@@ -1,0 +1,18 @@
+_base_: base.yaml
+name: e02_preprocess
+
+e02:
+  sample_per_group: 100          # seeded images per (split x class) group; 13 groups -> ~1,300 images
+  workers: 4                     # CPU processes
+  denoise_methods:               # alternatives compared (lab: justify + compare)
+    median: {method: median, ksize: 3}
+    gaussian: {method: gaussian, ksize: 3}
+    bilateral: {method: bilateral, d: 5, sigma_color: 50, sigma_space: 50}
+  contrast_methods:
+    he_rgb: {method: he_rgb}
+    he_l: {method: he_l}
+    clahe_l: {method: clahe_l, clip_limit: 2.0, tile: 8}
+  noise:                         # added on purpose to the clean resized image, so PSNR/SSIM can judge restoration
+    salt_pepper_amount: 0.02     # 2% of pixels set to black/white
+    gaussian_sigma: 10           # grey-level standard deviation
+  figure_examples_per_class: 2   # images in the step-by-step strip (seeded, from test_in) + 1 look-alike

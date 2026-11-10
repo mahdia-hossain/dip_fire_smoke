@@ -1,0 +1,9 @@
+source,split,fire,smoke,normal,total
+deepquest,test_ext,939,993,996,2928
+dfire,test_in,928,823,1247,2998
+dfire,train,3050,2252,3100,8402
+dfire,val,339,250,345,934
+fireandsmoke,test_in,1756,726,47,2529
+fireandsmoke,test_lookalike,0,0,172,172
+fireandsmoke,train,8961,3211,1305,13477
+fireandsmoke,val,3830,1484,617,5931

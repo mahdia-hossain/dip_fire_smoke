@@ -1,0 +1,56 @@
+{
+  "images": 600,
+  "failed": 0,
+  "mask_area_by_group": {
+    "fire": {
+      "fire_mask_area": 0.0576,
+      "smoke_mask_area": 0.1812
+    },
+    "look-alike: cloud_fog_haze": {
+      "fire_mask_area": 0.0153,
+      "smoke_mask_area": 0.4352
+    },
+    "look-alike: lamp_streetlight": {
+      "fire_mask_area": 0.0517,
+      "smoke_mask_area": 0.0695
+    },
+    "look-alike: reflection_glow": {
+      "fire_mask_area": 0.0231,
+      "smoke_mask_area": 0.0596
+    },
+    "look-alike: sunset_sunrise": {
+      "fire_mask_area": 0.1087,
+      "smoke_mask_area": 0.2662
+    },
+    "look-alike: vehicle_light": {
+      "fire_mask_area": 0.0345,
+      "smoke_mask_area": 0.0777
+    },
+    "normal": {
+      "fire_mask_area": 0.0219,
+      "smoke_mask_area": 0.205
+    },
+    "smoke": {
+      "fire_mask_area": 0.016,
+      "smoke_mask_area": 0.246
+    }
+  },
+  "box_overlap": [
+    {
+      "mask": "fire",
+      "images_with_this_box": 150,
+      "mean_box_area_covered": 0.2867,
+      "median_box_area_covered": 0.2878,
+      "images_box_covered_>10%": 0.74,
+      "mean_mask_inside_box": 0.562
+    },
+    {
+      "mask": "smoke",
+      "images_with_this_box": 270,
+      "mean_box_area_covered": 0.3508,
+      "median_box_area_covered": 0.3227,
+      "images_box_covered_>10%": 0.7333,
+      "mean_mask_inside_box": 0.3797
+    }
+  ]
+}

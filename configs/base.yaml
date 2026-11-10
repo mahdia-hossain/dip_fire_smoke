@@ -1,0 +1,58 @@
+# Folder roots (data, outputs, checkpoints, caches) come from .env via src/config.py, not from here.
+# Training settings are FROZEN on Day 1 — do not tune them later.
+
+seed: 42
+
+paths:                                   # relative to the project folder
+  raw_dfire: data/raw/dfire              # D-Fire official split (train/ test/ ... with images/ + labels/)
+  raw_fireandsmoke: data/raw/fireandsmoke  # FireAndSmoke (Catargiu et al. 2024) part1 + part2, Roboflow YOLOv8 export
+  raw_deepquest: data/raw/deepquest      # DeepQuestAI Fire-Smoke-Dataset (separate test set)
+
+manifest:
+  phash_threshold: 4            # perceptual-hash distance <= 4 = near-duplicate; removed only ACROSS splits
+  val_frac: 0.10                # validation share carved from train when a dataset has no val split
+  lookalike_test_from_val: true # FireAndSmoke 'other-only' images from valid/ also go to the look-alike test
+  hash_workers: 8
+  dfire_known_box_totals: {fire: 14692, smoke: 11865}   # from the D-Fire README, used to detect class ids
+  keywords:                      # folder-name keywords -> label (checked: normal first, then fire, then smoke)
+    normal: [non_fire, non-fire, nonfire, no_fire, no-fire, nofire, normal, neutral]
+    fire: [fire, flame]
+    smoke: [smoke]
+  folder_label_overrides: {}     # e.g. {"deepquest/FIRE-SMOKE-DATASET/Train/Smoke": "skip"} for a manual fix
+
+preprocess:                      # the DIP preprocessing used by EVERY later stage (decided + justified in E02)
+  size: 256                      # resize to size x size (cv2.INTER_AREA); Roboflow images are already square
+  denoise: {method: median, ksize: 3}
+  contrast: {method: clahe_l, clip_limit: 2.0, tile: 8}   # CLAHE on the L channel of LAB -> colours unchanged
+
+segmentation:                    # E03 — fire + smoke candidate masks on the preprocessed (P2) image
+  fire: {tau_cb_cr: 40}          # YCbCr fire rule (Celik & Demirel 2009): Y>Cb, Cr>Cb, Y>mean Y, Cb<mean Cb,
+                                 #   Cr>mean Cr, |Cb-Cr| >= tau
+  smoke: {sat_max: 70, val_min: 80, dark_patch: 15}   # greyish (low HSV saturation), not dark, hazy (dark channel
+                                                      #   above its Otsu threshold), not fire
+  morph: {kernel: 5, min_area_frac: 0.001}            # opening + closing (ellipse 5x5), drop regions < 0.1% of image
+  box_classes:                   # class ids in the YOLO label files (verified 9 Nov 2026 in the E00 manifest run)
+    dfire: {fire: 1, smoke: 0}
+    fireandsmoke: {fire: 0, smoke: 2}
+
+features:                        # E04 — 16 DIP features per image (used by models A, D and E)
+  lbp: {P: 8, R: 1}              # uniform LBP, 8 neighbours at radius 1
+  glcm: {levels: 32, distance: 1}
+  edge_thr: 100                  # Sobel magnitude counted as an edge above this value
+
+train:                           # FROZEN — same for every deep model
+  img_size: 256
+  batch_size: 32                 # fits a 6 GB RTX 3050 with AMP
+  epochs: 15
+  optimizer: adamw
+  lr: 0.0005
+  weight_decay: 0.05
+  scheduler: cosine
+  warmup_epochs: 1
+  label_smoothing: 0.1
+  amp: true
+  class_weighted_loss: true
+  num_workers: 4
+  models:
+    cnn: mobilenetv3_small_100   # timm, ImageNet-pretrained
+    vit: mobilevit_xs            # timm, ImageNet-pretrained

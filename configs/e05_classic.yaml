@@ -1,0 +1,9 @@
+_base_: base.yaml
+name: e05_classic
+
+e05:
+  svm_C_grid: [0.3, 1, 3, 10]   # chosen on val macro-F1 (never on test)
+  rf_trees: 300
+  rf_min_leaf: 2
+  workers: 4                    # Random Forest CPU threads
+  n_boot: 1000                  # bootstrap rounds for the 95% intervals

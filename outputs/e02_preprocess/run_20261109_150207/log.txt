@@ -1,0 +1,48 @@
+2026-11-09 15:02:07,856 | New run: E:\dip_fire_smoke\outputs\e02_preprocess\run_20261109_150207
+2026-11-09 15:02:08,060 | Sample per group:
+group
+test_ext/fire            100
+test_ext/normal          100
+test_ext/smoke           100
+test_in/fire             100
+test_in/normal           100
+test_in/smoke            100
+test_lookalike/normal    100
+train/fire               100
+train/normal             100
+train/smoke              100
+val/fire                 100
+val/normal               100
+val/smoke                100
+2026-11-09 15:02:08,066 | 1300 images, 0 already done, 1300 to do
+2026-11-09 15:02:24,422 | ...100/1300  0.16 s/image  eta 3.3 min
+2026-11-09 15:02:35,238 | ...200/1300  0.14 s/image  eta 2.5 min
+2026-11-09 15:02:43,970 | ...300/1300  0.12 s/image  eta 2.0 min
+2026-11-09 15:02:52,814 | ...400/1300  0.11 s/image  eta 1.7 min
+2026-11-09 15:03:01,717 | ...500/1300  0.11 s/image  eta 1.4 min
+2026-11-09 15:03:10,367 | ...600/1300  0.10 s/image  eta 1.2 min
+2026-11-09 15:03:18,816 | ...700/1300  0.10 s/image  eta 1.0 min
+2026-11-09 15:03:27,458 | ...800/1300  0.10 s/image  eta 0.8 min
+2026-11-09 15:03:35,955 | ...900/1300  0.10 s/image  eta 0.7 min
+2026-11-09 15:03:44,599 | ...1000/1300  0.10 s/image  eta 0.5 min
+2026-11-09 15:03:52,890 | ...1100/1300  0.10 s/image  eta 0.3 min
+2026-11-09 15:04:01,188 | ...1200/1300  0.09 s/image  eta 0.2 min
+2026-11-09 15:04:09,331 | ...1300/1300  0.09 s/image  eta 0.0 min
+2026-11-09 15:04:09,648 | table_step_change:
+ class    n PSNR median (dB) PSNR clahe (dB) PSNR full (dB)   SSIM median    SSIM clahe     SSIM full entropy P0 → P2 (bits) RMS contrast P0 → P2
+   all 1300   32.323 ± 4.901  21.073 ± 2.051 20.834 ± 2.035 0.925 ± 0.054 0.799 ± 0.083 0.786 ± 0.081            7.05 → 7.33          53.8 → 56.2
+  fire  400   32.218 ± 4.422  21.090 ± 2.028 20.854 ± 1.995 0.933 ± 0.046 0.791 ± 0.083 0.780 ± 0.081            6.99 → 7.28          52.1 → 55.7
+ smoke  400   32.083 ± 4.326  20.996 ± 1.731 20.769 ± 1.708 0.924 ± 0.050 0.816 ± 0.064 0.804 ± 0.064            7.22 → 7.46          56.6 → 57.9
+normal  500   32.600 ± 5.638  21.122 ± 2.292 20.871 ± 2.295 0.919 ± 0.062 0.791 ± 0.093 0.775 ± 0.091            6.96 → 7.25          53.0 → 55.3
+2026-11-09 15:04:09,648 | table_denoise:
+   method change PSNR (dB)   change SSIM edge preservation salt-pepper → restored PSNR salt-pepper restored SSIM Gaussian → restored PSNR Gaussian restored SSIM
+   median   32.323 ± 4.901 0.925 ± 0.054     0.791 ± 0.061               21.75 → 32.15             0.923 ± 0.055            28.42 → 29.97          0.819 ± 0.037
+ gaussian   33.296 ± 4.539 0.946 ± 0.036     0.800 ± 0.055               21.75 → 27.87             0.750 ± 0.041            28.42 → 31.10          0.848 ± 0.058
+bilateral   38.569 ± 3.241 0.965 ± 0.020     0.847 ± 0.053               21.75 → 21.67             0.622 ± 0.055            28.42 → 34.56          0.894 ± 0.058
+2026-11-09 15:04:09,648 | table_contrast:
+ method change PSNR (dB)   change SSIM entropy gain (bits) RMS contrast gain colour shift |Δa|+|Δb|
+ he_rgb   15.550 ± 4.711 0.718 ± 0.194       0.686 ± 0.443   19.078 ± 13.893        18.445 ± 13.169
+   he_l   16.675 ± 4.992 0.727 ± 0.197       0.324 ± 0.291   18.788 ± 14.284          1.282 ± 1.786
+clahe_l   21.073 ± 2.051 0.799 ± 0.083       0.311 ± 0.198     3.119 ± 6.267          0.323 ± 0.371
+2026-11-09 15:04:14,346 | Figures saved to E:\dip_fire_smoke\outputs\e02_preprocess\run_20261109_150207\figures
+2026-11-09 15:04:14,454 | Done. Summary: {"images": 1300, "failed": 0, "mean_psnr_db": {"median": 32.323, "clahe": 21.073, "full": 20.834}, "mean_ssim": {"median": 0.9247, "clahe": 0.7987, "full": 0.7856}, "denoise_salt_pepper_restored_psnr": {"median": 32.148, "gaussian": 27.873, "bilateral": 21.668}, "denoise_edge_preservation": {"median": 0.7914, "gaussian": 0.8003, "bilateral": 0.8466}, "contrast_colour_shift": {"he_rgb": 18.445, "he_l": 1.282, "clahe_l": 0.323}, "contrast_entropy_gain": {"he_rgb": 0.6855, "he_l": 0.3235, "clahe_l": 0.3111}}

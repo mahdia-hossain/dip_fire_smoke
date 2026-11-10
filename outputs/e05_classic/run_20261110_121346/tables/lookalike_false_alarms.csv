@@ -1,0 +1,11 @@
+model,lookalike_type,n,false_alarm_rate,called_fire,called_smoke
+A_svm,cloud_fog_haze,75,0.24,14,4
+A_svm,lamp_streetlight,52,0.4423,20,3
+A_svm,reflection_glow,51,0.3333,9,8
+A_svm,sunset_sunrise,88,0.2955,19,7
+A_svm,vehicle_light,185,0.4162,57,20
+A_rf,cloud_fog_haze,75,0.1467,10,1
+A_rf,lamp_streetlight,52,0.5,24,2
+A_rf,reflection_glow,51,0.4314,16,6
+A_rf,sunset_sunrise,88,0.3295,26,3
+A_rf,vehicle_light,185,0.5189,78,18

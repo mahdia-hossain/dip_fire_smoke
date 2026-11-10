@@ -1,0 +1,83 @@
+seed: 42
+paths:
+  raw_dfire: data/raw/dfire
+  raw_fireandsmoke: data/raw/fireandsmoke
+  raw_deepquest: data/raw/deepquest
+manifest:
+  phash_threshold: 4
+  val_frac: 0.1
+  lookalike_test_from_val: true
+  hash_workers: 8
+  dfire_known_box_totals:
+    fire: 14692
+    smoke: 11865
+  keywords:
+    normal:
+    - non_fire
+    - non-fire
+    - nonfire
+    - no_fire
+    - no-fire
+    - nofire
+    - normal
+    - neutral
+    fire:
+    - fire
+    - flame
+    smoke:
+    - smoke
+  folder_label_overrides: {}
+preprocess:
+  size: 256
+  denoise:
+    method: median
+    ksize: 3
+  contrast:
+    method: clahe_l
+    clip_limit: 2.0
+    tile: 8
+train:
+  img_size: 256
+  batch_size: 32
+  epochs: 15
+  optimizer: adamw
+  lr: 0.0005
+  weight_decay: 0.05
+  scheduler: cosine
+  warmup_epochs: 1
+  label_smoothing: 0.1
+  amp: true
+  class_weighted_loss: true
+  num_workers: 4
+  models:
+    cnn: mobilenetv3_small_100
+    vit: mobilevit_xs
+name: e02_preprocess
+e02:
+  sample_per_group: 100
+  workers: 4
+  denoise_methods:
+    median:
+      method: median
+      ksize: 3
+    gaussian:
+      method: gaussian
+      ksize: 3
+    bilateral:
+      method: bilateral
+      d: 5
+      sigma_color: 50
+      sigma_space: 50
+  contrast_methods:
+    he_rgb:
+      method: he_rgb
+    he_l:
+      method: he_l
+    clahe_l:
+      method: clahe_l
+      clip_limit: 2.0
+      tile: 8
+  noise:
+    salt_pepper_amount: 0.02
+    gaussian_sigma: 10
+  figure_examples_per_class: 2

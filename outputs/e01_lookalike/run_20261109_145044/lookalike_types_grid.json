@@ -1,0 +1,55 @@
+{
+  "seed": 42,
+  "shown": {
+    "sunset_sunrise": [
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW91_f12_jpg.rf.2be217fe87bb1d10063e40ad2f98edfb.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW113_f43_jpg.rf.c97f0efc50fc406abeef5751198b195d.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW34_f43_jpg.rf.9e222c9b1d96d118972970c3443736d1.jpg",
+      "data/raw/fireandsmoke/part2/test/images/FireSmokeVideoNEW57_f10_jpg.rf.5b5044da453bdf4fff519d0d71e2913d.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW89_f7_jpg.rf.caacb271e2aefd773e75e54d4cb37ec6.jpg",
+      "data/raw/fireandsmoke/part1/valid/images/frame4350_jpg.rf.592eb358ee9e7ccd6a35025356f75a49.jpg",
+      "data/raw/fireandsmoke/part1/valid/images/WEB02114_jpg.rf.c302f56d08ddcd6d9a23f4f899a9deed.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW133_f20_jpg.rf.fcc7dac568150f6fe2b6c2712bf7aaa9.jpg"
+    ],
+    "lamp_streetlight": [
+      "data/raw/fireandsmoke/part1/valid/images/NoFire-32_png.rf.763574e57056c9a1e1f4929cfd88acb9.jpg",
+      "data/raw/fireandsmoke/part1/valid/images/street_view_5457_jpg.rf.d6ecd00530937838957d94bd245bc4da.jpg",
+      "data/raw/fireandsmoke/part1/valid/images/NoFire-34_png.rf.e7469e7f42f8529e654a31bb686504d1.jpg",
+      "data/raw/fireandsmoke/part1/valid/images/NoFire-28_png.rf.e177d33e6d2ebb4e950f2e62cb139c53.jpg",
+      "data/raw/fireandsmoke/part1/valid/images/FrameVideoManual2494_png.rf.4cbbd6abbb5451efe784a00babf8cc3d.jpg",
+      "data/raw/fireandsmoke/part2/test/images/FireSmokeVideoNEW58_f17_jpg.rf.076d9217e2466be0e0fd241ae7f862a3.jpg",
+      "data/raw/fireandsmoke/part1/valid/images/NoFire-3_png.rf.7a3224169251ea8ffa59c4df1544f388.jpg",
+      "data/raw/fireandsmoke/part1/valid/images/NoFire-11_png.rf.297f6277255ca265d1f853c50fe83262.jpg"
+    ],
+    "vehicle_light": [
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW247_f5_jpg.rf.5551c019ca5f55d746103bdfd37021b6.jpg",
+      "data/raw/fireandsmoke/part1/test/images/FireVideo241_f45_jpg.rf.478e0d66531070df0b9b93f253a14396.jpg",
+      "data/raw/fireandsmoke/part1/valid/images/FrameVideoManual2093_png.rf.f6dbcfa86f94ad6e6310f749e0816510.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW23_f76_jpg.rf.a966534c07edefd0f3dff0c96376a243.jpg",
+      "data/raw/fireandsmoke/part2/test/images/FireSmokeVideoNEW2_f4_jpg.rf.14f850b1faa3cad23efe42ea11d501b9.jpg",
+      "data/raw/fireandsmoke/part1/valid/images/frame394_jpg.rf.395fca33077138c40f2c949788996732.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW26_f24_jpg.rf.4f2db69dad9cd8cd05d2eeae0cacf0c3.jpg",
+      "data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo171_f274_jpg.rf.5b2dccfbd136437588ec04a88300e368.jpg"
+    ],
+    "reflection_glow": [
+      "data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo322_f89_jpg.rf.4a185a3062840ae07cbed9b87995a77d.jpg",
+      "data/raw/fireandsmoke/part2/test/images/FireSmokeVideoNEW138_f57_jpg.rf.2340c76a46752bec89de2c8dfe4e182e.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW219_f108_jpg.rf.d4d37da7d96c999b26abd0d080b2a1e4.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW32_f15_jpg.rf.6b74dff367db9385d9e5458b023e1721.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW239_f62_jpg.rf.c5dbdb82e651aa6e0eeadf51a3d4b0b8.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW23_f125_jpg.rf.5debf4bd1984f010c1b1dcd28310aa83.jpg",
+      "data/raw/fireandsmoke/part1/valid/images/WEB03140_jpg.rf.4f1fe8885368f4a8189fe0b5fdda4562.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW138_f55_jpg.rf.8692714e7ca4fce394cbde4c9b0768f4.jpg"
+    ],
+    "cloud_fog_haze": [
+      "data/raw/fireandsmoke/part2/test/images/FireSmokeVideoNEW185_f79_jpg.rf.e7e81e8a132d0b4e52f1bbe9daa19ed1.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW48_f2_jpg.rf.ec11cbfdc108affb5a7c9723dbb7e5da.jpg",
+      "data/raw/fireandsmoke/part2/test/images/FireSmokeVideoNEW185_f30_jpg.rf.262556593a711da26ecfb599a59ca0c7.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW194_f10_jpg.rf.14bb70a2f6b468bdf563a13a0d9603a5.jpg",
+      "data/raw/fireandsmoke/part2/test/images/FireSmokeVideoNEW19_f18_jpg.rf.21bdd568c875ccc60491a85174ff6ca2.jpg",
+      "data/raw/fireandsmoke/part2/test/images/FireSmokeVideoNEW205_f20_jpg.rf.31ac0235ba34047a113915aa2914348b.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW95_f0_jpg.rf.299539ebe34ef69dd7e3c11c58b836b0.jpg",
+      "data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW217_f42_jpg.rf.547bf36d056de255bbbe8865cf2169e4.jpg"
+    ]
+  }
+}

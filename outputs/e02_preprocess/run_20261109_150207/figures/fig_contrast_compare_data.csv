@@ -1,0 +1,5 @@
+panel
+P1
+he_rgb colour shift 29.9
+he_l colour shift 2.0
+clahe_l colour shift 0.2

@@ -1,0 +1,11 @@
+2026-11-09 14:50:44,244 | Images per type:
+label
+sunset_sunrise            88
+lamp_streetlight          52
+vehicle_light            185
+reflection_glow           51
+cloud_fog_haze            75
+reject_has_fire_smoke     19
+skip_unsure               37
+unlabelled               169
+2026-11-09 14:50:44,530 | Frozen: 451 images -> E:\dip_fire_smoke\data\manifest\lookalike_types.csv

@@ -1,0 +1,6 @@
+panel
+clean P0
+2% salt-pepper PSNR 21.9 dB
+median PSNR 33.0 dB
+gaussian PSNR 28.8 dB
+bilateral PSNR 21.7 dB

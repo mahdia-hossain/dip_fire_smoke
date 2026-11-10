@@ -1,0 +1,7 @@
+source,folder,label,split,n_images
+deepquest,deepquest/FIRE-SMOKE-DATASET/Test/Fire,fire,test_ext,100
+deepquest,deepquest/FIRE-SMOKE-DATASET/Test/Neutral,normal,test_ext,100
+deepquest,deepquest/FIRE-SMOKE-DATASET/Test/Smoke,smoke,test_ext,100
+deepquest,deepquest/FIRE-SMOKE-DATASET/Train/Fire,fire,test_ext,900
+deepquest,deepquest/FIRE-SMOKE-DATASET/Train/Neutral,normal,test_ext,900
+deepquest,deepquest/FIRE-SMOKE-DATASET/Train/Smoke,smoke,test_ext,900

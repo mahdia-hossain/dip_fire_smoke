@@ -1,0 +1,16 @@
+# torch + torchvision are installed separately (CUDA build), see the Step 01 commands.
+numpy>=2.0
+pandas
+opencv-python
+scikit-image
+scikit-learn
+PyWavelets
+imagehash
+pillow
+matplotlib
+pyyaml
+tqdm
+timm
+tensorboard
+python-dotenv
+tabulate

@@ -1,0 +1,24 @@
+2026-11-10 12:09:59,114 | New run: E:\dip_fire_smoke\outputs\e03_segmentation\run_20261110_120959
+2026-11-10 12:09:59,249 | 600 images, 0 already done, 600 to do (4 worker processes)
+2026-11-10 12:10:00,912 | ...100/600  17 ms/image  eta 0.1 min
+2026-11-10 12:10:01,526 | ...200/600  11 ms/image  eta 0.1 min
+2026-11-10 12:10:02,141 | ...300/600  10 ms/image  eta 0.0 min
+2026-11-10 12:10:02,619 | ...400/600  8 ms/image  eta 0.0 min
+2026-11-10 12:10:03,155 | ...500/600  8 ms/image  eta 0.0 min
+2026-11-10 12:10:03,753 | ...600/600  8 ms/image  eta 0.0 min
+2026-11-10 12:10:03,906 | table_mask_area:
+                       group   n  fire_mask_area  smoke_mask_area  fire_regions  smoke_regions  images_with_fire_mask  images_with_smoke_mask
+                        fire 150          0.0576           0.1812        3.0667         4.4400                 0.8333                  0.9400
+  look-alike: cloud_fog_haze  32          0.0153           0.4352        1.5938         3.0938                 0.5938                  1.0000
+look-alike: lamp_streetlight  21          0.0517           0.0695        3.7619         4.6667                 0.6667                  1.0000
+ look-alike: reflection_glow  15          0.0231           0.0596        2.3333         4.4667                 0.6667                  0.9333
+  look-alike: sunset_sunrise  14          0.1087           0.2662        2.5000         2.2857                 1.0000                  1.0000
+   look-alike: vehicle_light  68          0.0345           0.0777        4.2206         5.1324                 0.8971                  0.9706
+                      normal 150          0.0219           0.2050        1.8933         3.1067                 0.4667                  0.9600
+                       smoke 150          0.0160           0.2460        2.0667         4.3400                 0.4933                  0.9933
+2026-11-10 12:10:03,906 | table_box_overlap:
+ mask  images_with_this_box  mean_box_area_covered  median_box_area_covered  images_box_covered_>10%  mean_mask_inside_box
+ fire                   150                 0.2867                   0.2878                   0.7400                0.5620
+smoke                   270                 0.3508                   0.3227                   0.7333                0.3797
+2026-11-10 12:10:06,564 | Figures saved to E:\dip_fire_smoke\outputs\e03_segmentation\run_20261110_120959\figures
+2026-11-10 12:10:06,608 | Done.

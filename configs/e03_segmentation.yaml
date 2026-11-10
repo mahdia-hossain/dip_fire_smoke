@@ -1,0 +1,7 @@
+_base_: base.yaml
+name: e03_segmentation
+
+e03:
+  sample_per_class: 150     # seeded test_in images per class (fire, smoke, normal)
+  lookalike_sample: 150     # seeded images from the frozen look-alike set (all 5 types)
+  workers: 4                # CPU processes

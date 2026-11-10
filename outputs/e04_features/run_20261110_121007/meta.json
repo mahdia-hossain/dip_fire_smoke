@@ -1,0 +1,88 @@
+{
+  "start_time": "2026-11-10 12:10:07",
+  "command": "E:\\dip_fire_smoke\\src\\dip\\e04_features.py",
+  "host": "Razin-PC",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.12.10",
+  "libraries": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "opencv-python": "5.0.0.93",
+    "scikit-image": "0.26.0",
+    "scikit-learn": "1.9.1",
+    "PyWavelets": "1.10.0",
+    "imagehash": "4.3.2",
+    "pillow": "13.0.0",
+    "matplotlib": "3.11.2",
+    "pyyaml": "6.0.3",
+    "torch": "2.14.1+cu130",
+    "torchvision": "0.29.1+cu130",
+    "timm": "1.0.31",
+    "tensorboard": "2.21.0",
+    "python-dotenv": "1.2.4"
+  },
+  "gpu": {
+    "cuda": "torch not loaded"
+  },
+  "code_sha256_16": {
+    "src/__init__.py": "e3b0c44298fc1c14",
+    "src/classic/__init__.py": "e3b0c44298fc1c14",
+    "src/classic/e05_classic.py": "add137e70e618a4a",
+    "src/common/__init__.py": "e3b0c44298fc1c14",
+    "src/common/cfg.py": "a741d8c4a02761e4",
+    "src/common/check.py": "72521b826bc3843f",
+    "src/common/parallel.py": "0d926aef0f560d62",
+    "src/common/runs.py": "b4533692f7668124",
+    "src/config.py": "c14018677d814b19",
+    "src/data/__init__.py": "e3b0c44298fc1c14",
+    "src/data/boxes.py": "e8d72d0eb95e5e0b",
+    "src/data/build_manifest.py": "5fb625569d989ff6",
+    "src/data/check_duplicates.py": "096d1f0e90e097d5",
+    "src/data/lookalike.py": "8a399c5faf01a031",
+    "src/data/lookalike_app.py": "a41d81abd6f3566b",
+    "src/dip/__init__.py": "e3b0c44298fc1c14",
+    "src/dip/e02_preprocess.py": "4ad246d680605df9",
+    "src/dip/e03_segmentation.py": "b90e77c666e0f662",
+    "src/dip/e04_features.py": "73fa88e7a2f46b89",
+    "src/dip/features.py": "bc61c4a57f8abe63",
+    "src/dip/preprocess.py": "2d6f3b8fefbcc9f0",
+    "src/dip/quality.py": "440cb8cb808e3722",
+    "src/dip/segmentation.py": "c6f62c9bdc37e7f2",
+    "src/eval/__init__.py": "e3b0c44298fc1c14",
+    "src/eval/metrics.py": "d838fca29cc40fa5",
+    "src/eval/plots.py": "cb9fc6957ef5a07a",
+    "src/viz/__init__.py": "e3b0c44298fc1c14",
+    "src/viz/grids.py": "c033b86c3770d4c2",
+    "src/viz/style.py": "aafb64ef2635182e",
+    "run.py": "6b81c68f0baf8246"
+  },
+  "data_files": {
+    "E:/dip_fire_smoke/data/manifest/manifest.csv": {
+      "bytes": 7550500,
+      "sha256": "28ff922ac991c9ece880cc25fcb6144a9a6e9c8c59da7b2667938225f041ea5d"
+    },
+    "E:/dip_fire_smoke/data/manifest/lookalike_types.csv": {
+      "bytes": 54688,
+      "sha256": "26a8ad154054bf30b33bc9b747874f21dddcd5d6739a2e58a7e7e53bffa68beb"
+    }
+  },
+  "smoke": false,
+  "feature_names": [
+    "fire_frac",
+    "smoke_frac",
+    "redness",
+    "saturation",
+    "brightness",
+    "rms_contrast",
+    "entropy",
+    "lbp_entropy",
+    "lbp_flat_frac",
+    "glcm_contrast",
+    "glcm_homogeneity",
+    "dark_mean",
+    "dark_high_frac",
+    "sobel_mean",
+    "edge_frac",
+    "fire_edge"
+  ]
+}

@@ -1,0 +1,4 @@
+method,change PSNR (dB),change SSIM,edge preservation,salt-pepper → restored PSNR,salt-pepper restored SSIM,Gaussian → restored PSNR,Gaussian restored SSIM
+median,32.323 ± 4.901,0.925 ± 0.054,0.791 ± 0.061,21.75 → 32.15,0.923 ± 0.055,28.42 → 29.97,0.819 ± 0.037
+gaussian,33.296 ± 4.539,0.946 ± 0.036,0.800 ± 0.055,21.75 → 27.87,0.750 ± 0.041,28.42 → 31.10,0.848 ± 0.058
+bilateral,38.569 ± 3.241,0.965 ± 0.020,0.847 ± 0.053,21.75 → 21.67,0.622 ± 0.055,28.42 → 34.56,0.894 ± 0.058

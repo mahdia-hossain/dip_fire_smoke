@@ -1,0 +1,22 @@
+2026-11-08 21:56:17,245 | Run folder: E:\dip_fire_smoke\outputs\s02_manifest\run_20261108_215617
+2026-11-08 21:56:18,331 | Scanned: {'deepquest': 3000}
+2026-11-08 21:56:18,346 | Folder -> label check (look at this carefully):
+   source                                     folder  label    split  n_images
+deepquest     deepquest/FIRE-SMOKE-DATASET/Test/Fire   fire test_ext       100
+deepquest  deepquest/FIRE-SMOKE-DATASET/Test/Neutral normal test_ext       100
+deepquest    deepquest/FIRE-SMOKE-DATASET/Test/Smoke  smoke test_ext       100
+deepquest    deepquest/FIRE-SMOKE-DATASET/Train/Fire   fire test_ext       900
+deepquest deepquest/FIRE-SMOKE-DATASET/Train/Neutral normal test_ext       900
+deepquest   deepquest/FIRE-SMOKE-DATASET/Train/Smoke  smoke test_ext       900
+2026-11-08 21:56:18,346 | Hashing: 3000 images, 0 cached, 3000 to do
+2026-11-08 21:56:23,551 | Counts per source/split:
+label               fire  smoke  normal  total
+source    split                               
+deepquest test_ext   939    993     996   2928
+2026-11-08 21:56:23,551 | Counts per split:
+label     fire  smoke  normal
+split                        
+test_ext   939    993     996
+2026-11-08 21:56:23,551 | Excluded: {'exact_duplicate': 69, 'near_duplicate': 3}
+2026-11-08 21:56:23,551 | D-Fire mapping: {}
+2026-11-08 21:56:23,551 | Done in 6.3 s. Official manifest -> data/manifest/manifest.csv

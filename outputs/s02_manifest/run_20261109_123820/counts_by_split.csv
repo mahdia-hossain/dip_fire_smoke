@@ -1,0 +1,6 @@
+split,fire,smoke,normal
+test_ext,939,993,996
+test_in,2684,1549,1294
+test_lookalike,0,0,172
+train,12011,5463,4405
+val,4169,1734,962

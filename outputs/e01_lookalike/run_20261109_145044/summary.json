@@ -1,0 +1,13 @@
+{
+  "typed_images": 451,
+  "per_type": {
+    "sunset_sunrise": 88,
+    "lamp_streetlight": 52,
+    "vehicle_light": 185,
+    "reflection_glow": 51,
+    "cloud_fog_haze": 75
+  },
+  "rejected_real_fire_smoke": 19,
+  "skipped_unsure": 37,
+  "unlabelled": 169
+}

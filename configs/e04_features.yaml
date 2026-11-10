@@ -1,0 +1,5 @@
+_base_: base.yaml
+name: e04_features
+
+e04:
+  workers: 6                # CPU processes (lower to 4 if the laptop gets slow)

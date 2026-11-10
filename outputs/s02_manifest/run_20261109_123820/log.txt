@@ -1,0 +1,67 @@
+2026-11-09 12:38:20,480 | Run folder: E:\dip_fire_smoke\outputs\s02_manifest\run_20261109_123820
+2026-11-09 12:38:20,758 | D-Fire split file dfire_train.txt: 17221 names -> train
+2026-11-09 12:38:20,790 | D-Fire split file dfire_test.txt: 4306 names -> test_in
+2026-11-09 12:40:33,667 | D-Fire split from official lists: 21527 matched, 0 not listed (excluded), 0 differ from folder names (lists win)
+2026-11-09 12:45:40,314 | Scanned: {'fireandsmoke': 27294, 'dfire': 21527, 'deepquest': 3000}
+2026-11-09 12:45:40,344 | Folder -> label check (look at this carefully):
+      source                                     folder  label          split  n_images
+   deepquest     deepquest/FIRE-SMOKE-DATASET/Test/Fire   fire       test_ext       100
+   deepquest  deepquest/FIRE-SMOKE-DATASET/Test/Neutral normal       test_ext       100
+   deepquest    deepquest/FIRE-SMOKE-DATASET/Test/Smoke  smoke       test_ext       100
+   deepquest    deepquest/FIRE-SMOKE-DATASET/Train/Fire   fire       test_ext       900
+   deepquest deepquest/FIRE-SMOKE-DATASET/Train/Neutral normal       test_ext       900
+   deepquest   deepquest/FIRE-SMOKE-DATASET/Train/Smoke  smoke       test_ext       900
+       dfire                          dfire/test/images   fire        test_in      1115
+       dfire                          dfire/test/images normal        test_in      2005
+       dfire                          dfire/test/images  smoke        test_in      1186
+       dfire                         dfire/train/images   fire          train      4707
+       dfire                         dfire/train/images normal          train      7833
+       dfire                         dfire/train/images  smoke          train      4681
+fireandsmoke             fireandsmoke/part1/test/images   fire        test_in      1570
+fireandsmoke             fireandsmoke/part1/test/images normal        test_in        46
+fireandsmoke             fireandsmoke/part1/test/images normal test_lookalike        48
+fireandsmoke             fireandsmoke/part1/test/images  smoke        test_in       573
+fireandsmoke            fireandsmoke/part1/train/images   fire        test_in        31
+fireandsmoke            fireandsmoke/part1/train/images   fire          train      8898
+fireandsmoke            fireandsmoke/part1/train/images normal          train       730
+fireandsmoke            fireandsmoke/part1/train/images  smoke        test_in         2
+fireandsmoke            fireandsmoke/part1/train/images  smoke          train      3152
+fireandsmoke            fireandsmoke/part1/valid/images   fire            val      4226
+fireandsmoke            fireandsmoke/part1/valid/images normal            val       428
+fireandsmoke            fireandsmoke/part1/valid/images  smoke            val      1414
+fireandsmoke             fireandsmoke/part2/test/images   fire        test_in       194
+fireandsmoke             fireandsmoke/part2/test/images normal        test_in         1
+fireandsmoke             fireandsmoke/part2/test/images normal test_lookalike       133
+fireandsmoke             fireandsmoke/part2/test/images  smoke        test_in       176
+fireandsmoke            fireandsmoke/part2/train/images   fire          train      1969
+fireandsmoke            fireandsmoke/part2/train/images normal          train      1040
+fireandsmoke            fireandsmoke/part2/train/images  smoke          train      1483
+fireandsmoke            fireandsmoke/part2/valid/images   fire            val       529
+fireandsmoke            fireandsmoke/part2/valid/images normal            val       263
+fireandsmoke            fireandsmoke/part2/valid/images  smoke            val       388
+2026-11-09 12:45:40,378 | Hashing: 51821 images, 3000 cached, 48821 to do
+2026-11-09 12:47:21,769 | Carved 934 val images from dfire train (stratified, seed 42)
+2026-11-09 12:47:22,079 | Counts per source/split:
+label                        fire  smoke  normal  total
+source       split                                     
+deepquest    test_ext         939    993     996   2928
+dfire        test_in          928    823    1247   2998
+             train           3050   2252    3100   8402
+             val              339    250     345    934
+fireandsmoke test_in         1756    726      47   2529
+             test_lookalike     0      0     172    172
+             train           8961   3211    1305  13477
+             val             3830   1484     617   5931
+2026-11-09 12:47:22,079 | Counts per split:
+label            fire  smoke  normal
+split                               
+test_ext          939    993     996
+test_in          2684   1549    1294
+test_lookalike      0      0     172
+train           12011   5463    4405
+val              4169   1734     962
+2026-11-09 12:47:22,079 | Excluded: {'near_duplicate': 14293, 'exact_duplicate': 157}
+2026-11-09 12:47:22,084 | D-Fire mapping: {'id_fire': 1, 'id_smoke': 0, 'box_counts_by_id': [11865, 14692], 'relative_error_vs_readme': {'fire': 0.0, 'smoke': 0.0}, 'split_source': 'official split files', 'images_not_in_split_files': 0}
+2026-11-09 12:47:22,084 | FireAndSmoke: {'class_names_per_part': {'part1': ['fire', 'other', 'smoke'], 'part2': ['fire', 'other', 'smoke']}, 'box_class_counts': {'part1': [22605, 6735, 19378], 'part2': [4112, 7936, 5182]}, 'lookalike_images_total': 1947}
+2026-11-09 12:47:22,084 | Look-alike images: 1272 in train/val (labelled normal), 172 in the look-alike test set
+2026-11-09 12:47:22,084 | Done in 541.6 s. Official manifest -> data/manifest/manifest.csv

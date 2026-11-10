@@ -1,0 +1,116 @@
+{
+  "run_dir": "outputs/s02_manifest/run_20261109_133905",
+  "seconds": 477.3,
+  "dfire_class_mapping": {
+    "id_fire": 1,
+    "id_smoke": 0,
+    "box_counts_by_id": [
+      11865,
+      14692
+    ],
+    "relative_error_vs_readme": {
+      "fire": 0.0,
+      "smoke": 0.0
+    },
+    "split_source": "official split files",
+    "images_not_in_split_files": 0
+  },
+  "fireandsmoke_info": {
+    "class_names_per_part": {
+      "part1": [
+        "fire",
+        "other",
+        "smoke"
+      ],
+      "part2": [
+        "fire",
+        "other",
+        "smoke"
+      ]
+    },
+    "box_class_counts": {
+      "part1": [
+        22605,
+        6735,
+        19378
+      ],
+      "part2": [
+        4112,
+        7936,
+        5182
+      ]
+    },
+    "lookalike_images_total": 1947
+  },
+  "lookalike_in_train_val": 1062,
+  "lookalike_test_images": 676,
+  "scanned_per_source": {
+    "fireandsmoke": 27294,
+    "dfire": 21527,
+    "deepquest": 3000
+  },
+  "excluded_by_reason": {
+    "near_duplicate": 9875,
+    "exact_duplicate": 157
+  },
+  "duplicate_label_conflicts": 1125,
+  "duplicates_removed_from_train_val_because_of_test": 8119,
+  "final_images": 41789,
+  "final_counts_by_split": {
+    "test_ext": {
+      "fire": 940,
+      "smoke": 993,
+      "normal": 998
+    },
+    "test_in": {
+      "fire": 2858,
+      "smoke": 1930,
+      "normal": 2022
+    },
+    "test_lookalike": {
+      "fire": 0,
+      "smoke": 0,
+      "normal": 676
+    },
+    "train": {
+      "fire": 12837,
+      "smoke": 6239,
+      "normal": 4971
+    },
+    "val": {
+      "fire": 4805,
+      "smoke": 1922,
+      "normal": 598
+    }
+  },
+  "settings": {
+    "phash_threshold": 4,
+    "val_frac": 0.1,
+    "lookalike_test_from_val": true,
+    "hash_workers": 8,
+    "dfire_known_box_totals": {
+      "fire": 14692,
+      "smoke": 11865
+    },
+    "keywords": {
+      "normal": [
+        "non_fire",
+        "non-fire",
+        "nonfire",
+        "no_fire",
+        "no-fire",
+        "nofire",
+        "normal",
+        "neutral"
+      ],
+      "fire": [
+        "fire",
+        "flame"
+      ],
+      "smoke": [
+        "smoke"
+      ]
+    },
+    "folder_label_overrides": {}
+  }
+}
