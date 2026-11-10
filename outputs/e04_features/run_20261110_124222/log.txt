@@ -1,0 +1,120 @@
+2026-11-10 12:42:22,828 | New run: E:\dip_fire_smoke\outputs\e04_features\run_20261110_124222
+2026-11-10 12:42:23,017 | Images per split/label:
+split           label 
+test_ext        fire        940
+                normal      998
+                smoke       993
+test_in         fire       2858
+                normal     2022
+                smoke      1930
+test_lookalike  normal      451
+train           fire      12837
+                normal     4971
+                smoke      6239
+val             fire       4805
+                normal      598
+                smoke      1922
+2026-11-10 12:42:23,124 | 41564 images, 0 already done, 41564 to do (6 worker processes)
+2026-11-10 12:42:26,867 | ...500/41564  7 ms/image  eta 5.1 min
+2026-11-10 12:42:29,246 | ...1000/41564  6 ms/image  eta 4.1 min
+2026-11-10 12:42:31,577 | ...1500/41564  6 ms/image  eta 3.8 min
+2026-11-10 12:42:33,472 | ...2000/41564  5 ms/image  eta 3.4 min
+2026-11-10 12:42:35,299 | ...2500/41564  5 ms/image  eta 3.2 min
+2026-11-10 12:42:37,394 | ...3000/41564  5 ms/image  eta 3.1 min
+2026-11-10 12:42:39,323 | ...3500/41564  5 ms/image  eta 2.9 min
+2026-11-10 12:42:41,268 | ...4000/41564  5 ms/image  eta 2.8 min
+2026-11-10 12:42:43,329 | ...4500/41564  4 ms/image  eta 2.8 min
+2026-11-10 12:42:45,608 | ...5000/41564  4 ms/image  eta 2.7 min
+2026-11-10 12:42:47,530 | ...5500/41564  4 ms/image  eta 2.7 min
+2026-11-10 12:42:49,432 | ...6000/41564  4 ms/image  eta 2.6 min
+2026-11-10 12:42:51,177 | ...6500/41564  4 ms/image  eta 2.5 min
+2026-11-10 12:42:52,868 | ...7000/41564  4 ms/image  eta 2.4 min
+2026-11-10 12:42:54,567 | ...7500/41564  4 ms/image  eta 2.4 min
+2026-11-10 12:42:56,824 | ...8000/41564  4 ms/image  eta 2.4 min
+2026-11-10 12:42:58,950 | ...8500/41564  4 ms/image  eta 2.3 min
+2026-11-10 12:43:01,059 | ...9000/41564  4 ms/image  eta 2.3 min
+2026-11-10 12:43:03,169 | ...9500/41564  4 ms/image  eta 2.3 min
+2026-11-10 12:43:05,102 | ...10000/41564  4 ms/image  eta 2.2 min
+2026-11-10 12:43:06,908 | ...10500/41564  4 ms/image  eta 2.2 min
+2026-11-10 12:43:08,904 | ...11000/41564  4 ms/image  eta 2.1 min
+2026-11-10 12:43:10,857 | ...11500/41564  4 ms/image  eta 2.1 min
+2026-11-10 12:43:12,867 | ...12000/41564  4 ms/image  eta 2.0 min
+2026-11-10 12:43:14,960 | ...12500/41564  4 ms/image  eta 2.0 min
+2026-11-10 12:43:16,874 | ...13000/41564  4 ms/image  eta 2.0 min
+2026-11-10 12:43:18,682 | ...13500/41564  4 ms/image  eta 1.9 min
+2026-11-10 12:43:20,438 | ...14000/41564  4 ms/image  eta 1.9 min
+2026-11-10 12:43:22,483 | ...14500/41564  4 ms/image  eta 1.8 min
+2026-11-10 12:43:24,317 | ...15000/41564  4 ms/image  eta 1.8 min
+2026-11-10 12:43:26,166 | ...15500/41564  4 ms/image  eta 1.8 min
+2026-11-10 12:43:28,012 | ...16000/41564  4 ms/image  eta 1.7 min
+2026-11-10 12:43:29,915 | ...16500/41564  4 ms/image  eta 1.7 min
+2026-11-10 12:43:31,767 | ...17000/41564  4 ms/image  eta 1.7 min
+2026-11-10 12:43:33,631 | ...17500/41564  4 ms/image  eta 1.6 min
+2026-11-10 12:43:35,484 | ...18000/41564  4 ms/image  eta 1.6 min
+2026-11-10 12:43:37,396 | ...18500/41564  4 ms/image  eta 1.5 min
+2026-11-10 12:43:39,262 | ...19000/41564  4 ms/image  eta 1.5 min
+2026-11-10 12:43:41,121 | ...19500/41564  4 ms/image  eta 1.5 min
+2026-11-10 12:43:43,011 | ...20000/41564  4 ms/image  eta 1.4 min
+2026-11-10 12:43:44,917 | ...20500/41564  4 ms/image  eta 1.4 min
+2026-11-10 12:43:46,803 | ...21000/41564  4 ms/image  eta 1.4 min
+2026-11-10 12:43:48,692 | ...21500/41564  4 ms/image  eta 1.3 min
+2026-11-10 12:43:50,538 | ...22000/41564  4 ms/image  eta 1.3 min
+2026-11-10 12:43:52,443 | ...22500/41564  4 ms/image  eta 1.3 min
+2026-11-10 12:43:54,296 | ...23000/41564  4 ms/image  eta 1.2 min
+2026-11-10 12:43:56,133 | ...23500/41564  4 ms/image  eta 1.2 min
+2026-11-10 12:43:57,973 | ...24000/41564  4 ms/image  eta 1.2 min
+2026-11-10 12:43:59,846 | ...24500/41564  4 ms/image  eta 1.1 min
+2026-11-10 12:44:01,667 | ...25000/41564  4 ms/image  eta 1.1 min
+2026-11-10 12:44:03,496 | ...25500/41564  4 ms/image  eta 1.1 min
+2026-11-10 12:44:05,313 | ...26000/41564  4 ms/image  eta 1.0 min
+2026-11-10 12:44:07,198 | ...26500/41564  4 ms/image  eta 1.0 min
+2026-11-10 12:44:09,032 | ...27000/41564  4 ms/image  eta 1.0 min
+2026-11-10 12:44:10,867 | ...27500/41564  4 ms/image  eta 0.9 min
+2026-11-10 12:44:12,666 | ...28000/41564  4 ms/image  eta 0.9 min
+2026-11-10 12:44:14,546 | ...28500/41564  4 ms/image  eta 0.9 min
+2026-11-10 12:44:16,382 | ...29000/41564  4 ms/image  eta 0.8 min
+2026-11-10 12:44:18,200 | ...29500/41564  4 ms/image  eta 0.8 min
+2026-11-10 12:44:20,042 | ...30000/41564  4 ms/image  eta 0.8 min
+2026-11-10 12:44:21,928 | ...30500/41564  4 ms/image  eta 0.7 min
+2026-11-10 12:44:23,776 | ...31000/41564  4 ms/image  eta 0.7 min
+2026-11-10 12:44:25,605 | ...31500/41564  4 ms/image  eta 0.7 min
+2026-11-10 12:44:27,433 | ...32000/41564  4 ms/image  eta 0.6 min
+2026-11-10 12:44:29,325 | ...32500/41564  4 ms/image  eta 0.6 min
+2026-11-10 12:44:31,166 | ...33000/41564  4 ms/image  eta 0.6 min
+2026-11-10 12:44:33,009 | ...33500/41564  4 ms/image  eta 0.5 min
+2026-11-10 12:44:34,840 | ...34000/41564  4 ms/image  eta 0.5 min
+2026-11-10 12:44:36,717 | ...34500/41564  4 ms/image  eta 0.5 min
+2026-11-10 12:44:38,538 | ...35000/41564  4 ms/image  eta 0.4 min
+2026-11-10 12:44:40,407 | ...35500/41564  4 ms/image  eta 0.4 min
+2026-11-10 12:44:42,230 | ...36000/41564  4 ms/image  eta 0.4 min
+2026-11-10 12:44:44,104 | ...36500/41564  4 ms/image  eta 0.3 min
+2026-11-10 12:44:45,962 | ...37000/41564  4 ms/image  eta 0.3 min
+2026-11-10 12:44:47,780 | ...37500/41564  4 ms/image  eta 0.3 min
+2026-11-10 12:44:49,611 | ...38000/41564  4 ms/image  eta 0.2 min
+2026-11-10 12:44:51,506 | ...38500/41564  4 ms/image  eta 0.2 min
+2026-11-10 12:44:53,199 | ...39000/41564  4 ms/image  eta 0.2 min
+2026-11-10 12:44:54,756 | ...39500/41564  4 ms/image  eta 0.1 min
+2026-11-10 12:44:56,308 | ...40000/41564  4 ms/image  eta 0.1 min
+2026-11-10 12:44:58,332 | ...40500/41564  4 ms/image  eta 0.1 min
+2026-11-10 12:44:59,969 | ...41000/41564  4 ms/image  eta 0.0 min
+2026-11-10 12:45:01,524 | ...41500/41564  4 ms/image  eta 0.0 min
+2026-11-10 12:45:01,709 | ...41564/41564  4 ms/image  eta 0.0 min
+2026-11-10 12:45:04,251 | Feature ranking (ANOVA F on train, higher = separates the classes better):
+         feature      group  anova_F  p_value
+       fire_edge      edges 2568.095      0.0
+         redness     colour 1452.476      0.0
+       fire_frac     colour 1020.599      0.0
+       dark_mean       haze  998.715      0.0
+      brightness brightness  755.087      0.0
+      saturation     colour  568.127      0.0
+      smoke_frac     colour  527.448      0.0
+  dark_high_frac       haze  478.474      0.0
+     lbp_entropy    texture  223.787      0.0
+glcm_homogeneity    texture  188.890      0.0
+      sobel_mean      edges  171.365      0.0
+   lbp_flat_frac    texture  151.331      0.0
+         entropy brightness  141.788      0.0
+       edge_frac      edges  136.694      0.0
+   glcm_contrast    texture  135.813      0.0
+    rms_contrast brightness   24.710      0.0
+2026-11-10 12:45:06,143 | Done. {"images": 41564, "failed": 0, "features": ["fire_frac", "smoke_frac", "redness", "saturation", "brightness", "rms_contrast", "entropy", "lbp_entropy", "lbp_flat_frac", "glcm_contrast", "glcm_homogeneity", "dark_mean", "dark_high_frac", "sobel_mean", "edge_frac", "fire_edge"], "mean_ms_per_image": 22.3, "top5_features": ["fire_edge", "redness", "fire_frac", "dark_mean", "brightness"]}

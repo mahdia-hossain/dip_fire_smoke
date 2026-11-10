@@ -1,0 +1,30 @@
+{
+  "images": 41564,
+  "failed": 0,
+  "features": [
+    "fire_frac",
+    "smoke_frac",
+    "redness",
+    "saturation",
+    "brightness",
+    "rms_contrast",
+    "entropy",
+    "lbp_entropy",
+    "lbp_flat_frac",
+    "glcm_contrast",
+    "glcm_homogeneity",
+    "dark_mean",
+    "dark_high_frac",
+    "sobel_mean",
+    "edge_frac",
+    "fire_edge"
+  ],
+  "mean_ms_per_image": 22.3,
+  "top5_features": [
+    "fire_edge",
+    "redness",
+    "fire_frac",
+    "dark_mean",
+    "brightness"
+  ]
+}

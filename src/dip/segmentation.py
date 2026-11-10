@@ -17,11 +17,15 @@ def dark_channel(rgb: np.ndarray, patch: int) -> np.ndarray:
     return cv2.erode(rgb.min(axis=2), cv2.getStructuringElement(cv2.MORPH_RECT, (patch, patch)))
 
 
-def smoke_rule(rgb: np.ndarray, sat_max: int, val_min: int, dark_patch: int):
+def smoke_rule(rgb: np.ndarray, sat_max: int, val_min: int, dark_patch: int, dark_thr="otsu"):
+    """Grey (low saturation), not dark, hazy (dark channel above Otsu or a fixed threshold)."""
     hsv = cv2.cvtColor(rgb, cv2.COLOR_RGB2HSV)
     dc = dark_channel(rgb, dark_patch)
-    thr, hazy = cv2.threshold(dc, 0, 1, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-    m = (hsv[..., 1] < sat_max) & (hsv[..., 2] > val_min) & (hazy > 0)
+    if dark_thr == "otsu":
+        thr, _ = cv2.threshold(dc, 0, 1, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    else:
+        thr = float(dark_thr)
+    m = (hsv[..., 1] < sat_max) & (hsv[..., 2] > val_min) & (dc > thr)
     return m.astype(np.uint8), dc, float(thr)
 
 

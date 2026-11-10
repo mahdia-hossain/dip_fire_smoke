@@ -1,0 +1,37 @@
+{
+  "images": 900,
+  "failed": 0,
+  "chosen": {
+    "fire": {
+      "tau_cb_cr": 40
+    },
+    "smoke": {
+      "sat_max": 70,
+      "val_min": 80,
+      "dark_patch": 15,
+      "dark_thr": "otsu"
+    }
+  },
+  "fire_best": {
+    "tau_cb_cr": 40.0,
+    "fire_box_covered": 0.3303,
+    "normal_fire_area": 0.0365,
+    "J": 0.2938
+  },
+  "smoke_best": {
+    "sat_max": 70,
+    "val_min": 80,
+    "dark_thr": "otsu",
+    "smoke_box_covered": 0.33695428118957715,
+    "normal_smoke_area": 0.18946889241536458,
+    "J": 0.14748538877421258
+  },
+  "default_fire": [
+    {
+      "tau_cb_cr": 40,
+      "fire_box_covered": 0.3303,
+      "normal_fire_area": 0.0365,
+      "J": 0.2938
+    }
+  ]
+}

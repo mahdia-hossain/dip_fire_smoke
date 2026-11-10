@@ -18,6 +18,7 @@ STAGES = {
     "lookalike-label": ("src.data.lookalike_app", [], "E01 browser app: label look-alike types (saved per click)"),
     "lookalike-freeze": ("src.data.lookalike", ["freeze"], "E01 save labelled types + freeze the look-alike set"),
     "e02": ("src.dip.e02_preprocess", [], "E02 preprocessing + PSNR/SSIM (add --smoke for a 20-image test)"),
+    "seg-tune": ("src.dip.e03b_seg_tune", [], "E03b choose segmentation thresholds on val (writes configs/segmentation_tuned.yaml)"),
     "e03": ("src.dip.e03_segmentation", [], "E03 segmentation masks + box overlap (--smoke = 20 images)"),
     "e04": ("src.dip.e04_features", [], "E04 16 DIP features for all images (--smoke = 40 images)"),
     "e05": ("src.classic.e05_classic", [], "E05 model A: SVM + Random Forest (needs a finished E04 run)"),

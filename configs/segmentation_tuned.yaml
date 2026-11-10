@@ -1,0 +1,9 @@
+# Chosen by E03b on validation images: outputs/e03b_seg_tune/run_20261110_124124
+segmentation:
+  fire:
+    tau_cb_cr: 40
+  smoke:
+    sat_max: 70
+    val_min: 80
+    dark_patch: 15
+    dark_thr: otsu

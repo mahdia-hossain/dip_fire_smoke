@@ -1,0 +1,10 @@
+path,label
+data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW251_f5_jpg.rf.57893ff66f5d16c89cbb35a5a9b62725.jpg,fire
+data/raw/dfire/train/images/WEB02693.jpg,normal
+data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo250_f84_jpg.rf.caa3da99dc8722ca8bc68af3679d27c2.jpg,fire
+data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo185_f22_jpg.rf.3e174a2d8fc348c4f441f48a27941b77.jpg,smoke
+data/raw/fireandsmoke/part1/valid/images/frame2000_jpg.rf.8d3176410d8db401c64824f8665609b6.jpg,fire
+data/raw/fireandsmoke/part1/valid/images/henrik-verle-kp5sMoQr0Wg-unsplash_jpg.rf.5c6052637d04b68efed28fe7e39e763e.jpg,normal
+data/raw/fireandsmoke/part2/valid/images/FireSmokeVideoNEW108_f62_jpg.rf.75de84f084f926c770f77e4e75ac1938.jpg,smoke
+data/raw/fireandsmoke/part1/valid/images/shaah-shahidh-2M2N6RjUQao-unsplash_jpg.rf.917692346f5618ddff53c97c68500c1a.jpg,normal
+data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo220_f46_jpg.rf.aca424d471c41ba71533896ab641aa7b.jpg,smoke

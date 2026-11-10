@@ -1,0 +1,162 @@
+{
+  "best_svm_C": 10,
+  "fit_time_s": {
+    "A_svm": 12.79,
+    "A_rf": 4.14
+  },
+  "speed": {
+    "A_svm": {
+      "feature_ms_per_image": 22.3,
+      "classify_ms_per_image": 1.4541,
+      "fps_cpu": 42.0
+    },
+    "A_rf": {
+      "feature_ms_per_image": 22.3,
+      "classify_ms_per_image": 0.0177,
+      "fps_cpu": 44.7
+    }
+  },
+  "table": [
+    {
+      "model": "A_svm",
+      "split": "test_in",
+      "n": 6810,
+      "accuracy": 0.7006,
+      "accuracy_ci95": [
+        0.6897,
+        0.711
+      ],
+      "macro_f1": 0.6896,
+      "macro_f1_ci95": [
+        0.679,
+        0.7002
+      ],
+      "fire_recall": 0.7673,
+      "smoke_recall": 0.6663,
+      "normal_recall": 0.639,
+      "false_alarm_rate": 0.361
+    },
+    {
+      "model": "A_svm",
+      "split": "val",
+      "n": 7325,
+      "accuracy": 0.7287,
+      "accuracy_ci95": [
+        0.7184,
+        0.7391
+      ],
+      "macro_f1": 0.6416,
+      "macro_f1_ci95": [
+        0.6276,
+        0.6554
+      ],
+      "fire_recall": 0.7707,
+      "smoke_recall": 0.642,
+      "normal_recall": 0.6706,
+      "false_alarm_rate": 0.3294
+    },
+    {
+      "model": "A_svm",
+      "split": "test_lookalike",
+      "n": 451,
+      "accuracy": NaN,
+      "accuracy_ci95": NaN,
+      "macro_f1": NaN,
+      "macro_f1_ci95": NaN,
+      "fire_recall": NaN,
+      "smoke_recall": NaN,
+      "normal_recall": NaN,
+      "false_alarm_rate": 0.357
+    },
+    {
+      "model": "A_svm",
+      "split": "test_ext",
+      "n": 2931,
+      "accuracy": 0.5544,
+      "accuracy_ci95": [
+        0.5353,
+        0.5718
+      ],
+      "macro_f1": 0.5243,
+      "macro_f1_ci95": [
+        0.5063,
+        0.5403
+      ],
+      "fire_recall": 0.8883,
+      "smoke_recall": 0.5619,
+      "normal_recall": 0.2325,
+      "false_alarm_rate": 0.7675
+    },
+    {
+      "model": "A_rf",
+      "split": "test_in",
+      "n": 6810,
+      "accuracy": 0.7257,
+      "accuracy_ci95": [
+        0.7151,
+        0.7366
+      ],
+      "macro_f1": 0.7105,
+      "macro_f1_ci95": [
+        0.6998,
+        0.7217
+      ],
+      "fire_recall": 0.8359,
+      "smoke_recall": 0.6472,
+      "normal_recall": 0.6449,
+      "false_alarm_rate": 0.3551
+    },
+    {
+      "model": "A_rf",
+      "split": "val",
+      "n": 7325,
+      "accuracy": 0.779,
+      "accuracy_ci95": [
+        0.77,
+        0.7891
+      ],
+      "macro_f1": 0.6955,
+      "macro_f1_ci95": [
+        0.6821,
+        0.7097
+      ],
+      "fire_recall": 0.8373,
+      "smoke_recall": 0.6618,
+      "normal_recall": 0.6873,
+      "false_alarm_rate": 0.3127
+    },
+    {
+      "model": "A_rf",
+      "split": "test_lookalike",
+      "n": 451,
+      "accuracy": NaN,
+      "accuracy_ci95": NaN,
+      "macro_f1": NaN,
+      "macro_f1_ci95": NaN,
+      "fire_recall": NaN,
+      "smoke_recall": NaN,
+      "normal_recall": NaN,
+      "false_alarm_rate": 0.408
+    },
+    {
+      "model": "A_rf",
+      "split": "test_ext",
+      "n": 2931,
+      "accuracy": 0.5493,
+      "accuracy_ci95": [
+        0.5316,
+        0.5664
+      ],
+      "macro_f1": 0.5078,
+      "macro_f1_ci95": [
+        0.4907,
+        0.5238
+      ],
+      "fire_recall": 0.934,
+      "smoke_recall": 0.5519,
+      "normal_recall": 0.1844,
+      "false_alarm_rate": 0.8156
+    }
+  ],
+  "checkpoints": "E:\\dip_fire_smoke\\checkpoints\\e05_classic\\run_20261110_124508"
+}

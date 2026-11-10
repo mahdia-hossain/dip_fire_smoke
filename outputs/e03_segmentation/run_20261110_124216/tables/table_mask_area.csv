@@ -1,0 +1,9 @@
+group,n,fire_mask_area,smoke_mask_area,fire_regions,smoke_regions,images_with_fire_mask,images_with_smoke_mask
+fire,150,0.0576,0.1812,3.0667,4.44,0.8333,0.94
+look-alike: cloud_fog_haze,32,0.0153,0.4352,1.5938,3.0938,0.5938,1.0
+look-alike: lamp_streetlight,21,0.0517,0.0695,3.7619,4.6667,0.6667,1.0
+look-alike: reflection_glow,15,0.0231,0.0596,2.3333,4.4667,0.6667,0.9333
+look-alike: sunset_sunrise,14,0.1087,0.2662,2.5,2.2857,1.0,1.0
+look-alike: vehicle_light,68,0.0345,0.0777,4.2206,5.1324,0.8971,0.9706
+normal,150,0.0219,0.205,1.8933,3.1067,0.4667,0.96
+smoke,150,0.016,0.246,2.0667,4.34,0.4933,0.9933

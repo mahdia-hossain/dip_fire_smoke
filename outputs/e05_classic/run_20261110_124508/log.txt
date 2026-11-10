@@ -1,0 +1,32 @@
+2026-11-10 12:45:08,205 | New run: E:\dip_fire_smoke\outputs\e05_classic\run_20261110_124508
+Features: E:\dip_fire_smoke\outputs\e04_features\run_20261110_124222\features.csv
+2026-11-10 12:45:08,659 | train 24047  val 7325  (classes in train: {'fire': 12837, 'smoke': 6239, 'normal': 4971})
+2026-11-10 12:45:26,171 | SVM C=0.3: val macro-F1 0.6023
+2026-11-10 12:45:43,074 | SVM C=1: val macro-F1 0.6105
+2026-11-10 12:46:00,015 | SVM C=3: val macro-F1 0.6258
+2026-11-10 12:46:17,995 | SVM C=10: val macro-F1 0.6416
+2026-11-10 12:46:34,922 | Chosen C=10. Fit time (s): {'A_svm': 12.79, 'A_rf': 4.14}
+2026-11-10 12:48:07,515 | Summary:
+model          split    n  accuracy    accuracy_ci95  macro_f1    macro_f1_ci95  fire_recall  smoke_recall  normal_recall  false_alarm_rate
+A_svm        test_in 6810    0.7006  [0.6897, 0.711]    0.6896  [0.679, 0.7002]       0.7673        0.6663         0.6390            0.3610
+A_svm            val 7325    0.7287 [0.7184, 0.7391]    0.6416 [0.6276, 0.6554]       0.7707        0.6420         0.6706            0.3294
+A_svm test_lookalike  451       NaN              NaN       NaN              NaN          NaN           NaN            NaN            0.3570
+A_svm       test_ext 2931    0.5544 [0.5353, 0.5718]    0.5243 [0.5063, 0.5403]       0.8883        0.5619         0.2325            0.7675
+ A_rf        test_in 6810    0.7257 [0.7151, 0.7366]    0.7105 [0.6998, 0.7217]       0.8359        0.6472         0.6449            0.3551
+ A_rf            val 7325    0.7790   [0.77, 0.7891]    0.6955 [0.6821, 0.7097]       0.8373        0.6618         0.6873            0.3127
+ A_rf test_lookalike  451       NaN              NaN       NaN              NaN          NaN           NaN            NaN            0.4080
+ A_rf       test_ext 2931    0.5493 [0.5316, 0.5664]    0.5078 [0.4907, 0.5238]       0.9340        0.5519         0.1844            0.8156
+2026-11-10 12:48:07,813 | Look-alike false alarms by type:
+model   lookalike_type   n  false_alarm_rate  called_fire  called_smoke
+A_svm   cloud_fog_haze  75            0.2400           14             4
+A_svm lamp_streetlight  52            0.4423           20             3
+A_svm  reflection_glow  51            0.3333            9             8
+A_svm   sunset_sunrise  88            0.2955           19             7
+A_svm    vehicle_light 185            0.4162           57            20
+ A_rf   cloud_fog_haze  75            0.1467           10             1
+ A_rf lamp_streetlight  52            0.5000           24             2
+ A_rf  reflection_glow  51            0.4314           16             6
+ A_rf   sunset_sunrise  88            0.3295           26             3
+ A_rf    vehicle_light 185            0.5189           78            18
+2026-11-10 12:48:08,098 | Speed (CPU, one process): {'A_svm': {'feature_ms_per_image': 22.3, 'classify_ms_per_image': 1.4541, 'fps_cpu': 42.0}, 'A_rf': {'feature_ms_per_image': 22.3, 'classify_ms_per_image': 0.0177, 'fps_cpu': 44.7}}
+2026-11-10 12:48:08,117 | Done.

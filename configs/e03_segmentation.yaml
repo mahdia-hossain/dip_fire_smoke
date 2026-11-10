@@ -1,4 +1,4 @@
-_base_: base.yaml
+_base_: [base.yaml, segmentation_tuned.yaml]
 name: e03_segmentation
 
 e03:

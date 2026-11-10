@@ -28,7 +28,7 @@ preprocess:                      # the DIP preprocessing used by EVERY later sta
 segmentation:                    # E03 — fire + smoke candidate masks on the preprocessed (P2) image
   fire: {tau_cb_cr: 40}          # YCbCr fire rule (Celik & Demirel 2009): Y>Cb, Cr>Cb, Y>mean Y, Cb<mean Cb,
                                  #   Cr>mean Cr, |Cb-Cr| >= tau
-  smoke: {sat_max: 70, val_min: 80, dark_patch: 15}   # greyish (low HSV saturation), not dark, hazy (dark channel
+  smoke: {sat_max: 70, val_min: 80, dark_patch: 15, dark_thr: otsu}   # greyish (low HSV saturation), not dark, hazy (dark channel
                                                       #   above its Otsu threshold), not fire
   morph: {kernel: 5, min_area_frac: 0.001}            # opening + closing (ellipse 5x5), drop regions < 0.1% of image
   box_classes:                   # class ids in the YOLO label files (verified 9 Nov 2026 in the E00 manifest run)

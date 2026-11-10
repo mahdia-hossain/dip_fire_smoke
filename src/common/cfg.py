@@ -17,8 +17,14 @@ def load_config(path) -> dict:
     if not path.exists():
         raise SystemExit(f"Config not found: {path}")
     cfg = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-    base = cfg.pop("_base_", None)
-    return deep_merge(load_config(path.parent / base), cfg) if base else cfg
+    bases = cfg.pop("_base_", None) or []
+    merged = {}
+    for b in [bases] if isinstance(bases, str) else bases:
+        bp = path.parent / b
+        if not bp.exists() and b == "segmentation_tuned.yaml":
+            raise SystemExit("configs/segmentation_tuned.yaml not found. Run:  python run.py seg-tune")
+        merged = deep_merge(merged, load_config(bp))
+    return deep_merge(merged, cfg)
 
 
 def get(cfg: dict, dotted: str):
