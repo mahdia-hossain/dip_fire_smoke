@@ -21,6 +21,7 @@ STAGES = {
     "seg-tune": ("src.dip.e03b_seg_tune", [], "E03b choose segmentation thresholds on val (writes configs/segmentation_tuned.yaml)"),
     "e03": ("src.dip.e03_segmentation", [], "E03 segmentation masks + box overlap (--smoke = 20 images)"),
     "e04": ("src.dip.e04_features", [], "E04 16 DIP features for all images (--smoke = 40 images)"),
+    "train": ("src.deep.train", [], "E06-E09 train a deep model: --model B|C|D|E (add --smoke for a quick test)"),
     "e05": ("src.classic.e05_classic", [], "E05 model A: SVM + Random Forest (needs a finished E04 run)"),
 }
 

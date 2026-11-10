@@ -12,3 +12,4 @@
 | 2026-11-10 12:42 | e03_segmentation | `e03_segmentation/run_20261110_124216` | `E:\dip_fire_smoke\src\dip\e03_segmentation.py` | E03 segmentation on 600 images (masks + box overlap) |
 | 2026-11-10 12:45 | e04_features | `e04_features/run_20261110_124222` | `E:\dip_fire_smoke\src\dip\e04_features.py` | E04 16 DIP features for 41564 images |
 | 2026-11-10 12:48 | e05_classic | `e05_classic/run_20261110_124508` | `E:\dip_fire_smoke\src\classic\e05_classic.py` | E05 model A (SVM C=10, RF); best test_in macro-F1 0.7105 (A_rf) |
+| 2026-11-10 14:13 | e06_mobilenetv3 | `e06_mobilenetv3/run_20261110_132052` | `E:\dip_fire_smoke\src\deep\train.py --model B` | B_mobilenetv3: best epoch 13, val macro-F1 0.8859, test_in macro-F1 0.8776 |

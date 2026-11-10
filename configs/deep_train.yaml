@@ -1,0 +1,5 @@
+_base_: [base.yaml, segmentation_tuned.yaml]
+name: deep_train
+
+deep:
+  n_boot: 1000

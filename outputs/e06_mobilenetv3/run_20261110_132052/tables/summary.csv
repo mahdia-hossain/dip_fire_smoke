@@ -1,0 +1,5 @@
+model,split,n,accuracy,accuracy_ci95,macro_f1,macro_f1_ci95,fire_recall,smoke_recall,normal_recall,false_alarm_rate
+B_mobilenetv3,val,7325,0.9195,"[0.9134, 0.9257]",0.8859,"[0.8766, 0.895]",0.9255,0.9037,0.9214,0.0786
+B_mobilenetv3,test_in,6810,0.8871,"[0.8794, 0.8946]",0.8776,"[0.8695, 0.8854]",0.9325,0.801,0.905,0.095
+B_mobilenetv3,test_ext,2931,0.8557,"[0.8434, 0.8686]",0.8555,"[0.8433, 0.8687]",0.9426,0.852,0.7776,0.2224
+B_mobilenetv3,test_lookalike,451,,,,,,,,0.0355

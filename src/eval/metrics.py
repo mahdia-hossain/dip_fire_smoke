@@ -8,6 +8,8 @@ CLASSES = ["fire", "smoke", "normal"]
 
 def bootstrap_ci(y_true, y_pred, fn, n_boot: int = 1000, seed: int = 42) -> list:
     """95% bootstrap interval of a metric (resample images with replacement)."""
+    if n_boot <= 0:
+        return None
     y_true, y_pred = np.asarray(y_true), np.asarray(y_pred)
     rng = np.random.default_rng(seed)
     idx = rng.integers(0, len(y_true), size=(n_boot, len(y_true)))

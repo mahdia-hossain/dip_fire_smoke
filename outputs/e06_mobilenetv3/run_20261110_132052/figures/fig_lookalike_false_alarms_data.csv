@@ -1,0 +1,6 @@
+model,lookalike_type,n,false_alarm_rate,called_fire,called_smoke
+B_mobilenetv3,cloud_fog_haze,75,0.0,0,0
+B_mobilenetv3,lamp_streetlight,52,0.0962,2,3
+B_mobilenetv3,reflection_glow,51,0.0196,0,1
+B_mobilenetv3,sunset_sunrise,88,0.0,0,0
+B_mobilenetv3,vehicle_light,185,0.0541,2,8
