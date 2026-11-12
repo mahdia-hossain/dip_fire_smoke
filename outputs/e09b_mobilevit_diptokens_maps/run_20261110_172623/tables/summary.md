@@ -1,0 +1,6 @@
+| model                       | split          |    n |   accuracy | accuracy_ci95    |   macro_f1 | macro_f1_ci95    |   fire_recall |   smoke_recall |   normal_recall |   false_alarm_rate |
+|:----------------------------|:---------------|-----:|-----------:|:-----------------|-----------:|:-----------------|--------------:|---------------:|----------------:|-------------------:|
+| EM_mobilevit_diptokens_maps | val            | 7325 |     0.9387 | [0.9332, 0.944]  |     0.9158 | [0.9075, 0.9242] |        0.9513 |         0.9069 |          0.9398 |             0.0602 |
+| EM_mobilevit_diptokens_maps | test_in        | 6810 |     0.8981 | [0.8909, 0.9046] |     0.8888 | [0.8807, 0.8958] |        0.9451 |         0.813  |          0.913  |             0.087  |
+| EM_mobilevit_diptokens_maps | test_ext       | 2931 |     0.8884 | [0.8779, 0.8994] |     0.8884 | [0.8779, 0.8993] |        0.9628 |         0.8812 |          0.8257 |             0.1743 |
+| EM_mobilevit_diptokens_maps | test_lookalike |  451 |   nan      | nan              |   nan      | nan              |      nan      |       nan      |        nan      |             0.0333 |

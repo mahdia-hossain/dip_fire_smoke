@@ -1,0 +1,6 @@
+| model                            | split          |    n |   accuracy | accuracy_ci95    |   macro_f1 | macro_f1_ci95    |   fire_recall |   smoke_recall |   normal_recall |   false_alarm_rate |
+|:---------------------------------|:---------------|-----:|-----------:|:-----------------|-----------:|:-----------------|--------------:|---------------:|----------------:|-------------------:|
+| CA3_mobilevit_noisetype_adaptive | val            | 7325 |     0.9412 | [0.9354, 0.9465] |     0.9142 | [0.9049, 0.9226] |        0.958  |         0.9006 |          0.9365 |             0.0635 |
+| CA3_mobilevit_noisetype_adaptive | test_in        | 6810 |     0.9001 | [0.8927, 0.9069] |     0.891  | [0.8831, 0.898]  |        0.9521 |         0.8181 |          0.905  |             0.095  |
+| CA3_mobilevit_noisetype_adaptive | test_ext       | 2931 |     0.8912 | [0.8802, 0.9028] |     0.8912 | [0.8807, 0.9023] |        0.966  |         0.8691 |          0.8427 |             0.1573 |
+| CA3_mobilevit_noisetype_adaptive | test_lookalike |  451 |   nan      | nan              |   nan      | nan              |      nan      |       nan      |        nan      |             0.0355 |

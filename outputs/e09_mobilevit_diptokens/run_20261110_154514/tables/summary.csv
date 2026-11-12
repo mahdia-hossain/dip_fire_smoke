@@ -1,0 +1,5 @@
+model,split,n,accuracy,accuracy_ci95,macro_f1,macro_f1_ci95,fire_recall,smoke_recall,normal_recall,false_alarm_rate
+E_mobilevit_diptokens,val,7325,0.9386,"[0.933, 0.9442]",0.913,"[0.9038, 0.9216]",0.9582,0.8918,0.9314,0.0686
+E_mobilevit_diptokens,test_in,6810,0.9032,"[0.8963, 0.9098]",0.8945,"[0.8873, 0.9017]",0.9556,0.8264,0.9026,0.0974
+E_mobilevit_diptokens,test_ext,2931,0.8782,"[0.8669, 0.8898]",0.8781,"[0.8666, 0.8898]",0.9521,0.8741,0.8126,0.1874
+E_mobilevit_diptokens,test_lookalike,451,,,,,,,,0.0355

@@ -1,0 +1,6 @@
+model,lookalike_type,n,false_alarm_rate,called_fire,called_smoke
+CA3_mobilevit_noisetype_adaptive,cloud_fog_haze,75,0.0,0,0
+CA3_mobilevit_noisetype_adaptive,lamp_streetlight,52,0.0385,2,0
+CA3_mobilevit_noisetype_adaptive,reflection_glow,51,0.0588,2,1
+CA3_mobilevit_noisetype_adaptive,sunset_sunrise,88,0.0455,3,1
+CA3_mobilevit_noisetype_adaptive,vehicle_light,185,0.0378,1,6

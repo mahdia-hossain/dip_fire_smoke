@@ -1,0 +1,105 @@
+{
+  "model": "E_mobilevit_diptokens",
+  "arch": "mobilevit_xs",
+  "kind": "tokens",
+  "params_m": 1.943,
+  "best_epoch": 12,
+  "best_val_macro_f1": 0.913,
+  "epochs_run": 15,
+  "total_minutes": 41.9,
+  "speed": {
+    "val": {
+      "ms_per_image": 2.032,
+      "fps": 492.1,
+      "batch": 32
+    },
+    "test_in": {
+      "ms_per_image": 7.297,
+      "fps": 137.0,
+      "batch": 32
+    },
+    "test_ext": {
+      "ms_per_image": 10.113,
+      "fps": 98.9,
+      "batch": 32
+    },
+    "test_lookalike": {
+      "ms_per_image": 52.095,
+      "fps": 19.2,
+      "batch": 32
+    }
+  },
+  "table": [
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "val",
+      "n": 7325,
+      "accuracy": 0.9386,
+      "accuracy_ci95": [
+        0.933,
+        0.9442
+      ],
+      "macro_f1": 0.913,
+      "macro_f1_ci95": [
+        0.9038,
+        0.9216
+      ],
+      "fire_recall": 0.9582,
+      "smoke_recall": 0.8918,
+      "normal_recall": 0.9314,
+      "false_alarm_rate": 0.0686
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_in",
+      "n": 6810,
+      "accuracy": 0.9032,
+      "accuracy_ci95": [
+        0.8963,
+        0.9098
+      ],
+      "macro_f1": 0.8945,
+      "macro_f1_ci95": [
+        0.8873,
+        0.9017
+      ],
+      "fire_recall": 0.9556,
+      "smoke_recall": 0.8264,
+      "normal_recall": 0.9026,
+      "false_alarm_rate": 0.0974
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_ext",
+      "n": 2931,
+      "accuracy": 0.8782,
+      "accuracy_ci95": [
+        0.8669,
+        0.8898
+      ],
+      "macro_f1": 0.8781,
+      "macro_f1_ci95": [
+        0.8666,
+        0.8898
+      ],
+      "fire_recall": 0.9521,
+      "smoke_recall": 0.8741,
+      "normal_recall": 0.8126,
+      "false_alarm_rate": 0.1874
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_lookalike",
+      "n": 451,
+      "accuracy": NaN,
+      "accuracy_ci95": NaN,
+      "macro_f1": NaN,
+      "macro_f1_ci95": NaN,
+      "fire_recall": NaN,
+      "smoke_recall": NaN,
+      "normal_recall": NaN,
+      "false_alarm_rate": 0.0355
+    }
+  ],
+  "checkpoints": "E:\\dip_fire_smoke\\checkpoints\\e09_mobilevit_diptokens\\run_20261110_154514"
+}

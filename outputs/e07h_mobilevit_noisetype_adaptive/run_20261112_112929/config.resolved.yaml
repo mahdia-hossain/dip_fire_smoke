@@ -1,0 +1,103 @@
+seed: 42
+paths:
+  raw_dfire: data/raw/dfire
+  raw_fireandsmoke: data/raw/fireandsmoke
+  raw_deepquest: data/raw/deepquest
+manifest:
+  phash_threshold: 4
+  val_frac: 0.1
+  lookalike_test_from_val: true
+  hash_workers: 8
+  dfire_known_box_totals:
+    fire: 14692
+    smoke: 11865
+  keywords:
+    normal:
+    - non_fire
+    - non-fire
+    - nonfire
+    - no_fire
+    - no-fire
+    - nofire
+    - normal
+    - neutral
+    fire:
+    - fire
+    - flame
+    smoke:
+    - smoke
+  folder_label_overrides: {}
+preprocess:
+  size: 256
+  denoise:
+    method: median
+    ksize: 3
+  contrast:
+    method: clahe_l
+    clip_limit: 2.0
+    tile: 8
+  adaptive:
+    sigma_thr: 2.56
+    points_thr: 0.009888
+    heavy_thr: 10.25
+segmentation:
+  fire:
+    tau_cb_cr: 40
+  smoke:
+    sat_max: 70
+    val_min: 80
+    dark_patch: 15
+    dark_thr: otsu
+  morph:
+    kernel: 5
+    min_area_frac: 0.001
+  box_classes:
+    dfire:
+      fire: 1
+      smoke: 0
+    fireandsmoke:
+      fire: 0
+      smoke: 2
+features:
+  lbp:
+    P: 8
+    R: 1
+  glcm:
+    levels: 32
+    distance: 1
+  edge_thr: 100
+train:
+  img_size: 256
+  batch_size: 32
+  epochs: 15
+  optimizer: adamw
+  lr: 0.0005
+  weight_decay: 0.05
+  scheduler: cosine
+  warmup_epochs: 1
+  label_smoothing: 0.1
+  amp: true
+  class_weighted_loss: true
+  num_workers: 2
+  models:
+    cnn: mobilenetv3_small_100
+    vit: mobilevit_xs
+name: deep_train
+deep:
+  n_boot: 1000
+  live_features: true
+  map_loss_weight: 0.5
+  map_grid: 16
+  noise_aug: &id001
+    p: 0.5
+    sigma:
+    - 5
+    - 25
+model:
+  id: CA3
+  name: CA3_mobilevit_noisetype_adaptive
+  arch: mobilevit_xs
+  kind: image
+  noise_aug: *id001
+  map_source: boxes
+features_file: E:\dip_fire_smoke\outputs\e04_features\run_20261110_124222\features.csv

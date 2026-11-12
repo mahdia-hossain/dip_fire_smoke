@@ -1,0 +1,106 @@
+{
+  "model": "CA_mobilevit_adaptive_noiseaug",
+  "seed": 42,
+  "arch": "mobilevit_xs",
+  "kind": "image",
+  "params_m": 1.934,
+  "best_epoch": 15,
+  "best_val_macro_f1": 0.9174,
+  "epochs_run": 15,
+  "total_minutes": 67.1,
+  "speed": {
+    "val": {
+      "ms_per_image": 4.55,
+      "fps": 219.8,
+      "batch": 32
+    },
+    "test_in": {
+      "ms_per_image": 8.806,
+      "fps": 113.6,
+      "batch": 32
+    },
+    "test_ext": {
+      "ms_per_image": 8.842,
+      "fps": 113.1,
+      "batch": 32
+    },
+    "test_lookalike": {
+      "ms_per_image": 32.816,
+      "fps": 30.5,
+      "batch": 32
+    }
+  },
+  "table": [
+    {
+      "model": "CA_mobilevit_adaptive_noiseaug",
+      "split": "val",
+      "n": 7325,
+      "accuracy": 0.9417,
+      "accuracy_ci95": [
+        0.936,
+        0.9472
+      ],
+      "macro_f1": 0.9174,
+      "macro_f1_ci95": [
+        0.9085,
+        0.9257
+      ],
+      "fire_recall": 0.9605,
+      "smoke_recall": 0.8939,
+      "normal_recall": 0.9448,
+      "false_alarm_rate": 0.0552
+    },
+    {
+      "model": "CA_mobilevit_adaptive_noiseaug",
+      "split": "test_in",
+      "n": 6810,
+      "accuracy": 0.904,
+      "accuracy_ci95": [
+        0.8969,
+        0.911
+      ],
+      "macro_f1": 0.895,
+      "macro_f1_ci95": [
+        0.8877,
+        0.9024
+      ],
+      "fire_recall": 0.9549,
+      "smoke_recall": 0.8145,
+      "normal_recall": 0.9174,
+      "false_alarm_rate": 0.0826
+    },
+    {
+      "model": "CA_mobilevit_adaptive_noiseaug",
+      "split": "test_ext",
+      "n": 2931,
+      "accuracy": 0.9,
+      "accuracy_ci95": [
+        0.8895,
+        0.9116
+      ],
+      "macro_f1": 0.9002,
+      "macro_f1_ci95": [
+        0.8898,
+        0.9116
+      ],
+      "fire_recall": 0.9702,
+      "smoke_recall": 0.858,
+      "normal_recall": 0.8758,
+      "false_alarm_rate": 0.1242
+    },
+    {
+      "model": "CA_mobilevit_adaptive_noiseaug",
+      "split": "test_lookalike",
+      "n": 451,
+      "accuracy": NaN,
+      "accuracy_ci95": NaN,
+      "macro_f1": NaN,
+      "macro_f1_ci95": NaN,
+      "fire_recall": NaN,
+      "smoke_recall": NaN,
+      "normal_recall": NaN,
+      "false_alarm_rate": 0.0222
+    }
+  ],
+  "checkpoints": "E:\\dip_fire_smoke\\checkpoints\\e07d_mobilevit_adaptive_noiseaug\\run_20261111_153248"
+}

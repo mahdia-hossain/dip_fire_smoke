@@ -1,0 +1,6 @@
+model,lookalike_type,n,false_alarm_rate,called_fire,called_smoke
+CR_mobilevit_rawinput,cloud_fog_haze,75,0.0267,2,0
+CR_mobilevit_rawinput,lamp_streetlight,52,0.0192,1,0
+CR_mobilevit_rawinput,reflection_glow,51,0.0784,3,1
+CR_mobilevit_rawinput,sunset_sunrise,88,0.0227,1,1
+CR_mobilevit_rawinput,vehicle_light,185,0.0378,2,5

@@ -1,0 +1,6 @@
+model,lookalike_type,n,false_alarm_rate,called_fire,called_smoke
+EMD_mobilevit_diptokens_dipmaps,cloud_fog_haze,75,0.0,0,0
+EMD_mobilevit_diptokens_dipmaps,lamp_streetlight,52,0.0192,1,0
+EMD_mobilevit_diptokens_dipmaps,reflection_glow,51,0.0392,1,1
+EMD_mobilevit_diptokens_dipmaps,sunset_sunrise,88,0.0227,1,1
+EMD_mobilevit_diptokens_dipmaps,vehicle_light,185,0.0378,2,5

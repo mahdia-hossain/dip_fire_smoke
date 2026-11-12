@@ -1,0 +1,6 @@
+model,lookalike_type,n,false_alarm_rate,called_fire,called_smoke
+CN_mobilevit_dip_noiseaug,cloud_fog_haze,75,0.0,0,0
+CN_mobilevit_dip_noiseaug,lamp_streetlight,52,0.0385,2,0
+CN_mobilevit_dip_noiseaug,reflection_glow,51,0.0392,1,1
+CN_mobilevit_dip_noiseaug,sunset_sunrise,88,0.0227,0,2
+CN_mobilevit_dip_noiseaug,vehicle_light,185,0.0378,2,5

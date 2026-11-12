@@ -1,0 +1,106 @@
+{
+  "model": "CM_mobilevit_maps",
+  "seed": 42,
+  "arch": "mobilevit_xs",
+  "kind": "image_maps",
+  "params_m": 1.992,
+  "best_epoch": 13,
+  "best_val_macro_f1": 0.9133,
+  "epochs_run": 15,
+  "total_minutes": 45.9,
+  "speed": {
+    "val": {
+      "ms_per_image": 2.041,
+      "fps": 490.0,
+      "batch": 32
+    },
+    "test_in": {
+      "ms_per_image": 7.215,
+      "fps": 138.6,
+      "batch": 32
+    },
+    "test_ext": {
+      "ms_per_image": 10.305,
+      "fps": 97.0,
+      "batch": 32
+    },
+    "test_lookalike": {
+      "ms_per_image": 51.424,
+      "fps": 19.4,
+      "batch": 32
+    }
+  },
+  "table": [
+    {
+      "model": "CM_mobilevit_maps",
+      "split": "val",
+      "n": 7325,
+      "accuracy": 0.9379,
+      "accuracy_ci95": [
+        0.9326,
+        0.9435
+      ],
+      "macro_f1": 0.9133,
+      "macro_f1_ci95": [
+        0.9049,
+        0.9213
+      ],
+      "fire_recall": 0.9594,
+      "smoke_recall": 0.8819,
+      "normal_recall": 0.9448,
+      "false_alarm_rate": 0.0552
+    },
+    {
+      "model": "CM_mobilevit_maps",
+      "split": "test_in",
+      "n": 6810,
+      "accuracy": 0.9037,
+      "accuracy_ci95": [
+        0.8969,
+        0.9101
+      ],
+      "macro_f1": 0.8944,
+      "macro_f1_ci95": [
+        0.887,
+        0.9015
+      ],
+      "fire_recall": 0.9594,
+      "smoke_recall": 0.8073,
+      "normal_recall": 0.9169,
+      "false_alarm_rate": 0.0831
+    },
+    {
+      "model": "CM_mobilevit_maps",
+      "split": "test_ext",
+      "n": 2931,
+      "accuracy": 0.8755,
+      "accuracy_ci95": [
+        0.8646,
+        0.8874
+      ],
+      "macro_f1": 0.8753,
+      "macro_f1_ci95": [
+        0.8645,
+        0.8871
+      ],
+      "fire_recall": 0.9574,
+      "smoke_recall": 0.8389,
+      "normal_recall": 0.8347,
+      "false_alarm_rate": 0.1653
+    },
+    {
+      "model": "CM_mobilevit_maps",
+      "split": "test_lookalike",
+      "n": 451,
+      "accuracy": NaN,
+      "accuracy_ci95": NaN,
+      "macro_f1": NaN,
+      "macro_f1_ci95": NaN,
+      "fire_recall": NaN,
+      "smoke_recall": NaN,
+      "normal_recall": NaN,
+      "false_alarm_rate": 0.0421
+    }
+  ],
+  "checkpoints": "E:\\dip_fire_smoke\\checkpoints\\e09c_mobilevit_maps\\run_20261111_102345"
+}
