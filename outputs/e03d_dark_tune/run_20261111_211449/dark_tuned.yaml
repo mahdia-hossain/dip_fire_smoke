@@ -1,0 +1,4 @@
+# Chosen by E03d on validation images: outputs/e03d_dark_tune/run_20261111_211449
+preprocess:
+  adaptive:
+    dark_thr: 71.4

@@ -1,0 +1,6 @@
+2026-11-12 14:07:58,711 | Best filters (mean SSIM vs clean): salt-and-pepper median_3 (0.8732), light grain bilateral (0.9317), heavy grain bilateral (0.8718)
+2026-11-12 14:07:58,720 | Chosen thresholds:
+ threshold    value  balanced_accuracy                         separates
+points_thr 0.000458           0.605556 salt-and-pepper vs clean/Gaussian
+ heavy_thr 4.550581           0.853333     Gaussian sigma 25 vs sigma 10
+2026-11-12 14:07:58,725 | Done.

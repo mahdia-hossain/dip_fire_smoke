@@ -1,0 +1,21 @@
+2026-11-12 11:19:32,678 | New run: E:\dip_fire_smoke\outputs\e12_restoration\run_20261112_111932
+2026-11-12 11:19:32,815 | 150 images, 0 already done, 150 to do (2 worker processes)
+2026-11-12 11:19:59,155 | ...30/150  878 ms/image  eta 1.8 min
+2026-11-12 11:20:21,982 | ...60/150  819 ms/image  eta 1.2 min
+2026-11-12 11:20:45,263 | ...90/150  805 ms/image  eta 0.8 min
+2026-11-12 11:21:08,745 | ...120/150  799 ms/image  eta 0.4 min
+2026-11-12 11:21:32,316 | ...150/150  797 ms/image  eta 0.0 min
+2026-11-12 11:21:32,836 | Best method per degradation (by SSIM vs the clean photo):
+ task     degradation     method    psnr   ssim  edge_f1
+noise saltpepper_2pct   median_3 32.0183 0.9157   0.8191
+noise saltpepper_5pct   median_3 31.7057 0.9127   0.8217
+noise        gauss_10  bilateral 34.5732 0.8904   0.8787
+noise        gauss_25 gaussian_7 27.0628 0.7128   0.4623
+2026-11-12 11:21:32,836 | Noise detectors (AUC, 1.0 = perfect):
+     noise_type detector    auc
+ Gaussian noise    sigma 0.9814
+ Gaussian noise   points 0.5982
+salt-and-pepper    sigma 0.9937
+salt-and-pepper   points 0.9990
+2026-11-12 11:21:38,788 | Figures saved to E:\dip_fire_smoke\outputs\e12_restoration\run_20261112_111932\figures
+2026-11-12 11:21:38,803 | Done.

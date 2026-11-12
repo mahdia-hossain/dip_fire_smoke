@@ -1,0 +1,6 @@
+panel,image
+input,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+Sobel,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+Laplacian,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+Canny,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+isolated points (on S&P 5%),data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg

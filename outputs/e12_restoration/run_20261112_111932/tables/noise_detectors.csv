@@ -1,0 +1,5 @@
+noise_type,detector,auc
+Gaussian noise,sigma,0.9814
+Gaussian noise,points,0.5982
+salt-and-pepper,sigma,0.9937
+salt-and-pepper,points,0.999

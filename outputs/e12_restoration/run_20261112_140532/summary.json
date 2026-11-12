@@ -1,0 +1,59 @@
+{
+  "images": 150,
+  "best": [
+    {
+      "task": "noise",
+      "degradation": "gauss_10",
+      "method": "bilateral",
+      "psnr": 37.1091,
+      "ssim": 0.9317,
+      "edge_f1": 0.8735
+    },
+    {
+      "task": "noise",
+      "degradation": "saltpepper_2pct",
+      "method": "median_3",
+      "psnr": 31.5386,
+      "ssim": 0.9026,
+      "edge_f1": 0.8127
+    },
+    {
+      "task": "noise",
+      "degradation": "gauss_25",
+      "method": "bilateral",
+      "psnr": 33.4554,
+      "ssim": 0.8718,
+      "edge_f1": 0.8669
+    },
+    {
+      "task": "noise",
+      "degradation": "saltpepper_5pct",
+      "method": "median_3",
+      "psnr": 30.1112,
+      "ssim": 0.8438,
+      "edge_f1": 0.807
+    }
+  ],
+  "detectors": [
+    {
+      "noise_type": "Gaussian noise",
+      "detector": "sigma",
+      "auc": 0.8385
+    },
+    {
+      "noise_type": "Gaussian noise",
+      "detector": "points",
+      "auc": 0.4983
+    },
+    {
+      "noise_type": "salt-and-pepper",
+      "detector": "sigma",
+      "auc": 0.9638
+    },
+    {
+      "noise_type": "salt-and-pepper",
+      "detector": "points",
+      "auc": 0.6207
+    }
+  ]
+}

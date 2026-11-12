@@ -1,0 +1,3 @@
+threshold,value,balanced_accuracy,separates
+points_thr,0.009888,0.994444,salt-and-pepper vs clean/Gaussian
+heavy_thr,10.249969,0.976667,Gaussian sigma 25 vs sigma 10

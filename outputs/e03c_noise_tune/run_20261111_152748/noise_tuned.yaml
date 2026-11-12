@@ -1,0 +1,4 @@
+# Chosen by E03c on validation images: outputs/e03c_noise_tune/run_20261111_152748
+preprocess:
+  adaptive:
+    sigma_thr: 2.56

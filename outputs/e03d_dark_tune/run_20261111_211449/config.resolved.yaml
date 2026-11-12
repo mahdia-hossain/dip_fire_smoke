@@ -1,0 +1,11 @@
+seed: 42
+preprocess:
+  size: 256
+  denoise:
+    method: median
+    ksize: 3
+  contrast:
+    method: clahe_l
+    clip_limit: 2.0
+    tile: 8
+per_class: 300

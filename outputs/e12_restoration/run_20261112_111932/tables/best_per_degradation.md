@@ -1,0 +1,6 @@
+| task   | degradation     | method     |    psnr |   ssim |   edge_f1 |
+|:-------|:----------------|:-----------|--------:|-------:|----------:|
+| noise  | saltpepper_2pct | median_3   | 32.0183 | 0.9157 |    0.8191 |
+| noise  | saltpepper_5pct | median_3   | 31.7057 | 0.9127 |    0.8217 |
+| noise  | gauss_10        | bilateral  | 34.5732 | 0.8904 |    0.8787 |
+| noise  | gauss_25        | gaussian_7 | 27.0628 | 0.7128 |    0.4623 |

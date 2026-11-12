@@ -1,0 +1,16 @@
+{
+  "metrics": [
+    {
+      "threshold": "points_thr",
+      "value": 0.000458,
+      "balanced_accuracy": 0.605556,
+      "separates": "salt-and-pepper vs clean/Gaussian"
+    },
+    {
+      "threshold": "heavy_thr",
+      "value": 4.550581,
+      "balanced_accuracy": 0.853333,
+      "separates": "Gaussian sigma 25 vs sigma 10"
+    }
+  ]
+}

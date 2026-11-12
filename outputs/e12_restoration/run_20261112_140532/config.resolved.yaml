@@ -1,0 +1,4 @@
+seed: 42
+size: 256
+per_class: 50
+noise_before_resize: true

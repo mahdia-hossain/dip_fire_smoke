@@ -1,0 +1,5 @@
+task,degradation,method,psnr,ssim,edge_f1
+noise,gauss_10,bilateral,37.1091,0.9317,0.8735
+noise,saltpepper_2pct,median_3,31.5386,0.9026,0.8127
+noise,gauss_25,bilateral,33.4554,0.8718,0.8669
+noise,saltpepper_5pct,median_3,30.1112,0.8438,0.807

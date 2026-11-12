@@ -1,0 +1,21 @@
+panel,image
+salt & pepper 5%,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+average_3,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+weighted_avg_3,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+gaussian_3,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+median_3,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+min_3,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+max_3,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+midpoint_3,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+bilateral,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+nlmeans,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+Gaussian noise σ25,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+average_3,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+weighted_avg_3,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+gaussian_3,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+median_3,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+min_3,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+max_3,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+midpoint_3,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+bilateral,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg
+nlmeans,data/raw/fireandsmoke/part1/valid/images/FireSmokeVideo299_f171_jpg.rf.fda8cbb032008eced6d1eaf8ce75e168.jpg

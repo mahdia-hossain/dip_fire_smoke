@@ -1,0 +1,12 @@
+2026-11-11 21:14:49,806 | 900 images, 0 already done, 900 to do (2 worker processes)
+2026-11-11 21:14:51,023 | ...200/900  6 ms/image  eta 0.1 min
+2026-11-11 21:14:51,379 | ...400/900  4 ms/image  eta 0.0 min
+2026-11-11 21:14:51,735 | ...600/900  3 ms/image  eta 0.0 min
+2026-11-11 21:14:52,186 | ...800/900  3 ms/image  eta 0.0 min
+2026-11-11 21:14:52,420 | ...900/900  3 ms/image  eta 0.0 min
+2026-11-11 21:14:52,557 | Chosen dark threshold 71.4 (balanced accuracy 0.8697)
+ factor  mean_grey  share_below_thr
+   1.00   101.0614           0.2189
+   0.50    50.5307           0.9189
+   0.35    35.3715           0.9978
+2026-11-11 21:14:53,872 | Done.

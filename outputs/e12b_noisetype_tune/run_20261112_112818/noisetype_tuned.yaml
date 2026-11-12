@@ -1,0 +1,6 @@
+# Chosen by E12b on validation records: outputs/e12b_noisetype_tune/run_20261112_112818
+preprocess:
+  adaptive:
+    sigma_thr: 2.56
+    points_thr: 0.009888
+    heavy_thr: 10.25

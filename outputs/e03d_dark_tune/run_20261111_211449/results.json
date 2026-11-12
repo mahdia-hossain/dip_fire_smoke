@@ -1,0 +1,24 @@
+{
+  "metrics": {
+    "dark_thr": 71.4,
+    "balanced_accuracy": 0.8697222222222223,
+    "levels": [
+      {
+        "factor": 1.0,
+        "mean_grey": 101.0614,
+        "share_below_thr": 0.2189
+      },
+      {
+        "factor": 0.5,
+        "mean_grey": 50.5307,
+        "share_below_thr": 0.9189
+      },
+      {
+        "factor": 0.35,
+        "mean_grey": 35.3715,
+        "share_below_thr": 0.9978
+      }
+    ]
+  },
+  "records_file": "records.csv"
+}
