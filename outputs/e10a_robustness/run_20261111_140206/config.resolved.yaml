@@ -1,0 +1,11 @@
+mode: robust
+models:
+- C
+- CR
+- D
+- E
+- EM
+- CM
+- EMD
+seed: 42
+smoke: false

@@ -1,0 +1,92 @@
+2026-11-11 14:26:07,570 | D_mobilevit_concat: run run_20261110_150015
+2026-11-11 14:27:12,789 |   val      off=none       macro-F1 0.9132  smoke recall 0.8944
+2026-11-11 14:27:48,503 |   val      off=colour     macro-F1 0.9130  smoke recall 0.8933
+2026-11-11 14:28:24,194 |   val      off=brightness macro-F1 0.9126  smoke recall 0.8923
+2026-11-11 14:28:58,782 |   val      off=texture    macro-F1 0.9137  smoke recall 0.8970
+2026-11-11 14:29:33,354 |   val      off=haze       macro-F1 0.9140  smoke recall 0.8949
+2026-11-11 14:30:08,161 |   val      off=edges      macro-F1 0.9126  smoke recall 0.8902
+2026-11-11 14:30:46,851 |   test_in  off=none       macro-F1 0.8912  smoke recall 0.8067
+2026-11-11 14:31:23,467 |   test_in  off=colour     macro-F1 0.8910  smoke recall 0.8047
+2026-11-11 14:31:59,949 |   test_in  off=brightness macro-F1 0.8916  smoke recall 0.8057
+2026-11-11 14:32:38,112 |   test_in  off=texture    macro-F1 0.8913  smoke recall 0.8093
+2026-11-11 14:33:15,936 |   test_in  off=haze       macro-F1 0.8906  smoke recall 0.8047
+2026-11-11 14:33:54,101 |   test_in  off=edges      macro-F1 0.8906  smoke recall 0.8057
+2026-11-11 14:34:13,457 |   test_ext off=none       macro-F1 0.8981  smoke recall 0.8469
+2026-11-11 14:34:32,899 |   test_ext off=colour     macro-F1 0.8974  smoke recall 0.8439
+2026-11-11 14:34:52,281 |   test_ext off=brightness macro-F1 0.8978  smoke recall 0.8449
+2026-11-11 14:35:11,732 |   test_ext off=texture    macro-F1 0.8981  smoke recall 0.8469
+2026-11-11 14:35:31,197 |   test_ext off=haze       macro-F1 0.8981  smoke recall 0.8469
+2026-11-11 14:35:50,647 |   test_ext off=edges      macro-F1 0.8967  smoke recall 0.8449
+2026-11-11 14:35:50,804 | E_mobilevit_diptokens: run run_20261110_154514
+2026-11-11 14:36:27,521 |   val      off=none       macro-F1 0.9130  smoke recall 0.8918
+2026-11-11 14:37:02,745 |   val      off=colour     macro-F1 0.9085  smoke recall 0.8866
+2026-11-11 14:37:37,849 |   val      off=brightness macro-F1 0.9138  smoke recall 0.8923
+2026-11-11 14:38:12,670 |   val      off=texture    macro-F1 0.9127  smoke recall 0.8954
+2026-11-11 14:38:47,458 |   val      off=haze       macro-F1 0.9141  smoke recall 0.8939
+2026-11-11 14:39:22,019 |   val      off=edges      macro-F1 0.9116  smoke recall 0.8881
+2026-11-11 14:39:58,060 |   test_in  off=none       macro-F1 0.8945  smoke recall 0.8264
+2026-11-11 14:40:34,352 |   test_in  off=colour     macro-F1 0.8916  smoke recall 0.7979
+2026-11-11 14:41:10,567 |   test_in  off=brightness macro-F1 0.8926  smoke recall 0.8192
+2026-11-11 14:41:46,864 |   test_in  off=texture    macro-F1 0.8912  smoke recall 0.8130
+2026-11-11 14:42:23,233 |   test_in  off=haze       macro-F1 0.8943  smoke recall 0.8238
+2026-11-11 14:42:59,356 |   test_in  off=edges      macro-F1 0.8929  smoke recall 0.8295
+2026-11-11 14:43:17,833 |   test_ext off=none       macro-F1 0.8781  smoke recall 0.8741
+2026-11-11 14:43:36,474 |   test_ext off=colour     macro-F1 0.8730  smoke recall 0.8701
+2026-11-11 14:43:55,176 |   test_ext off=brightness macro-F1 0.8735  smoke recall 0.8630
+2026-11-11 14:44:13,899 |   test_ext off=texture    macro-F1 0.8650  smoke recall 0.8792
+2026-11-11 14:44:32,478 |   test_ext off=haze       macro-F1 0.8716  smoke recall 0.8681
+2026-11-11 14:44:51,223 |   test_ext off=edges      macro-F1 0.8670  smoke recall 0.8691
+2026-11-11 14:44:51,498 | EM_mobilevit_diptokens_maps: run run_20261110_172623
+2026-11-11 14:45:26,131 |   val      off=none       macro-F1 0.9158  smoke recall 0.9069
+2026-11-11 14:46:01,116 |   val      off=colour     macro-F1 0.9175  smoke recall 0.9043
+2026-11-11 14:46:35,971 |   val      off=brightness macro-F1 0.9166  smoke recall 0.9105
+2026-11-11 14:47:10,695 |   val      off=texture    macro-F1 0.9148  smoke recall 0.9100
+2026-11-11 14:47:45,525 |   val      off=haze       macro-F1 0.9171  smoke recall 0.9095
+2026-11-11 14:48:20,521 |   val      off=edges      macro-F1 0.9142  smoke recall 0.8985
+2026-11-11 14:48:56,500 |   test_in  off=none       macro-F1 0.8888  smoke recall 0.8130
+2026-11-11 14:49:32,663 |   test_in  off=colour     macro-F1 0.8909  smoke recall 0.7938
+2026-11-11 14:50:08,850 |   test_in  off=brightness macro-F1 0.8874  smoke recall 0.8093
+2026-11-11 14:50:45,019 |   test_in  off=texture    macro-F1 0.8882  smoke recall 0.8223
+2026-11-11 14:51:20,936 |   test_in  off=haze       macro-F1 0.8888  smoke recall 0.8155
+2026-11-11 14:51:57,144 |   test_in  off=edges      macro-F1 0.8862  smoke recall 0.8145
+2026-11-11 14:52:15,754 |   test_ext off=none       macro-F1 0.8884  smoke recall 0.8812
+2026-11-11 14:52:34,382 |   test_ext off=colour     macro-F1 0.8852  smoke recall 0.8771
+2026-11-11 14:52:52,989 |   test_ext off=brightness macro-F1 0.8865  smoke recall 0.8792
+2026-11-11 14:53:11,695 |   test_ext off=texture    macro-F1 0.8883  smoke recall 0.8832
+2026-11-11 14:53:30,288 |   test_ext off=haze       macro-F1 0.8859  smoke recall 0.8792
+2026-11-11 14:53:50,331 |   test_ext off=edges      macro-F1 0.8880  smoke recall 0.8862
+2026-11-11 14:53:50,545 | EMD_mobilevit_diptokens_dipmaps: run run_20261111_122411
+2026-11-11 14:54:33,209 |   val      off=none       macro-F1 0.9102  smoke recall 0.8777
+2026-11-11 14:55:07,726 |   val      off=colour     macro-F1 0.9064  smoke recall 0.8647
+2026-11-11 14:55:42,595 |   val      off=brightness macro-F1 0.9095  smoke recall 0.8736
+2026-11-11 14:56:17,377 |   val      off=texture    macro-F1 0.9104  smoke recall 0.8793
+2026-11-11 14:56:52,113 |   val      off=haze       macro-F1 0.9100  smoke recall 0.8798
+2026-11-11 14:57:26,863 |   val      off=edges      macro-F1 0.9111  smoke recall 0.8772
+2026-11-11 14:58:03,167 |   test_in  off=none       macro-F1 0.8871  smoke recall 0.7808
+2026-11-11 14:58:39,542 |   test_in  off=colour     macro-F1 0.8888  smoke recall 0.7632
+2026-11-11 14:59:15,614 |   test_in  off=brightness macro-F1 0.8860  smoke recall 0.7679
+2026-11-11 14:59:52,040 |   test_in  off=texture    macro-F1 0.8894  smoke recall 0.7938
+2026-11-11 15:00:28,433 |   test_in  off=haze       macro-F1 0.8862  smoke recall 0.7845
+2026-11-11 15:01:04,684 |   test_in  off=edges      macro-F1 0.8873  smoke recall 0.7876
+2026-11-11 15:01:23,267 |   test_ext off=none       macro-F1 0.8827  smoke recall 0.8419
+2026-11-11 15:01:42,130 |   test_ext off=colour     macro-F1 0.8764  smoke recall 0.8238
+2026-11-11 15:02:01,000 |   test_ext off=brightness macro-F1 0.8777  smoke recall 0.8278
+2026-11-11 15:02:19,786 |   test_ext off=texture    macro-F1 0.8820  smoke recall 0.8429
+2026-11-11 15:02:38,336 |   test_ext off=haze       macro-F1 0.8790  smoke recall 0.8439
+2026-11-11 15:02:57,055 |   test_ext off=edges      macro-F1 0.8795  smoke recall 0.8419
+2026-11-11 15:02:58,779 | Macro-F1 change when one hint group is switched off:
+hint_group_off                            brightness  colour   edges    haze  texture
+model                           split                                                
+D_mobilevit_concat              test_ext     -0.0003 -0.0007 -0.0014  0.0000   0.0000
+                                test_in       0.0004 -0.0002 -0.0006 -0.0006   0.0001
+                                val          -0.0006 -0.0002 -0.0006  0.0008   0.0005
+EMD_mobilevit_diptokens_dipmaps test_ext     -0.0050 -0.0063 -0.0032 -0.0037  -0.0007
+                                test_in      -0.0011  0.0017  0.0002 -0.0009   0.0023
+                                val          -0.0007 -0.0038  0.0009 -0.0002   0.0002
+EM_mobilevit_diptokens_maps     test_ext     -0.0019 -0.0032 -0.0004 -0.0025  -0.0001
+                                test_in      -0.0014  0.0021 -0.0026  0.0000  -0.0006
+                                val           0.0008  0.0017 -0.0016  0.0013  -0.0010
+E_mobilevit_diptokens           test_ext     -0.0046 -0.0051 -0.0111 -0.0065  -0.0131
+                                test_in      -0.0019 -0.0029 -0.0016 -0.0002  -0.0033
+                                val           0.0008 -0.0045 -0.0014  0.0011  -0.0003
+2026-11-11 15:02:59,324 | Done.

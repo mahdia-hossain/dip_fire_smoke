@@ -1,0 +1,455 @@
+{
+  "table": [
+    {
+      "model": "CR_mobilevit_rawinput",
+      "condition": "clean",
+      "macro_f1": 0.8995,
+      "accuracy": 0.8994,
+      "fire_recall": 0.9585,
+      "smoke_recall": 0.863,
+      "false_alarm_rate": 0.1202
+    },
+    {
+      "model": "CR_mobilevit_rawinput",
+      "condition": "dark",
+      "macro_f1": 0.8895,
+      "accuracy": 0.8888,
+      "fire_recall": 0.9021,
+      "smoke_recall": 0.856,
+      "false_alarm_rate": 0.0912
+    },
+    {
+      "model": "CR_mobilevit_rawinput",
+      "condition": "blur",
+      "macro_f1": 0.9062,
+      "accuracy": 0.9062,
+      "fire_recall": 0.9606,
+      "smoke_recall": 0.9013,
+      "false_alarm_rate": 0.1403
+    },
+    {
+      "model": "CR_mobilevit_rawinput",
+      "condition": "jpeg",
+      "macro_f1": 0.8731,
+      "accuracy": 0.8731,
+      "fire_recall": 0.9543,
+      "smoke_recall": 0.8741,
+      "false_alarm_rate": 0.2044
+    },
+    {
+      "model": "CR_mobilevit_rawinput",
+      "condition": "noise5",
+      "macro_f1": 0.8791,
+      "accuracy": 0.8785,
+      "fire_recall": 0.9415,
+      "smoke_recall": 0.7845,
+      "false_alarm_rate": 0.0872
+    },
+    {
+      "model": "CR_mobilevit_rawinput",
+      "condition": "noise10",
+      "macro_f1": 0.797,
+      "accuracy": 0.7984,
+      "fire_recall": 0.8936,
+      "smoke_recall": 0.572,
+      "false_alarm_rate": 0.0661
+    },
+    {
+      "model": "CR_mobilevit_rawinput",
+      "condition": "noise15",
+      "macro_f1": 0.6614,
+      "accuracy": 0.6755,
+      "fire_recall": 0.7574,
+      "smoke_recall": 0.3162,
+      "false_alarm_rate": 0.0441
+    },
+    {
+      "model": "CR_mobilevit_rawinput",
+      "condition": "noise25",
+      "macro_f1": 0.3957,
+      "accuracy": 0.4708,
+      "fire_recall": 0.3755,
+      "smoke_recall": 0.0443,
+      "false_alarm_rate": 0.015
+    },
+    {
+      "model": "CR_mobilevit_rawinput",
+      "condition": "saltpepper2",
+      "macro_f1": 0.6364,
+      "accuracy": 0.6571,
+      "fire_recall": 0.7426,
+      "smoke_recall": 0.2941,
+      "false_alarm_rate": 0.0621
+    },
+    {
+      "model": "CR_mobilevit_rawinput",
+      "condition": "saltpepper5",
+      "macro_f1": 0.4339,
+      "accuracy": 0.4899,
+      "fire_recall": 0.4298,
+      "smoke_recall": 0.0987,
+      "false_alarm_rate": 0.0641
+    },
+    {
+      "model": "CA_mobilevit_adaptive_noiseaug",
+      "condition": "clean",
+      "macro_f1": 0.9002,
+      "accuracy": 0.9,
+      "fire_recall": 0.9702,
+      "smoke_recall": 0.858,
+      "false_alarm_rate": 0.1242
+    },
+    {
+      "model": "CA_mobilevit_adaptive_noiseaug",
+      "condition": "dark",
+      "macro_f1": 0.8678,
+      "accuracy": 0.8663,
+      "fire_recall": 0.8457,
+      "smoke_recall": 0.858,
+      "false_alarm_rate": 0.1062
+    },
+    {
+      "model": "CA_mobilevit_adaptive_noiseaug",
+      "condition": "blur",
+      "macro_f1": 0.8887,
+      "accuracy": 0.8884,
+      "fire_recall": 0.9447,
+      "smoke_recall": 0.8328,
+      "false_alarm_rate": 0.1092
+    },
+    {
+      "model": "CA_mobilevit_adaptive_noiseaug",
+      "condition": "jpeg",
+      "macro_f1": 0.8772,
+      "accuracy": 0.8765,
+      "fire_recall": 0.9532,
+      "smoke_recall": 0.855,
+      "false_alarm_rate": 0.1743
+    },
+    {
+      "model": "CA_mobilevit_adaptive_noiseaug",
+      "condition": "noise5",
+      "macro_f1": 0.8937,
+      "accuracy": 0.8936,
+      "fire_recall": 0.967,
+      "smoke_recall": 0.864,
+      "false_alarm_rate": 0.1463
+    },
+    {
+      "model": "CA_mobilevit_adaptive_noiseaug",
+      "condition": "noise10",
+      "macro_f1": 0.8759,
+      "accuracy": 0.8758,
+      "fire_recall": 0.9596,
+      "smoke_recall": 0.8399,
+      "false_alarm_rate": 0.1673
+    },
+    {
+      "model": "CA_mobilevit_adaptive_noiseaug",
+      "condition": "noise15",
+      "macro_f1": 0.8599,
+      "accuracy": 0.8598,
+      "fire_recall": 0.9543,
+      "smoke_recall": 0.8238,
+      "false_alarm_rate": 0.1934
+    },
+    {
+      "model": "CA_mobilevit_adaptive_noiseaug",
+      "condition": "noise25",
+      "macro_f1": 0.8145,
+      "accuracy": 0.8137,
+      "fire_recall": 0.9138,
+      "smoke_recall": 0.7472,
+      "false_alarm_rate": 0.2144
+    },
+    {
+      "model": "CA_mobilevit_adaptive_noiseaug",
+      "condition": "saltpepper2",
+      "macro_f1": 0.8632,
+      "accuracy": 0.8639,
+      "fire_recall": 0.9702,
+      "smoke_recall": 0.7774,
+      "false_alarm_rate": 0.1503
+    },
+    {
+      "model": "CA_mobilevit_adaptive_noiseaug",
+      "condition": "saltpepper5",
+      "macro_f1": 0.8197,
+      "accuracy": 0.8222,
+      "fire_recall": 0.9574,
+      "smoke_recall": 0.6717,
+      "false_alarm_rate": 0.1553
+    },
+    {
+      "model": "CRN_mobilevit_raw_noiseaug",
+      "condition": "clean",
+      "macro_f1": 0.8974,
+      "accuracy": 0.8973,
+      "fire_recall": 0.9681,
+      "smoke_recall": 0.86,
+      "false_alarm_rate": 0.1323
+    },
+    {
+      "model": "CRN_mobilevit_raw_noiseaug",
+      "condition": "dark",
+      "macro_f1": 0.8776,
+      "accuracy": 0.8762,
+      "fire_recall": 0.8926,
+      "smoke_recall": 0.8681,
+      "false_alarm_rate": 0.1313
+    },
+    {
+      "model": "CRN_mobilevit_raw_noiseaug",
+      "condition": "blur",
+      "macro_f1": 0.8858,
+      "accuracy": 0.886,
+      "fire_recall": 0.9649,
+      "smoke_recall": 0.8973,
+      "false_alarm_rate": 0.1994
+    },
+    {
+      "model": "CRN_mobilevit_raw_noiseaug",
+      "condition": "jpeg",
+      "macro_f1": 0.8859,
+      "accuracy": 0.8857,
+      "fire_recall": 0.9691,
+      "smoke_recall": 0.8681,
+      "false_alarm_rate": 0.1754
+    },
+    {
+      "model": "CRN_mobilevit_raw_noiseaug",
+      "condition": "noise5",
+      "macro_f1": 0.8984,
+      "accuracy": 0.8983,
+      "fire_recall": 0.9681,
+      "smoke_recall": 0.8671,
+      "false_alarm_rate": 0.1363
+    },
+    {
+      "model": "CRN_mobilevit_raw_noiseaug",
+      "condition": "noise10",
+      "macro_f1": 0.8876,
+      "accuracy": 0.8874,
+      "fire_recall": 0.9638,
+      "smoke_recall": 0.854,
+      "false_alarm_rate": 0.1513
+    },
+    {
+      "model": "CRN_mobilevit_raw_noiseaug",
+      "condition": "noise15",
+      "macro_f1": 0.8696,
+      "accuracy": 0.8693,
+      "fire_recall": 0.9543,
+      "smoke_recall": 0.8107,
+      "false_alarm_rate": 0.1523
+    },
+    {
+      "model": "CRN_mobilevit_raw_noiseaug",
+      "condition": "noise25",
+      "macro_f1": 0.8058,
+      "accuracy": 0.8052,
+      "fire_recall": 0.8947,
+      "smoke_recall": 0.6596,
+      "false_alarm_rate": 0.1343
+    },
+    {
+      "model": "CRN_mobilevit_raw_noiseaug",
+      "condition": "saltpepper2",
+      "macro_f1": 0.6857,
+      "accuracy": 0.7021,
+      "fire_recall": 0.8043,
+      "smoke_recall": 0.3938,
+      "false_alarm_rate": 0.0872
+    },
+    {
+      "model": "CRN_mobilevit_raw_noiseaug",
+      "condition": "saltpepper5",
+      "macro_f1": 0.4407,
+      "accuracy": 0.5073,
+      "fire_recall": 0.5372,
+      "smoke_recall": 0.0775,
+      "false_alarm_rate": 0.0932
+    },
+    {
+      "model": "CN_mobilevit_dip_noiseaug",
+      "condition": "clean",
+      "macro_f1": 0.8871,
+      "accuracy": 0.8871,
+      "fire_recall": 0.9532,
+      "smoke_recall": 0.8802,
+      "false_alarm_rate": 0.1683
+    },
+    {
+      "model": "CN_mobilevit_dip_noiseaug",
+      "condition": "dark",
+      "macro_f1": 0.8838,
+      "accuracy": 0.8826,
+      "fire_recall": 0.8915,
+      "smoke_recall": 0.8731,
+      "false_alarm_rate": 0.1162
+    },
+    {
+      "model": "CN_mobilevit_dip_noiseaug",
+      "condition": "blur",
+      "macro_f1": 0.8678,
+      "accuracy": 0.8676,
+      "fire_recall": 0.9436,
+      "smoke_recall": 0.862,
+      "false_alarm_rate": 0.1984
+    },
+    {
+      "model": "CN_mobilevit_dip_noiseaug",
+      "condition": "jpeg",
+      "macro_f1": 0.8612,
+      "accuracy": 0.8615,
+      "fire_recall": 0.9574,
+      "smoke_recall": 0.861,
+      "false_alarm_rate": 0.2285
+    },
+    {
+      "model": "CN_mobilevit_dip_noiseaug",
+      "condition": "noise5",
+      "macro_f1": 0.8815,
+      "accuracy": 0.8816,
+      "fire_recall": 0.9532,
+      "smoke_recall": 0.8852,
+      "false_alarm_rate": 0.1894
+    },
+    {
+      "model": "CN_mobilevit_dip_noiseaug",
+      "condition": "noise10",
+      "macro_f1": 0.8698,
+      "accuracy": 0.87,
+      "fire_recall": 0.95,
+      "smoke_recall": 0.863,
+      "false_alarm_rate": 0.1984
+    },
+    {
+      "model": "CN_mobilevit_dip_noiseaug",
+      "condition": "noise15",
+      "macro_f1": 0.8569,
+      "accuracy": 0.857,
+      "fire_recall": 0.9372,
+      "smoke_recall": 0.8389,
+      "false_alarm_rate": 0.2004
+    },
+    {
+      "model": "CN_mobilevit_dip_noiseaug",
+      "condition": "noise25",
+      "macro_f1": 0.7983,
+      "accuracy": 0.797,
+      "fire_recall": 0.8702,
+      "smoke_recall": 0.7241,
+      "false_alarm_rate": 0.1994
+    },
+    {
+      "model": "CN_mobilevit_dip_noiseaug",
+      "condition": "saltpepper2",
+      "macro_f1": 0.843,
+      "accuracy": 0.8437,
+      "fire_recall": 0.9489,
+      "smoke_recall": 0.7603,
+      "false_alarm_rate": 0.1723
+    },
+    {
+      "model": "CN_mobilevit_dip_noiseaug",
+      "condition": "saltpepper5",
+      "macro_f1": 0.7879,
+      "accuracy": 0.7902,
+      "fire_recall": 0.9085,
+      "smoke_recall": 0.6425,
+      "false_alarm_rate": 0.1743
+    },
+    {
+      "model": "CA3_mobilevit_noisetype_adaptive",
+      "condition": "clean",
+      "macro_f1": 0.9044,
+      "accuracy": 0.9045,
+      "fire_recall": 0.9723,
+      "smoke_recall": 0.8761,
+      "false_alarm_rate": 0.1313
+    },
+    {
+      "model": "CA3_mobilevit_noisetype_adaptive",
+      "condition": "dark",
+      "macro_f1": 0.8647,
+      "accuracy": 0.8628,
+      "fire_recall": 0.8851,
+      "smoke_recall": 0.8338,
+      "false_alarm_rate": 0.1293
+    },
+    {
+      "model": "CA3_mobilevit_noisetype_adaptive",
+      "condition": "blur",
+      "macro_f1": 0.8662,
+      "accuracy": 0.8663,
+      "fire_recall": 0.9553,
+      "smoke_recall": 0.8459,
+      "false_alarm_rate": 0.1974
+    },
+    {
+      "model": "CA3_mobilevit_noisetype_adaptive",
+      "condition": "jpeg",
+      "macro_f1": 0.8862,
+      "accuracy": 0.8864,
+      "fire_recall": 0.9702,
+      "smoke_recall": 0.8771,
+      "false_alarm_rate": 0.1834
+    },
+    {
+      "model": "CA3_mobilevit_noisetype_adaptive",
+      "condition": "noise5",
+      "macro_f1": 0.8991,
+      "accuracy": 0.899,
+      "fire_recall": 0.9702,
+      "smoke_recall": 0.8761,
+      "false_alarm_rate": 0.1453
+    },
+    {
+      "model": "CA3_mobilevit_noisetype_adaptive",
+      "condition": "noise10",
+      "macro_f1": 0.8888,
+      "accuracy": 0.8888,
+      "fire_recall": 0.9681,
+      "smoke_recall": 0.859,
+      "false_alarm_rate": 0.1563
+    },
+    {
+      "model": "CA3_mobilevit_noisetype_adaptive",
+      "condition": "noise15",
+      "macro_f1": 0.8697,
+      "accuracy": 0.8697,
+      "fire_recall": 0.9596,
+      "smoke_recall": 0.8278,
+      "false_alarm_rate": 0.1733
+    },
+    {
+      "model": "CA3_mobilevit_noisetype_adaptive",
+      "condition": "noise25",
+      "macro_f1": 0.8053,
+      "accuracy": 0.8042,
+      "fire_recall": 0.8979,
+      "smoke_recall": 0.7019,
+      "false_alarm_rate": 0.1824
+    },
+    {
+      "model": "CA3_mobilevit_noisetype_adaptive",
+      "condition": "saltpepper2",
+      "macro_f1": 0.8737,
+      "accuracy": 0.8751,
+      "fire_recall": 0.9755,
+      "smoke_recall": 0.7583,
+      "false_alarm_rate": 0.1032
+    },
+    {
+      "model": "CA3_mobilevit_noisetype_adaptive",
+      "condition": "saltpepper5",
+      "macro_f1": 0.8083,
+      "accuracy": 0.8124,
+      "fire_recall": 0.9702,
+      "smoke_recall": 0.6385,
+      "false_alarm_rate": 0.1633
+    }
+  ],
+  "records_file": "records.csv"
+}

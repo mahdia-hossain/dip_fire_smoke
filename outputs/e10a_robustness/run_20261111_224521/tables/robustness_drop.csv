@@ -1,0 +1,6 @@
+model,dark,blur,jpeg,noise5,noise10,noise15,noise25
+CA_mobilevit_adaptive_noiseaug,-0.0324,-0.0115,-0.023,-0.0065,-0.0243,-0.0403,-0.0857
+CN_mobilevit_dip_noiseaug,-0.0033,-0.0193,-0.0259,-0.0056,-0.0173,-0.0302,-0.0888
+CRN_mobilevit_raw_noiseaug,-0.0198,-0.0116,-0.0115,0.001,-0.0098,-0.0278,-0.0916
+CR_mobilevit_rawinput,-0.01,0.0067,-0.0264,-0.0204,-0.1025,-0.2381,-0.5038
+C_mobilevit,0.0113,-0.0051,-0.0554,-0.0063,-0.0635,-0.1566,-0.3376

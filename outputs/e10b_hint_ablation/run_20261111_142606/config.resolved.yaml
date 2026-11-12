@@ -1,0 +1,8 @@
+mode: ablate
+models:
+- D
+- E
+- EM
+- EMD
+seed: 42
+smoke: false

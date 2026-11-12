@@ -1,0 +1,62 @@
+2026-11-11 22:45:23,816 | C_mobilevit: run run_20261110_141639
+2026-11-11 22:45:58,341 |   clean  macro-F1 0.8833  fire recall 0.9734
+2026-11-11 22:46:34,322 |   dark   macro-F1 0.8946  fire recall 0.9447
+2026-11-11 22:47:08,881 |   blur   macro-F1 0.8782  fire recall 0.9702
+2026-11-11 22:47:44,121 |   jpeg   macro-F1 0.8279  fire recall 0.9819
+2026-11-12 10:16:35,646 | C_mobilevit: run run_20261110_141639
+2026-11-12 10:17:40,759 |   clean  macro-F1 0.8833  fire recall 0.9734
+2026-11-12 10:20:28,546 | C_mobilevit: run run_20261110_141639
+2026-11-12 10:21:15,897 |   clean  macro-F1 0.8833  fire recall 0.9734
+2026-11-12 10:21:51,546 |   dark   macro-F1 0.8946  fire recall 0.9447
+2026-11-12 10:22:26,601 |   blur   macro-F1 0.8782  fire recall 0.9702
+2026-11-12 10:23:02,611 |   jpeg   macro-F1 0.8279  fire recall 0.9819
+2026-11-12 10:23:49,159 |   noise5 macro-F1 0.8770  fire recall 0.9638
+2026-11-12 10:24:38,068 |   noise10 macro-F1 0.8198  fire recall 0.9617
+2026-11-12 10:25:27,917 |   noise15 macro-F1 0.7267  fire recall 0.9351
+2026-11-12 10:26:16,018 |   noise25 macro-F1 0.5457  fire recall 0.7936
+2026-11-12 10:26:16,171 | CR_mobilevit_rawinput: run run_20261111_112855
+2026-11-12 10:27:23,889 |   clean  macro-F1 0.8995  fire recall 0.9585
+2026-11-12 10:27:57,448 |   dark   macro-F1 0.8895  fire recall 0.9021
+2026-11-12 10:28:29,838 |   blur   macro-F1 0.9062  fire recall 0.9606
+2026-11-12 10:29:03,641 |   jpeg   macro-F1 0.8731  fire recall 0.9543
+2026-11-12 10:29:48,955 |   noise5 macro-F1 0.8791  fire recall 0.9415
+2026-11-12 10:30:34,085 |   noise10 macro-F1 0.7970  fire recall 0.8936
+2026-11-12 10:31:19,136 |   noise15 macro-F1 0.6614  fire recall 0.7574
+2026-11-12 10:32:04,029 |   noise25 macro-F1 0.3957  fire recall 0.3755
+2026-11-12 10:32:04,178 | CA_mobilevit_adaptive_noiseaug: run run_20261111_153248
+2026-11-12 10:32:36,553 |   clean  macro-F1 0.9002  fire recall 0.9702
+2026-11-12 10:33:10,454 |   dark   macro-F1 0.8678  fire recall 0.8457
+2026-11-12 10:33:43,268 |   blur   macro-F1 0.8887  fire recall 0.9447
+2026-11-12 10:34:17,092 |   jpeg   macro-F1 0.8772  fire recall 0.9532
+2026-11-12 10:35:02,985 |   noise5 macro-F1 0.8937  fire recall 0.9670
+2026-11-12 10:35:49,456 |   noise10 macro-F1 0.8759  fire recall 0.9596
+2026-11-12 10:36:36,189 |   noise15 macro-F1 0.8599  fire recall 0.9543
+2026-11-12 10:37:23,069 |   noise25 macro-F1 0.8145  fire recall 0.9138
+2026-11-12 10:37:23,301 | CRN_mobilevit_raw_noiseaug: run run_20261111_164258
+2026-11-12 10:37:55,407 |   clean  macro-F1 0.8974  fire recall 0.9681
+2026-11-12 10:38:29,302 |   dark   macro-F1 0.8776  fire recall 0.8926
+2026-11-12 10:39:01,868 |   blur   macro-F1 0.8858  fire recall 0.9649
+2026-11-12 10:39:35,261 |   jpeg   macro-F1 0.8859  fire recall 0.9691
+2026-11-12 10:40:20,180 |   noise5 macro-F1 0.8984  fire recall 0.9681
+2026-11-12 10:41:05,779 |   noise10 macro-F1 0.8876  fire recall 0.9638
+2026-11-12 10:41:51,047 |   noise15 macro-F1 0.8696  fire recall 0.9543
+2026-11-12 10:42:36,430 |   noise25 macro-F1 0.8058  fire recall 0.8947
+2026-11-12 10:42:36,567 | CN_mobilevit_dip_noiseaug: run run_20261111_174750
+2026-11-12 10:43:10,214 |   clean  macro-F1 0.8871  fire recall 0.9532
+2026-11-12 10:43:45,730 |   dark   macro-F1 0.8838  fire recall 0.8915
+2026-11-12 10:44:19,903 |   blur   macro-F1 0.8678  fire recall 0.9436
+2026-11-12 10:44:54,997 |   jpeg   macro-F1 0.8612  fire recall 0.9574
+2026-11-12 10:45:41,743 |   noise5 macro-F1 0.8815  fire recall 0.9532
+2026-11-12 10:46:28,235 |   noise10 macro-F1 0.8698  fire recall 0.9500
+2026-11-12 10:47:14,833 |   noise15 macro-F1 0.8569  fire recall 0.9372
+2026-11-12 10:48:01,691 |   noise25 macro-F1 0.7983  fire recall 0.8702
+2026-11-12 10:48:01,694 | skip CA2: No finished run of model CA2 with seed 42 under E:\dip_fire_smoke\outputs\e07g_mobilevit_fulladaptive_noiseaug
+2026-11-12 10:48:02,928 | Macro-F1 on DeepQuestAI by condition:
+condition                        clean    dark    blur    jpeg  noise5  noise10  noise15  noise25
+model                                                                                            
+CA_mobilevit_adaptive_noiseaug  0.9002  0.8678  0.8887  0.8772  0.8937   0.8759   0.8599   0.8145
+CN_mobilevit_dip_noiseaug       0.8871  0.8838  0.8678  0.8612  0.8815   0.8698   0.8569   0.7983
+CRN_mobilevit_raw_noiseaug      0.8974  0.8776  0.8858  0.8859  0.8984   0.8876   0.8696   0.8058
+CR_mobilevit_rawinput           0.8995  0.8895  0.9062  0.8731  0.8791   0.7970   0.6614   0.3957
+C_mobilevit                     0.8833  0.8946  0.8782  0.8279  0.8770   0.8198   0.7267   0.5457
+2026-11-12 10:48:03,626 | Done.

@@ -1,0 +1,64 @@
+2026-11-12 15:16:19,155 | CR_mobilevit_rawinput: run run_20261111_112855
+2026-11-12 15:16:51,767 |   clean  macro-F1 0.8995  fire recall 0.9585
+2026-11-12 15:17:25,609 |   dark   macro-F1 0.8895  fire recall 0.9021
+2026-11-12 15:17:58,110 |   blur   macro-F1 0.9062  fire recall 0.9606
+2026-11-12 15:18:31,401 |   jpeg   macro-F1 0.8731  fire recall 0.9543
+2026-11-12 15:19:16,650 |   noise5 macro-F1 0.8791  fire recall 0.9415
+2026-11-12 15:20:01,652 |   noise10 macro-F1 0.7970  fire recall 0.8936
+2026-11-12 15:20:46,619 |   noise15 macro-F1 0.6614  fire recall 0.7574
+2026-11-12 15:21:31,737 |   noise25 macro-F1 0.3957  fire recall 0.3755
+2026-11-12 15:22:05,787 |   saltpepper2 macro-F1 0.6364  fire recall 0.7426
+2026-11-12 15:22:39,866 |   saltpepper5 macro-F1 0.4339  fire recall 0.4298
+2026-11-12 15:22:39,993 | CA_mobilevit_adaptive_noiseaug: run run_20261111_153248
+2026-11-12 15:23:12,600 |   clean  macro-F1 0.9002  fire recall 0.9702
+2026-11-12 15:23:46,449 |   dark   macro-F1 0.8678  fire recall 0.8457
+2026-11-12 15:24:19,346 |   blur   macro-F1 0.8887  fire recall 0.9447
+2026-11-12 15:24:53,053 |   jpeg   macro-F1 0.8772  fire recall 0.9532
+2026-11-12 15:25:38,947 |   noise5 macro-F1 0.8937  fire recall 0.9670
+2026-11-12 15:26:25,237 |   noise10 macro-F1 0.8759  fire recall 0.9596
+2026-11-12 15:27:11,750 |   noise15 macro-F1 0.8599  fire recall 0.9543
+2026-11-12 15:27:57,964 |   noise25 macro-F1 0.8145  fire recall 0.9138
+2026-11-12 15:28:33,522 |   saltpepper2 macro-F1 0.8632  fire recall 0.9702
+2026-11-12 15:29:09,235 |   saltpepper5 macro-F1 0.8197  fire recall 0.9574
+2026-11-12 15:29:09,354 | CRN_mobilevit_raw_noiseaug: run run_20261111_164258
+2026-11-12 15:29:41,284 |   clean  macro-F1 0.8974  fire recall 0.9681
+2026-11-12 15:30:15,165 |   dark   macro-F1 0.8776  fire recall 0.8926
+2026-11-12 15:30:47,601 |   blur   macro-F1 0.8858  fire recall 0.9649
+2026-11-12 15:31:20,939 |   jpeg   macro-F1 0.8859  fire recall 0.9691
+2026-11-12 15:32:05,808 |   noise5 macro-F1 0.8984  fire recall 0.9681
+2026-11-12 15:32:50,628 |   noise10 macro-F1 0.8876  fire recall 0.9638
+2026-11-12 15:33:35,745 |   noise15 macro-F1 0.8696  fire recall 0.9543
+2026-11-12 15:34:21,176 |   noise25 macro-F1 0.8058  fire recall 0.8947
+2026-11-12 15:34:55,233 |   saltpepper2 macro-F1 0.6857  fire recall 0.8043
+2026-11-12 15:35:29,671 |   saltpepper5 macro-F1 0.4407  fire recall 0.5372
+2026-11-12 15:35:29,886 | CN_mobilevit_dip_noiseaug: run run_20261111_174750
+2026-11-12 15:36:02,996 |   clean  macro-F1 0.8871  fire recall 0.9532
+2026-11-12 15:36:37,721 |   dark   macro-F1 0.8838  fire recall 0.8915
+2026-11-12 15:37:11,468 |   blur   macro-F1 0.8678  fire recall 0.9436
+2026-11-12 15:37:46,119 |   jpeg   macro-F1 0.8612  fire recall 0.9574
+2026-11-12 15:38:32,149 |   noise5 macro-F1 0.8815  fire recall 0.9532
+2026-11-12 15:39:18,437 |   noise10 macro-F1 0.8698  fire recall 0.9500
+2026-11-12 15:40:04,636 |   noise15 macro-F1 0.8569  fire recall 0.9372
+2026-11-12 15:40:50,888 |   noise25 macro-F1 0.7983  fire recall 0.8702
+2026-11-12 15:41:26,174 |   saltpepper2 macro-F1 0.8430  fire recall 0.9489
+2026-11-12 15:42:01,480 |   saltpepper5 macro-F1 0.7879  fire recall 0.9085
+2026-11-12 15:42:01,627 | CA3_mobilevit_noisetype_adaptive: run run_20261112_140818
+2026-11-12 15:42:34,108 |   clean  macro-F1 0.8912  fire recall 0.9660
+2026-11-12 15:43:07,897 |   dark   macro-F1 0.8739  fire recall 0.8426
+2026-11-12 15:43:40,533 |   blur   macro-F1 0.8809  fire recall 0.9383
+2026-11-12 15:44:14,196 |   jpeg   macro-F1 0.8673  fire recall 0.9479
+2026-11-12 15:45:00,157 |   noise5 macro-F1 0.8870  fire recall 0.9660
+2026-11-12 15:45:47,157 |   noise10 macro-F1 0.8751  fire recall 0.9606
+2026-11-12 15:46:33,887 |   noise15 macro-F1 0.8560  fire recall 0.9511
+2026-11-12 15:47:20,657 |   noise25 macro-F1 0.7628  fire recall 0.8915
+2026-11-12 15:47:56,424 |   saltpepper2 macro-F1 0.8408  fire recall 0.9787
+2026-11-12 15:48:32,105 |   saltpepper5 macro-F1 0.7907  fire recall 0.9670
+2026-11-12 15:48:32,914 | Macro-F1 on DeepQuestAI by condition:
+condition                          clean    dark    blur    jpeg  noise5  noise10  noise15  noise25  saltpepper2  saltpepper5
+model                                                                                                                        
+CA3_mobilevit_noisetype_adaptive  0.8912  0.8739  0.8809  0.8673  0.8870   0.8751   0.8560   0.7628       0.8408       0.7907
+CA_mobilevit_adaptive_noiseaug    0.9002  0.8678  0.8887  0.8772  0.8937   0.8759   0.8599   0.8145       0.8632       0.8197
+CN_mobilevit_dip_noiseaug         0.8871  0.8838  0.8678  0.8612  0.8815   0.8698   0.8569   0.7983       0.8430       0.7879
+CRN_mobilevit_raw_noiseaug        0.8974  0.8776  0.8858  0.8859  0.8984   0.8876   0.8696   0.8058       0.6857       0.4407
+CR_mobilevit_rawinput             0.8995  0.8895  0.9062  0.8731  0.8791   0.7970   0.6614   0.3957       0.6364       0.4339
+2026-11-12 15:48:33,464 | Done.

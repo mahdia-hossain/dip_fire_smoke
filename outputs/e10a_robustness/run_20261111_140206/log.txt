@@ -1,0 +1,53 @@
+2026-11-11 14:02:08,172 | C_mobilevit: run run_20261110_141639
+2026-11-11 14:02:43,825 |   clean  macro-F1 0.8833  fire recall 0.9734
+2026-11-11 14:03:20,064 |   dark   macro-F1 0.8946  fire recall 0.9447
+2026-11-11 14:03:55,936 |   blur   macro-F1 0.8782  fire recall 0.9702
+2026-11-11 14:04:43,975 |   noise  macro-F1 0.7267  fire recall 0.9351
+2026-11-11 14:05:26,202 |   jpeg   macro-F1 0.8279  fire recall 0.9819
+2026-11-11 14:05:26,352 | CR_mobilevit_rawinput: run run_20261111_112855
+2026-11-11 14:06:00,012 |   clean  macro-F1 0.8995  fire recall 0.9585
+2026-11-11 14:06:34,788 |   dark   macro-F1 0.8895  fire recall 0.9021
+2026-11-11 14:07:10,081 |   blur   macro-F1 0.9062  fire recall 0.9606
+2026-11-11 14:08:03,204 |   noise  macro-F1 0.6614  fire recall 0.7574
+2026-11-11 14:08:38,738 |   jpeg   macro-F1 0.8731  fire recall 0.9543
+2026-11-11 14:08:38,897 | D_mobilevit_concat: run run_20261110_150015
+2026-11-11 14:09:14,458 |   clean  macro-F1 0.8981  fire recall 0.9574
+2026-11-11 14:09:52,417 |   dark   macro-F1 0.8844  fire recall 0.8713
+2026-11-11 14:10:41,415 |   blur   macro-F1 0.8905  fire recall 0.9372
+2026-11-11 14:11:43,493 |   noise  macro-F1 0.6970  fire recall 0.7926
+2026-11-11 14:12:24,947 |   jpeg   macro-F1 0.8857  fire recall 0.9564
+2026-11-11 14:12:25,125 | E_mobilevit_diptokens: run run_20261110_154514
+2026-11-11 14:13:06,905 |   clean  macro-F1 0.8781  fire recall 0.9521
+2026-11-11 14:13:50,890 |   dark   macro-F1 0.8501  fire recall 0.8649
+2026-11-11 14:14:30,800 |   blur   macro-F1 0.8625  fire recall 0.9277
+2026-11-11 14:15:24,149 |   noise  macro-F1 0.6855  fire recall 0.8468
+2026-11-11 14:16:05,023 |   jpeg   macro-F1 0.8497  fire recall 0.9383
+2026-11-11 14:16:05,283 | EM_mobilevit_diptokens_maps: run run_20261110_172623
+2026-11-11 14:16:54,582 |   clean  macro-F1 0.8884  fire recall 0.9628
+2026-11-11 14:17:39,618 |   dark   macro-F1 0.8631  fire recall 0.8617
+2026-11-11 14:18:17,309 |   blur   macro-F1 0.8625  fire recall 0.9713
+2026-11-11 14:19:05,044 |   noise  macro-F1 0.6708  fire recall 0.8979
+2026-11-11 14:19:40,817 |   jpeg   macro-F1 0.8533  fire recall 0.9564
+2026-11-11 14:19:40,990 | CM_mobilevit_maps: run run_20261111_102345
+2026-11-11 14:20:15,518 |   clean  macro-F1 0.8753  fire recall 0.9574
+2026-11-11 14:20:51,418 |   dark   macro-F1 0.8656  fire recall 0.8894
+2026-11-11 14:21:26,418 |   blur   macro-F1 0.8662  fire recall 0.9649
+2026-11-11 14:22:13,745 |   noise  macro-F1 0.6542  fire recall 0.8372
+2026-11-11 14:22:50,120 |   jpeg   macro-F1 0.8578  fire recall 0.9585
+2026-11-11 14:22:50,324 | EMD_mobilevit_diptokens_dipmaps: run run_20261111_122411
+2026-11-11 14:23:24,786 |   clean  macro-F1 0.8827  fire recall 0.9404
+2026-11-11 14:24:00,978 |   dark   macro-F1 0.8430  fire recall 0.8000
+2026-11-11 14:24:36,261 |   blur   macro-F1 0.8770  fire recall 0.9521
+2026-11-11 14:25:23,533 |   noise  macro-F1 0.6606  fire recall 0.8021
+2026-11-11 14:25:59,156 |   jpeg   macro-F1 0.8638  fire recall 0.9330
+2026-11-11 14:25:59,906 | Macro-F1 on DeepQuestAI by condition:
+condition                         clean    dark    blur   noise    jpeg
+model                                                                  
+CM_mobilevit_maps                0.8753  0.8656  0.8662  0.6542  0.8578
+CR_mobilevit_rawinput            0.8995  0.8895  0.9062  0.6614  0.8731
+C_mobilevit                      0.8833  0.8946  0.8782  0.7267  0.8279
+D_mobilevit_concat               0.8981  0.8844  0.8905  0.6970  0.8857
+EMD_mobilevit_diptokens_dipmaps  0.8827  0.8430  0.8770  0.6606  0.8638
+EM_mobilevit_diptokens_maps      0.8884  0.8631  0.8625  0.6708  0.8533
+E_mobilevit_diptokens            0.8781  0.8501  0.8625  0.6855  0.8497
+2026-11-11 14:26:00,518 | Done.

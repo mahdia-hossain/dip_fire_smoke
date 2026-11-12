@@ -1,0 +1,725 @@
+{
+  "table": [
+    {
+      "model": "D_mobilevit_concat",
+      "split": "val",
+      "hint_group_off": "none",
+      "macro_f1": 0.9132,
+      "fire_recall": 0.9546,
+      "smoke_recall": 0.8944,
+      "false_alarm_rate": 0.0535,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "val",
+      "hint_group_off": "colour",
+      "macro_f1": 0.913,
+      "fire_recall": 0.955,
+      "smoke_recall": 0.8933,
+      "false_alarm_rate": 0.0535,
+      "macro_f1_drop": -0.0002
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "val",
+      "hint_group_off": "brightness",
+      "macro_f1": 0.9126,
+      "fire_recall": 0.9548,
+      "smoke_recall": 0.8923,
+      "false_alarm_rate": 0.0535,
+      "macro_f1_drop": -0.0006
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "val",
+      "hint_group_off": "texture",
+      "macro_f1": 0.9137,
+      "fire_recall": 0.9544,
+      "smoke_recall": 0.897,
+      "false_alarm_rate": 0.0552,
+      "macro_f1_drop": 0.0005
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "val",
+      "hint_group_off": "haze",
+      "macro_f1": 0.914,
+      "fire_recall": 0.9553,
+      "smoke_recall": 0.8949,
+      "false_alarm_rate": 0.0535,
+      "macro_f1_drop": 0.0008
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "val",
+      "hint_group_off": "edges",
+      "macro_f1": 0.9126,
+      "fire_recall": 0.9557,
+      "smoke_recall": 0.8902,
+      "false_alarm_rate": 0.0535,
+      "macro_f1_drop": -0.0006
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "test_in",
+      "hint_group_off": "none",
+      "macro_f1": 0.8912,
+      "fire_recall": 0.9556,
+      "smoke_recall": 0.8067,
+      "false_alarm_rate": 0.087,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "test_in",
+      "hint_group_off": "colour",
+      "macro_f1": 0.891,
+      "fire_recall": 0.9552,
+      "smoke_recall": 0.8047,
+      "false_alarm_rate": 0.0851,
+      "macro_f1_drop": -0.0002
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "test_in",
+      "hint_group_off": "brightness",
+      "macro_f1": 0.8916,
+      "fire_recall": 0.9563,
+      "smoke_recall": 0.8057,
+      "false_alarm_rate": 0.0856,
+      "macro_f1_drop": 0.0004
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "test_in",
+      "hint_group_off": "texture",
+      "macro_f1": 0.8913,
+      "fire_recall": 0.9549,
+      "smoke_recall": 0.8093,
+      "false_alarm_rate": 0.0885,
+      "macro_f1_drop": 0.0001
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "test_in",
+      "hint_group_off": "haze",
+      "macro_f1": 0.8906,
+      "fire_recall": 0.9556,
+      "smoke_recall": 0.8047,
+      "false_alarm_rate": 0.0865,
+      "macro_f1_drop": -0.0006
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "test_in",
+      "hint_group_off": "edges",
+      "macro_f1": 0.8906,
+      "fire_recall": 0.9549,
+      "smoke_recall": 0.8057,
+      "false_alarm_rate": 0.087,
+      "macro_f1_drop": -0.0006
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "test_ext",
+      "hint_group_off": "none",
+      "macro_f1": 0.8981,
+      "fire_recall": 0.9574,
+      "smoke_recall": 0.8469,
+      "false_alarm_rate": 0.1072,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "test_ext",
+      "hint_group_off": "colour",
+      "macro_f1": 0.8974,
+      "fire_recall": 0.9564,
+      "smoke_recall": 0.8439,
+      "false_alarm_rate": 0.1052,
+      "macro_f1_drop": -0.0007
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "test_ext",
+      "hint_group_off": "brightness",
+      "macro_f1": 0.8978,
+      "fire_recall": 0.9574,
+      "smoke_recall": 0.8449,
+      "false_alarm_rate": 0.1062,
+      "macro_f1_drop": -0.0003
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "test_ext",
+      "hint_group_off": "texture",
+      "macro_f1": 0.8981,
+      "fire_recall": 0.9585,
+      "smoke_recall": 0.8469,
+      "false_alarm_rate": 0.1082,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "test_ext",
+      "hint_group_off": "haze",
+      "macro_f1": 0.8981,
+      "fire_recall": 0.9574,
+      "smoke_recall": 0.8469,
+      "false_alarm_rate": 0.1072,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "D_mobilevit_concat",
+      "split": "test_ext",
+      "hint_group_off": "edges",
+      "macro_f1": 0.8967,
+      "fire_recall": 0.9564,
+      "smoke_recall": 0.8449,
+      "false_alarm_rate": 0.1082,
+      "macro_f1_drop": -0.0014
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "val",
+      "hint_group_off": "none",
+      "macro_f1": 0.913,
+      "fire_recall": 0.9582,
+      "smoke_recall": 0.8918,
+      "false_alarm_rate": 0.0686,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "val",
+      "hint_group_off": "colour",
+      "macro_f1": 0.9085,
+      "fire_recall": 0.9565,
+      "smoke_recall": 0.8866,
+      "false_alarm_rate": 0.0686,
+      "macro_f1_drop": -0.0045
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "val",
+      "hint_group_off": "brightness",
+      "macro_f1": 0.9138,
+      "fire_recall": 0.9596,
+      "smoke_recall": 0.8923,
+      "false_alarm_rate": 0.0719,
+      "macro_f1_drop": 0.0008
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "val",
+      "hint_group_off": "texture",
+      "macro_f1": 0.9127,
+      "fire_recall": 0.9569,
+      "smoke_recall": 0.8954,
+      "false_alarm_rate": 0.0719,
+      "macro_f1_drop": -0.0003
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "val",
+      "hint_group_off": "haze",
+      "macro_f1": 0.9141,
+      "fire_recall": 0.9584,
+      "smoke_recall": 0.8939,
+      "false_alarm_rate": 0.0702,
+      "macro_f1_drop": 0.0011
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "val",
+      "hint_group_off": "edges",
+      "macro_f1": 0.9116,
+      "fire_recall": 0.9588,
+      "smoke_recall": 0.8881,
+      "false_alarm_rate": 0.0702,
+      "macro_f1_drop": -0.0014
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_in",
+      "hint_group_off": "none",
+      "macro_f1": 0.8945,
+      "fire_recall": 0.9556,
+      "smoke_recall": 0.8264,
+      "false_alarm_rate": 0.0974,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_in",
+      "hint_group_off": "colour",
+      "macro_f1": 0.8916,
+      "fire_recall": 0.9542,
+      "smoke_recall": 0.7979,
+      "false_alarm_rate": 0.0757,
+      "macro_f1_drop": -0.0029
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_in",
+      "hint_group_off": "brightness",
+      "macro_f1": 0.8926,
+      "fire_recall": 0.9559,
+      "smoke_recall": 0.8192,
+      "false_alarm_rate": 0.0964,
+      "macro_f1_drop": -0.0019
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_in",
+      "hint_group_off": "texture",
+      "macro_f1": 0.8912,
+      "fire_recall": 0.9538,
+      "smoke_recall": 0.813,
+      "false_alarm_rate": 0.0915,
+      "macro_f1_drop": -0.0033
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_in",
+      "hint_group_off": "haze",
+      "macro_f1": 0.8943,
+      "fire_recall": 0.9552,
+      "smoke_recall": 0.8238,
+      "false_alarm_rate": 0.095,
+      "macro_f1_drop": -0.0002
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_in",
+      "hint_group_off": "edges",
+      "macro_f1": 0.8929,
+      "fire_recall": 0.957,
+      "smoke_recall": 0.8295,
+      "false_alarm_rate": 0.1073,
+      "macro_f1_drop": -0.0016
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_ext",
+      "hint_group_off": "none",
+      "macro_f1": 0.8781,
+      "fire_recall": 0.9521,
+      "smoke_recall": 0.8741,
+      "false_alarm_rate": 0.1874,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_ext",
+      "hint_group_off": "colour",
+      "macro_f1": 0.873,
+      "fire_recall": 0.9404,
+      "smoke_recall": 0.8701,
+      "false_alarm_rate": 0.1874,
+      "macro_f1_drop": -0.0051
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_ext",
+      "hint_group_off": "brightness",
+      "macro_f1": 0.8735,
+      "fire_recall": 0.9574,
+      "smoke_recall": 0.863,
+      "false_alarm_rate": 0.1944,
+      "macro_f1_drop": -0.0046
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_ext",
+      "hint_group_off": "texture",
+      "macro_f1": 0.865,
+      "fire_recall": 0.9457,
+      "smoke_recall": 0.8792,
+      "false_alarm_rate": 0.2244,
+      "macro_f1_drop": -0.0131
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_ext",
+      "hint_group_off": "haze",
+      "macro_f1": 0.8716,
+      "fire_recall": 0.9489,
+      "smoke_recall": 0.8681,
+      "false_alarm_rate": 0.1974,
+      "macro_f1_drop": -0.0065
+    },
+    {
+      "model": "E_mobilevit_diptokens",
+      "split": "test_ext",
+      "hint_group_off": "edges",
+      "macro_f1": 0.867,
+      "fire_recall": 0.9479,
+      "smoke_recall": 0.8691,
+      "false_alarm_rate": 0.2104,
+      "macro_f1_drop": -0.0111
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "val",
+      "hint_group_off": "none",
+      "macro_f1": 0.9158,
+      "fire_recall": 0.9513,
+      "smoke_recall": 0.9069,
+      "false_alarm_rate": 0.0602,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "val",
+      "hint_group_off": "colour",
+      "macro_f1": 0.9175,
+      "fire_recall": 0.9525,
+      "smoke_recall": 0.9043,
+      "false_alarm_rate": 0.0552,
+      "macro_f1_drop": 0.0017
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "val",
+      "hint_group_off": "brightness",
+      "macro_f1": 0.9166,
+      "fire_recall": 0.9517,
+      "smoke_recall": 0.9105,
+      "false_alarm_rate": 0.0602,
+      "macro_f1_drop": 0.0008
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "val",
+      "hint_group_off": "texture",
+      "macro_f1": 0.9148,
+      "fire_recall": 0.9494,
+      "smoke_recall": 0.91,
+      "false_alarm_rate": 0.0635,
+      "macro_f1_drop": -0.001
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "val",
+      "hint_group_off": "haze",
+      "macro_f1": 0.9171,
+      "fire_recall": 0.9515,
+      "smoke_recall": 0.9095,
+      "false_alarm_rate": 0.0619,
+      "macro_f1_drop": 0.0013
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "val",
+      "hint_group_off": "edges",
+      "macro_f1": 0.9142,
+      "fire_recall": 0.9534,
+      "smoke_recall": 0.8985,
+      "false_alarm_rate": 0.0635,
+      "macro_f1_drop": -0.0016
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "test_in",
+      "hint_group_off": "none",
+      "macro_f1": 0.8888,
+      "fire_recall": 0.9451,
+      "smoke_recall": 0.813,
+      "false_alarm_rate": 0.087,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "test_in",
+      "hint_group_off": "colour",
+      "macro_f1": 0.8909,
+      "fire_recall": 0.9447,
+      "smoke_recall": 0.7938,
+      "false_alarm_rate": 0.0603,
+      "macro_f1_drop": 0.0021
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "test_in",
+      "hint_group_off": "brightness",
+      "macro_f1": 0.8874,
+      "fire_recall": 0.9451,
+      "smoke_recall": 0.8093,
+      "false_alarm_rate": 0.088,
+      "macro_f1_drop": -0.0014
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "test_in",
+      "hint_group_off": "texture",
+      "macro_f1": 0.8882,
+      "fire_recall": 0.9426,
+      "smoke_recall": 0.8223,
+      "false_alarm_rate": 0.0955,
+      "macro_f1_drop": -0.0006
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "test_in",
+      "hint_group_off": "haze",
+      "macro_f1": 0.8888,
+      "fire_recall": 0.9444,
+      "smoke_recall": 0.8155,
+      "false_alarm_rate": 0.089,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "test_in",
+      "hint_group_off": "edges",
+      "macro_f1": 0.8862,
+      "fire_recall": 0.9444,
+      "smoke_recall": 0.8145,
+      "false_alarm_rate": 0.0964,
+      "macro_f1_drop": -0.0026
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "test_ext",
+      "hint_group_off": "none",
+      "macro_f1": 0.8884,
+      "fire_recall": 0.9628,
+      "smoke_recall": 0.8812,
+      "false_alarm_rate": 0.1743,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "test_ext",
+      "hint_group_off": "colour",
+      "macro_f1": 0.8852,
+      "fire_recall": 0.9394,
+      "smoke_recall": 0.8771,
+      "false_alarm_rate": 0.1583,
+      "macro_f1_drop": -0.0032
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "test_ext",
+      "hint_group_off": "brightness",
+      "macro_f1": 0.8865,
+      "fire_recall": 0.966,
+      "smoke_recall": 0.8792,
+      "false_alarm_rate": 0.1804,
+      "macro_f1_drop": -0.0019
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "test_ext",
+      "hint_group_off": "texture",
+      "macro_f1": 0.8883,
+      "fire_recall": 0.9649,
+      "smoke_recall": 0.8832,
+      "false_alarm_rate": 0.1784,
+      "macro_f1_drop": -0.0001
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "test_ext",
+      "hint_group_off": "haze",
+      "macro_f1": 0.8859,
+      "fire_recall": 0.9628,
+      "smoke_recall": 0.8792,
+      "false_alarm_rate": 0.1794,
+      "macro_f1_drop": -0.0025
+    },
+    {
+      "model": "EM_mobilevit_diptokens_maps",
+      "split": "test_ext",
+      "hint_group_off": "edges",
+      "macro_f1": 0.888,
+      "fire_recall": 0.9606,
+      "smoke_recall": 0.8862,
+      "false_alarm_rate": 0.1784,
+      "macro_f1_drop": -0.0004
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "val",
+      "hint_group_off": "none",
+      "macro_f1": 0.9102,
+      "fire_recall": 0.9578,
+      "smoke_recall": 0.8777,
+      "false_alarm_rate": 0.0552,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "val",
+      "hint_group_off": "colour",
+      "macro_f1": 0.9064,
+      "fire_recall": 0.9594,
+      "smoke_recall": 0.8647,
+      "false_alarm_rate": 0.0552,
+      "macro_f1_drop": -0.0038
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "val",
+      "hint_group_off": "brightness",
+      "macro_f1": 0.9095,
+      "fire_recall": 0.9588,
+      "smoke_recall": 0.8736,
+      "false_alarm_rate": 0.0552,
+      "macro_f1_drop": -0.0007
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "val",
+      "hint_group_off": "texture",
+      "macro_f1": 0.9104,
+      "fire_recall": 0.9573,
+      "smoke_recall": 0.8793,
+      "false_alarm_rate": 0.0585,
+      "macro_f1_drop": 0.0002
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "val",
+      "hint_group_off": "haze",
+      "macro_f1": 0.91,
+      "fire_recall": 0.9567,
+      "smoke_recall": 0.8798,
+      "false_alarm_rate": 0.0585,
+      "macro_f1_drop": -0.0002
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "val",
+      "hint_group_off": "edges",
+      "macro_f1": 0.9111,
+      "fire_recall": 0.9586,
+      "smoke_recall": 0.8772,
+      "false_alarm_rate": 0.0552,
+      "macro_f1_drop": 0.0009
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "test_in",
+      "hint_group_off": "none",
+      "macro_f1": 0.8871,
+      "fire_recall": 0.951,
+      "smoke_recall": 0.7808,
+      "false_alarm_rate": 0.0678,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "test_in",
+      "hint_group_off": "colour",
+      "macro_f1": 0.8888,
+      "fire_recall": 0.9556,
+      "smoke_recall": 0.7632,
+      "false_alarm_rate": 0.0504,
+      "macro_f1_drop": 0.0017
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "test_in",
+      "hint_group_off": "brightness",
+      "macro_f1": 0.886,
+      "fire_recall": 0.9552,
+      "smoke_recall": 0.7679,
+      "false_alarm_rate": 0.0628,
+      "macro_f1_drop": -0.0011
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "test_in",
+      "hint_group_off": "texture",
+      "macro_f1": 0.8894,
+      "fire_recall": 0.95,
+      "smoke_recall": 0.7938,
+      "false_alarm_rate": 0.0727,
+      "macro_f1_drop": 0.0023
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "test_in",
+      "hint_group_off": "haze",
+      "macro_f1": 0.8862,
+      "fire_recall": 0.9496,
+      "smoke_recall": 0.7845,
+      "false_alarm_rate": 0.0727,
+      "macro_f1_drop": -0.0009
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "test_in",
+      "hint_group_off": "edges",
+      "macro_f1": 0.8873,
+      "fire_recall": 0.9517,
+      "smoke_recall": 0.7876,
+      "false_alarm_rate": 0.0752,
+      "macro_f1_drop": 0.0002
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "test_ext",
+      "hint_group_off": "none",
+      "macro_f1": 0.8827,
+      "fire_recall": 0.9404,
+      "smoke_recall": 0.8419,
+      "false_alarm_rate": 0.1313,
+      "macro_f1_drop": 0.0
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "test_ext",
+      "hint_group_off": "colour",
+      "macro_f1": 0.8764,
+      "fire_recall": 0.9298,
+      "smoke_recall": 0.8238,
+      "false_alarm_rate": 0.1212,
+      "macro_f1_drop": -0.0063
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "test_ext",
+      "hint_group_off": "brightness",
+      "macro_f1": 0.8777,
+      "fire_recall": 0.9511,
+      "smoke_recall": 0.8278,
+      "false_alarm_rate": 0.1413,
+      "macro_f1_drop": -0.005
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "test_ext",
+      "hint_group_off": "texture",
+      "macro_f1": 0.882,
+      "fire_recall": 0.9436,
+      "smoke_recall": 0.8429,
+      "false_alarm_rate": 0.1373,
+      "macro_f1_drop": -0.0007
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "test_ext",
+      "hint_group_off": "haze",
+      "macro_f1": 0.879,
+      "fire_recall": 0.9383,
+      "smoke_recall": 0.8439,
+      "false_alarm_rate": 0.1423,
+      "macro_f1_drop": -0.0037
+    },
+    {
+      "model": "EMD_mobilevit_diptokens_dipmaps",
+      "split": "test_ext",
+      "hint_group_off": "edges",
+      "macro_f1": 0.8795,
+      "fire_recall": 0.9436,
+      "smoke_recall": 0.8419,
+      "false_alarm_rate": 0.1433,
+      "macro_f1_drop": -0.0032
+    }
+  ],
+  "records_file": "records.csv"
+}

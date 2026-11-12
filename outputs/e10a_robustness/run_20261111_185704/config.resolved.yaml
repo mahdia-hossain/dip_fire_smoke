@@ -1,0 +1,9 @@
+mode: robust
+models:
+- C
+- CR
+- CA
+- CRN
+- CN
+seed: 42
+smoke: false
