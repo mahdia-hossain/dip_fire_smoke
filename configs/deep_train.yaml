@@ -3,3 +3,7 @@ name: deep_train
 
 deep:
   n_boot: 1000
+  live_features: true
+  map_loss_weight: 0.5
+  map_grid: 16
+  noise_aug: {p: 0.5, sigma: [5, 25]}

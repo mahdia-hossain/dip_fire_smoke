@@ -14,6 +14,23 @@ MODEL_STYLE = {
     "A_svm_rf": {"color": "#999999", "marker": "s"}, "B_mobilenetv3": {"color": "#E69F00", "marker": "^"},
     "C_mobilevit": {"color": "#56B4E9", "marker": "o"}, "D_mobilevit_concat": {"color": "#009E73", "marker": "D"},
     "E_mobilevit_diptokens": {"color": "#D55E00", "marker": "*"},
+    "EM_mobilevit_diptokens_maps": {"color": "#CC79A7", "marker": "P"},
+    "CM_mobilevit_maps": {"color": "#0072B2", "marker": "X"},
+    "CR_mobilevit_rawinput": {"color": "#000000", "marker": "v"},
+    "EMD_mobilevit_diptokens_dipmaps": {"color": "#F0E442", "marker": "h"},
+    "CA_mobilevit_adaptive_noiseaug": {"color": "#D55E00", "marker": "*"},
+    "CRN_mobilevit_raw_noiseaug": {"color": "#666666", "marker": "v"},
+    "CN_mobilevit_dip_noiseaug": {"color": "#009E73", "marker": "s"},
+    "CA2_mobilevit_fulladaptive_noiseaug": {"color": "#CC79A7", "marker": "D"},
+    "CA3_mobilevit_noisetype_adaptive": {"color": "#56B4E9", "marker": "P"},
+    "CM_mobilevit_maps": {"color": "#0072B2", "marker": "X"},
+    "CR_mobilevit_rawinput": {"color": "#000000", "marker": "v"},
+    "EMD_mobilevit_diptokens_dipmaps": {"color": "#F0E442", "marker": "h"},
+    "CA_mobilevit_adaptive_noiseaug": {"color": "#D55E00", "marker": "*"},
+    "CRN_mobilevit_raw_noiseaug": {"color": "#666666", "marker": "v"},
+    "CN_mobilevit_dip_noiseaug": {"color": "#009E73", "marker": "s"},
+    "CA2_mobilevit_fulladaptive_noiseaug": {"color": "#CC79A7", "marker": "D"},
+    "CA3_mobilevit_noisetype_adaptive": {"color": "#56B4E9", "marker": "P"},
 }
 
 mpl.rcParams.update({

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "firesmoke"
+version = "1.0.0"
+description = "Fire / smoke / normal image classification: adaptive DIP preprocessing + MobileViT-XS"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Mahdia Hossain"}]
+dependencies = ["torch>=2.0", "timm>=0.9", "opencv-python>=4.5", "numpy>=1.22", "matplotlib>=3.5"]
+
+[project.scripts]
+firesmoke = "firesmoke.cli:main"
+
+[tool.setuptools]
+packages = ["firesmoke"]

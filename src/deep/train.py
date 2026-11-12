@@ -7,6 +7,7 @@ E06-E09: train one deep model (B, C, D or E).
 import argparse
 import gc
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -23,8 +24,8 @@ from src.common.cfg import load_config, validate
 from src.common.runs import (append_ledger, atomic_write_json, new_or_resume_run, seed_everything, setup_logging,
                              write_meta)
 from src.config import CKPT_ROOT, CONFIG_DIR, RESULTS_ROOT
-from src.deep.data import CLASSES, FireSmokeDataset, worker_init
-from src.deep.models import build_model, uses_features
+from src.deep.data import CLASSES, MEAN, STD, FireSmokeDataset, worker_init
+from src.deep.models import build_model, has_maps, uses_features
 from src.dip.features import FEATURE_NAMES
 from src.eval.metrics import classification_metrics, summary_row
 
@@ -39,14 +40,17 @@ def newest_features(root: Path) -> Path:
     return runs[-1]
 
 
-def loaders(feat: pd.DataFrame, cfg: dict, smoke: bool):
+def loaders(feat: pd.DataFrame, cfg: dict, smoke: bool, use_f: bool, maps: bool):
     tr = feat[feat["split"] == "train"]
     if smoke:
         tr = tr.groupby("label").head(16)
     mean = tr[FEATURE_NAMES].to_numpy(np.float32).mean(0)
     std = tr[FEATURE_NAMES].to_numpy(np.float32).std(0) + 1e-6
     t = cfg["train"]
-    ds = {"train": FireSmokeDataset(tr, cfg["preprocess"], True, mean, std)}
+    live = (cfg["segmentation"], cfg["features"]) if use_f and cfg["deep"]["live_features"] else None
+    mcfg = {"box_classes": cfg["segmentation"]["box_classes"], "grid": cfg["deep"]["map_grid"],
+            "source": cfg["model"]["map_source"], "seg": cfg["segmentation"]} if maps else None
+    ds = {"train": FireSmokeDataset(tr, cfg["preprocess"], True, mean, std, live, mcfg, cfg["model"]["noise_aug"])}
     for s in EVAL_SPLITS:
         d = feat[feat["split"] == s]
         if smoke:
@@ -56,7 +60,7 @@ def loaders(feat: pd.DataFrame, cfg: dict, smoke: bool):
     keep = t["num_workers"] > 0
     dl = {"train": DataLoader(ds["train"], batch_size=t["batch_size"], shuffle=True, drop_last=True,
                               persistent_workers=keep, **common),
-          "val": DataLoader(ds["val"], batch_size=t["batch_size"], shuffle=False, persistent_workers=keep, **common)}
+          "val": DataLoader(ds["val"], batch_size=t["batch_size"], shuffle=False, persistent_workers=False, **common)}
     for s in EVAL_SPLITS[1:]:
         dl[s] = DataLoader(ds[s], batch_size=t["batch_size"], shuffle=False, persistent_workers=False, **common)
     frames = {"train": tr, **{s: (feat[feat["split"] == s].groupby("label").head(8) if smoke
@@ -68,7 +72,7 @@ def loaders(feat: pd.DataFrame, cfg: dict, smoke: bool):
 def predict(model, loader, dev, use_f: bool, amp: bool):
     model.eval()
     out, t0, n = [], time.perf_counter(), 0
-    for x, f, y, idx in loader:
+    for x, f, y, idx, *_ in loader:
         x, f = x.to(dev, non_blocking=True), f.to(dev, non_blocking=True)
         with torch.autocast("cuda", enabled=amp and dev.type == "cuda"):
             logits = model(x, f if use_f else None)
@@ -78,6 +82,32 @@ def predict(model, loader, dev, use_f: bool, amp: bool):
     idx = np.concatenate([o[0] for o in out])
     prob = np.concatenate([o[1] for o in out])
     return idx, prob, ms
+
+
+@torch.no_grad()
+def map_gallery(model, frame: pd.DataFrame, cfg: dict, norm: dict, dev, out_base, per_class: int = 3) -> None:
+    import cv2
+    import matplotlib.pyplot as plt
+    from src.viz import style
+    model.eval()
+    ex = frame.sample(frac=1, random_state=cfg["seed"]).groupby("label").head(per_class)
+    ds = FireSmokeDataset(ex, cfg["preprocess"], False, np.array(norm["mean"]), np.array(norm["std"]))
+    fig, axes = plt.subplots(3, len(ex), figsize=(1.2 * len(ex), 4.0), squeeze=False)
+    for j in range(len(ex)):
+        x, f, y, _ = ds[j]
+        logits, maps = model.forward_with_maps(x[None].to(dev), f[None].to(dev) if uses_features(cfg["model"]["kind"]) else None)
+        prob = torch.sigmoid(maps.float())[0].cpu().numpy()
+        img = (x.permute(1, 2, 0).numpy() * np.array(STD) + np.array(MEAN)).clip(0, 1)
+        size = img.shape[0]
+        pred = CLASSES[int(logits.argmax(1))]
+        panels = [(img, f"true {CLASSES[y]}\npred {pred}", None),
+                  (cv2.resize(prob[0], (size, size)), "fire map", "Reds"),
+                  (cv2.resize(prob[1], (size, size)), "smoke map", "Blues")]
+        for i, (im, title, cmap) in enumerate(panels):
+            axes[i, j].imshow(im, cmap=cmap, vmin=0, vmax=1)
+            axes[i, j].set_xticks([]), axes[i, j].set_yticks([]), axes[i, j].set_title(title, fontsize=6)
+    style.save(fig, out_base, ex[["path", "label"]])
+    plt.close(fig)
 
 
 def records(frame: pd.DataFrame, idx, prob, model_name: str) -> pd.DataFrame:
@@ -91,29 +121,64 @@ def records(frame: pd.DataFrame, idx, prob, model_name: str) -> pd.DataFrame:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--model", required=True, choices=list("BCDE"))
+    ap.add_argument("--model", required=True, choices=["B", "C", "D", "E", "EM", "CM", "CR", "EMD", "CA", "CRN", "CN", "CA2", "CA3"])
+    ap.add_argument("--seed", type=int, default=None)
     ap.add_argument("--config", default=None)
     ap.add_argument("--features", default=None)
     ap.add_argument("--smoke", action="store_true")
     a = ap.parse_args()
     spec = {"B": ("e06_mobilenetv3", "cnn", "image"), "C": ("e07_mobilevit", "vit", "image"),
-            "D": ("e08_mobilevit_concat", "vit", "concat"), "E": ("e09_mobilevit_diptokens", "vit", "tokens")}
+            "D": ("e08_mobilevit_concat", "vit", "concat"), "E": ("e09_mobilevit_diptokens", "vit", "tokens"),
+            "EM": ("e09b_mobilevit_diptokens_maps", "vit", "tokens_maps"),
+            "CM": ("e09c_mobilevit_maps", "vit", "image_maps"),
+            "CR": ("e07c_mobilevit_rawinput", "vit", "image"),
+            "EMD": ("e09d_mobilevit_diptokens_dipmaps", "vit", "tokens_maps"),
+            "CA": ("e07d_mobilevit_adaptive_noiseaug", "vit", "image"),
+            "CRN": ("e07e_mobilevit_raw_noiseaug", "vit", "image"),
+            "CN": ("e07f_mobilevit_dip_noiseaug", "vit", "image"),
+            "CA2": ("e07g_mobilevit_fulladaptive_noiseaug", "vit", "image"),
+            "CA3": ("e07h_mobilevit_noisetype_adaptive", "vit", "image")}
     stage, arch_key, kind = spec[a.model]
     model_name = {"B": "B_mobilenetv3", "C": "C_mobilevit", "D": "D_mobilevit_concat",
-                  "E": "E_mobilevit_diptokens"}[a.model]
+                  "E": "E_mobilevit_diptokens", "EM": "EM_mobilevit_diptokens_maps", "CM": "CM_mobilevit_maps",
+                  "CR": "CR_mobilevit_rawinput", "EMD": "EMD_mobilevit_diptokens_dipmaps",
+                  "CA": "CA_mobilevit_adaptive_noiseaug", "CRN": "CRN_mobilevit_raw_noiseaug",
+                  "CN": "CN_mobilevit_dip_noiseaug",
+                  "CA2": "CA2_mobilevit_fulladaptive_noiseaug",
+                  "CA3": "CA3_mobilevit_noisetype_adaptive"}[a.model]
     cfg = load_config(a.config or CONFIG_DIR / "deep_train.yaml")
     validate(cfg, ["seed", "preprocess", "train.img_size", "train.batch_size", "train.epochs", "train.lr",
                    "train.weight_decay", "train.warmup_epochs", "train.label_smoothing", "train.amp",
-                   "train.models", "deep.n_boot"], "deep_train.yaml")
+                   "train.models", "deep.n_boot", "deep.live_features", "deep.map_loss_weight", "deep.map_grid"], "deep_train.yaml")
+    if a.seed is not None:
+        cfg = {**cfg, "seed": a.seed}
+    if a.seed is not None:
+        cfg["seed"] = a.seed
     root = RESULTS_ROOT / "_smoke" if a.smoke else RESULTS_ROOT
     fpath = Path(a.features) if a.features else newest_features(root)
     arch = cfg["train"]["models"][arch_key]
     cfg = {**cfg, "model": {"id": a.model, "name": model_name, "arch": arch, "kind": kind},
            "features_file": str(fpath)}
+    if a.model in ("CR", "CRN"):
+        cfg["preprocess"] = {**cfg["preprocess"], "denoise": {"method": "none"}, "contrast": {"method": "none"}}
+    if a.model in ("CA", "CA2", "CA3"):
+        tuned = ([("noisetype_tuned.yaml", "noisetype-tune")] if a.model == "CA3" else [("noise_tuned.yaml", "noise-tune")])
+        tuned += [("dark_tuned.yaml", "dark-tune")] if a.model == "CA2" else []
+        adaptive = {}
+        for fname, stage_cmd in tuned:
+            if not (CONFIG_DIR / fname).exists():
+                sys.exit(f"configs/{fname} not found. Run:  python run.py {stage_cmd}")
+            adaptive.update(load_config(CONFIG_DIR / fname)["preprocess"]["adaptive"])
+        cfg["preprocess"] = {**cfg["preprocess"], "adaptive": adaptive}
+    cfg["model"]["noise_aug"] = cfg["deep"]["noise_aug"] if a.model in ("CA", "CRN", "CN", "CA2", "CA3") else None
+    cfg["model"]["map_source"] = "dip" if a.model == "EMD" else "boxes"
     if a.smoke:
         cfg["train"] = {**cfg["train"], "epochs": 2, "batch_size": 8, "num_workers": 0}
     run_dir, resumed = new_or_resume_run(stage, cfg, root=root)
     log = setup_logging(run_dir, stage)
+    if os.environ.get("DIP_WORKERS"):
+        cfg["train"] = {**cfg["train"], "num_workers": int(os.environ["DIP_WORKERS"])}
+        log(f"DIP_WORKERS override: {cfg['train']['num_workers']} data workers (does not change the run's config hash)")
     seed_everything(cfg["seed"])
     dev = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     log(f"{'RESUMING' if resumed else 'New'} run: {run_dir}\nModel {model_name} ({arch}, {kind}) on {dev}")
@@ -122,11 +187,12 @@ def main() -> None:
     feat = pd.read_csv(fpath, keep_default_na=False)
     feat = feat[feat["error"] == ""].reset_index(drop=True)
     feat[FEATURE_NAMES] = feat[FEATURE_NAMES].astype(np.float32)
-    dl, frames, norm = loaders(feat, cfg, a.smoke)
+    dl, frames, norm = loaders(feat, cfg, a.smoke, uses_features(kind), has_maps(kind))
     log("Images: " + json.dumps({k: len(v.dataset) for k, v in dl.items()}))
 
     model = build_model(kind, arch, pretrained=not a.smoke).to(dev)
-    use_f = uses_features(kind)
+    use_f, use_maps = uses_features(kind), has_maps(kind)
+    bce = nn.BCEWithLogitsLoss(reduction="none")
     params = sum(p.numel() for p in model.parameters()) / 1e6
     t = cfg["train"]
     counts = frames["train"]["label"].value_counts().reindex(CLASSES).fillna(0).to_numpy()
@@ -155,13 +221,20 @@ def main() -> None:
 
     for ep in range(start_ep, t["epochs"]):
         model.train()
-        t0, tot, seen, correct = time.time(), 0.0, 0, 0
-        for i, (x, f, y, _) in enumerate(dl["train"]):
+        t0, tot, seen, correct, map_tot = time.time(), 0.0, 0, 0, 0.0
+        for i, (x, f, y, _, *extra) in enumerate(dl["train"]):
             x, f, y = x.to(dev, non_blocking=True), f.to(dev, non_blocking=True), y.to(dev, non_blocking=True)
             opt.zero_grad(set_to_none=True)
             with torch.autocast("cuda", enabled=scaler.is_enabled()):
-                logits = model(x, f if use_f else None)
-                loss = crit(logits, y)
+                if use_maps:
+                    logits, maps = model.forward_with_maps(x, f if use_f else None)
+                    target, valid = extra[0].to(dev), extra[1].to(dev)
+                    map_loss = (bce(maps.float(), target).mean((1, 2, 3)) * valid).sum() / valid.sum().clamp(min=1)
+                    loss = crit(logits, y) + cfg["deep"]["map_loss_weight"] * map_loss
+                    map_tot += map_loss.item() * len(y)
+                else:
+                    logits = model(x, f if use_f else None)
+                    loss = crit(logits, y)
             scaler.scale(loss).backward()
             scaler.step(opt), scaler.update(), sched.step()
             tot += loss.item() * len(y)
@@ -172,7 +245,8 @@ def main() -> None:
                     f"acc {correct / seen:.4f}  lr {sched.get_last_lr()[0]:.2e}")
         idx, prob, _ = predict(model, dl["val"], dev, use_f, t["amp"])
         vm = classification_metrics(records(frames["val"], idx, prob, model_name), n_boot=0, seed=cfg["seed"])
-        row = {"epoch": ep + 1, "train_loss": round(tot / max(seen, 1), 4), "train_acc": round(correct / max(seen, 1), 4),
+        row = {"epoch": ep + 1, "train_loss": round(tot / max(seen, 1), 4),
+               **({"train_map_loss": round(map_tot / max(seen, 1), 4)} if use_maps else {}), "train_acc": round(correct / max(seen, 1), 4),
                "val_accuracy": vm["accuracy"], "val_macro_f1": vm["macro_f1"], "val_fire_recall": vm["fire_recall"],
                "val_false_alarm": vm["false_alarm_rate"], "minutes": round((time.time() - t0) / 60, 2),
                "lr": sched.get_last_lr()[0]}
@@ -196,7 +270,7 @@ def main() -> None:
     from src.eval.plots import confusion_figure, lookalike_figure
     for s in EVAL_SPLITS:
         idx, prob, ms = predict(model, dl[s], dev, use_f, t["amp"])
-        if s == "val":
+        if s == "val" and "val" in dl:
             del dl["val"]
             gc.collect()
         r = records(frames[s], idx, prob, model_name)
@@ -221,6 +295,8 @@ def main() -> None:
         lk.to_csv(run_dir / "tables" / "lookalike_false_alarms.csv", index=False)
         lookalike_figure(lk, run_dir / "figures" / "fig_lookalike_false_alarms")
         log("Look-alike false alarms by type:\n" + lk.to_string(index=False))
+    if use_maps:
+        map_gallery(model, frames["test_in"], cfg, norm, dev, run_dir / "figures" / "fig_learned_maps")
     h = pd.DataFrame(hist)
     if len(h) > 1:
         import matplotlib.pyplot as plt
@@ -233,7 +309,7 @@ def main() -> None:
         ax[1].set_xlabel("epoch"), ax[1].legend(fontsize=7, frameon=False)
         style.save(fig, run_dir / "figures" / "fig_training_curve", h)
         plt.close(fig)
-    summary = {"model": model_name, "arch": arch, "kind": kind, "params_m": round(params, 3),
+    summary = {"model": model_name, "seed": cfg["seed"], "arch": arch, "kind": kind, "params_m": round(params, 3),
                "best_epoch": best["epoch"], "best_val_macro_f1": best["val_macro_f1"],
                "epochs_run": len(hist), "total_minutes": round(float(h["minutes"].sum()), 1) if len(h) else 0.0,
                "speed": speed, "table": summ.to_dict("records"), "checkpoints": str(ck_dir)}
@@ -244,7 +320,7 @@ def main() -> None:
                                                  "meta": json.loads((run_dir / "meta.json").read_text(encoding="utf-8"))})
     if not a.smoke:
         best_row = summ[summ["split"] == "test_in"]
-        note = f"{model_name}: best epoch {best['epoch']}, val macro-F1 {best['val_macro_f1']}"
+        note = f"{model_name} seed {cfg['seed']}: best epoch {best['epoch']}, val macro-F1 {best['val_macro_f1']}"
         if len(best_row):
             note += f", test_in macro-F1 {best_row['macro_f1'].iloc[0]}"
         append_ledger(stage, run_dir, note)

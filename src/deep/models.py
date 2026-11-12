@@ -72,9 +72,60 @@ class DipTokens(nn.Module):
         return out
 
 
+class DipTokensMaps(DipTokens):
+    """MobileViT (with or without DIP tokens) plus an auxiliary head predicting coarse fire and smoke maps."""
+
+    def __init__(self, arch: str, pretrained: bool, n_classes: int = 3, map_stage: int = 3, tokens: bool = True):
+        if tokens:
+            super().__init__(arch, pretrained, n_classes)
+        else:
+            nn.Module.__init__(self)
+            self.net = timm.create_model(arch, pretrained=pretrained, num_classes=n_classes)
+            self.hints = nn.ModuleList()
+        self.map_stage = map_stage
+        with torch.no_grad():
+            was = self.net.training
+            self.net.eval()
+            x = self.net.stem(torch.zeros(1, 3, 64, 64))
+            for h in self.hints:
+                h.feats = torch.zeros(1, N_FEAT)
+            for stage in self.net.stages[:map_stage + 1]:
+                x = stage(x)
+            for h in self.hints:
+                h.feats = None
+            self.net.train(was)
+        ch = x.shape[1]
+        self.map_head = nn.Sequential(nn.Conv2d(ch, ch, 3, padding=1), nn.BatchNorm2d(ch), nn.SiLU(),
+                                      nn.Conv2d(ch, 2, 1))
+
+    def forward(self, x, f=None):
+        return self.forward_with_maps(x, f)[0]
+
+    def forward_with_maps(self, x, f):
+        for h in self.hints:
+            h.feats = f
+        x = self.net.stem(x)
+        mid = None
+        for i, stage in enumerate(self.net.stages):
+            x = stage(x)
+            if i == self.map_stage:
+                mid = x
+        logits = self.net.forward_head(self.net.final_conv(x))
+        for h in self.hints:
+            h.feats = None
+        return logits, self.map_head(mid)
+
+
 def build_model(kind: str, arch: str, pretrained: bool) -> nn.Module:
-    return {"image": ImageOnly, "concat": LateFusion, "tokens": DipTokens}[kind](arch, pretrained)
+    if kind == "image_maps":
+        return DipTokensMaps(arch, pretrained, tokens=False)
+    return {"image": ImageOnly, "concat": LateFusion, "tokens": DipTokens,
+            "tokens_maps": DipTokensMaps}[kind](arch, pretrained)
 
 
 def uses_features(kind: str) -> bool:
-    return kind in ("concat", "tokens")
+    return kind in ("concat", "tokens", "tokens_maps")
+
+
+def has_maps(kind: str) -> bool:
+    return kind in ("tokens_maps", "image_maps")

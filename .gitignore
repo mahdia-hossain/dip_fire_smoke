@@ -23,3 +23,6 @@ docs/IDEA_AND_RESEARCH_GAPS.md
 *.ckpt
 Thumbs.db
 desktop.ini
+release_smoke/
+*.egg-info/
+build/

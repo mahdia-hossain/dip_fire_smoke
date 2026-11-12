@@ -19,9 +19,16 @@ STAGES = {
     "lookalike-freeze": ("src.data.lookalike", ["freeze"], "E01 save labelled types + freeze the look-alike set"),
     "e02": ("src.dip.e02_preprocess", [], "E02 preprocessing + PSNR/SSIM (add --smoke for a 20-image test)"),
     "seg-tune": ("src.dip.e03b_seg_tune", [], "E03b choose segmentation thresholds on val (writes configs/segmentation_tuned.yaml)"),
+    "noise-tune": ("src.dip.e03c_noise_tune", [], "E03c choose the noise threshold for adaptive preprocessing on val"),
+    "dark-tune": ("src.dip.e03d_dark_tune", [], "E03d choose the brightness threshold for adaptive CLAHE on val"),
+    "restore-study": ("src.dip.e12_restoration", [], "E12 denoiser + noise-detector study (CPU)"),
+    "noisetype-tune": ("src.dip.e12b_noisetype_tune", [], "E12b thresholds for noise-type adaptive preprocessing (CA3)"),
     "e03": ("src.dip.e03_segmentation", [], "E03 segmentation masks + box overlap (--smoke = 20 images)"),
     "e04": ("src.dip.e04_features", [], "E04 16 DIP features for all images (--smoke = 40 images)"),
-    "train": ("src.deep.train", [], "E06-E09 train a deep model: --model B|C|D|E (add --smoke for a quick test)"),
+    "train": ("src.deep.train", [], "E06-E09 train a deep model: --model B|C|D|E|EM|CM|CR|EMD|CA|CRN|CN|CA2|CA3 [--seed N] (add --smoke for a quick test)"),
+    "probe": ("src.deep.probe", [], "E10a/b probes on trained models: --mode robust | --mode ablate"),
+    "export": ("src.app.export", [], "export the final model as one file for the firesmoke package (release/)"),
+    "demo": ("src.app.demo_app", [], "local demo website: upload a photo, see each DIP step and the answer"),
     "e05": ("src.classic.e05_classic", [], "E05 model A: SVM + Random Forest (needs a finished E04 run)"),
 }
 

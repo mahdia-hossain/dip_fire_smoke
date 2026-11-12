@@ -46,7 +46,35 @@ def enhance(img: np.ndarray, method: str = "clahe_l", clip_limit: float = 2.0, t
 
 
 def preprocess_steps(img: np.ndarray, pcfg: dict) -> dict:
+    """
+    Adaptive mode, pcfg["adaptive"] = {"sigma_thr": t, "dark_thr": d (optional)}:
+    noisy (estimated sigma > t) -> denoise + contrast; else dark (mean grey < d) -> contrast only; else unchanged.
+    Noise-type mode (adds "points_thr", "heavy_thr", chosen in E12b): clean -> unchanged; salt-and-pepper
+    (isolated-point share > points_thr) -> median 3x3; heavy Gaussian (sigma > heavy_thr) -> Gaussian 7x7;
+    other Gaussian -> bilateral; then CLAHE on L.
+    """
     p0 = resize(img, pcfg["size"])
+    ad = pcfg.get("adaptive")
+    if ad and "points_thr" in ad:
+        from src.dip.noise import estimate_sigma
+        from src.dip.restore import isolated_point_share
+        sigma = estimate_sigma(p0)
+        if sigma <= ad["sigma_thr"]:
+            return {"resized": p0, "denoised": p0, "enhanced": p0}
+        from src.dip.restore import DENOISERS
+        if isolated_point_share(p0) > ad["points_thr"]:
+            p1 = DENOISERS[ad.get("sp_filter", "median_3")](p0)
+        elif sigma > ad["heavy_thr"]:
+            p1 = DENOISERS[ad.get("heavy_filter", "gaussian_7")](p0)
+        else:
+            p1 = DENOISERS[ad.get("light_filter", "bilateral")](p0)
+        return {"resized": p0, "denoised": p1, "enhanced": enhance(p1, **pcfg["contrast"])}
+    if ad:
+        from src.dip.noise import estimate_sigma
+        if estimate_sigma(p0) <= ad["sigma_thr"]:
+            if "dark_thr" in ad and float(cv2.cvtColor(p0, cv2.COLOR_RGB2GRAY).mean()) < ad["dark_thr"]:
+                return {"resized": p0, "denoised": p0, "enhanced": enhance(p0, **pcfg["contrast"])}
+            return {"resized": p0, "denoised": p0, "enhanced": p0}
     p1 = denoise(p0, **pcfg["denoise"])
     p2 = enhance(p1, **pcfg["contrast"])
     return {"resized": p0, "denoised": p1, "enhanced": p2}
