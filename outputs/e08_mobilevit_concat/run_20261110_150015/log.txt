@@ -1,0 +1,284 @@
+2026-11-10 15:00:17,196 | New run: E:\dip_fire_smoke\outputs\e08_mobilevit_concat\run_20261110_150015
+Model D_mobilevit_concat (mobilevit_xs, concat) on cuda
+2026-11-10 15:00:17,196 | Features: E:\dip_fire_smoke\outputs\e04_features\run_20261110_124222\features.csv
+2026-11-10 15:00:17,329 | Images: {"train": 24047, "val": 7325, "test_in": 6810, "test_ext": 2931, "test_lookalike": 451}
+2026-11-10 15:00:18,804 | 1.94 M parameters, class weights [0.6244189739227295, 1.2847678661346436, 1.6124857664108276], 751 steps per epoch
+2026-11-10 15:00:47,402 |   epoch 1/15  step 0/751  loss 1.1567  acc 0.4062  lr 5.06e-05
+2026-11-10 15:00:57,686 |   epoch 1/15  step 50/751  loss 1.0775  acc 0.5000  lr 8.06e-05
+2026-11-10 15:01:06,754 |   epoch 1/15  step 100/751  loss 0.9802  acc 0.6021  lr 1.11e-04
+2026-11-10 15:01:15,988 |   epoch 1/15  step 150/751  loss 0.8980  acc 0.6602  lr 1.40e-04
+2026-11-10 15:01:25,029 |   epoch 1/15  step 200/751  loss 0.8320  acc 0.7072  lr 1.70e-04
+2026-11-10 15:01:34,175 |   epoch 1/15  step 250/751  loss 0.7874  acc 0.7363  lr 2.00e-04
+2026-11-10 15:01:43,369 |   epoch 1/15  step 300/751  loss 0.7620  acc 0.7547  lr 2.30e-04
+2026-11-10 15:01:52,878 |   epoch 1/15  step 350/751  loss 0.7369  acc 0.7698  lr 2.60e-04
+2026-11-10 15:02:02,287 |   epoch 1/15  step 400/751  loss 0.7223  acc 0.7814  lr 2.90e-04
+2026-11-10 15:02:12,101 |   epoch 1/15  step 450/751  loss 0.7062  acc 0.7911  lr 3.20e-04
+2026-11-10 15:02:21,897 |   epoch 1/15  step 500/751  loss 0.6927  acc 0.8006  lr 3.50e-04
+2026-11-10 15:02:31,921 |   epoch 1/15  step 550/751  loss 0.6802  acc 0.8080  lr 3.80e-04
+2026-11-10 15:02:41,974 |   epoch 1/15  step 600/751  loss 0.6697  acc 0.8143  lr 4.10e-04
+2026-11-10 15:02:52,124 |   epoch 1/15  step 650/751  loss 0.6609  acc 0.8192  lr 4.40e-04
+2026-11-10 15:03:02,150 |   epoch 1/15  step 700/751  loss 0.6545  acc 0.8236  lr 4.70e-04
+2026-11-10 15:03:13,032 |   epoch 1/15  step 750/751  loss 0.6490  acc 0.8276  lr 5.00e-04
+2026-11-10 15:04:05,213 | epoch 1: {"epoch": 1, "train_loss": 0.649, "train_acc": 0.8276, "val_accuracy": 0.8651, "val_macro_f1": 0.8097, "val_fire_recall": 0.8549, "val_false_alarm": 0.0686, "minutes": 3.77, "lr": 0.0005}
+2026-11-10 15:04:05,255 |   new best (val macro-F1 0.8097) -> E:\dip_fire_smoke\checkpoints\e08_mobilevit_concat\run_20261110_150015\best.pt
+2026-11-10 15:04:06,186 |   epoch 2/15  step 0/751  loss 0.5497  acc 0.8750  lr 5.00e-04
+2026-11-10 15:04:15,461 |   epoch 2/15  step 50/751  loss 0.5455  acc 0.8909  lr 5.00e-04
+2026-11-10 15:04:24,946 |   epoch 2/15  step 100/751  loss 0.5406  acc 0.8895  lr 5.00e-04
+2026-11-10 15:04:34,464 |   epoch 2/15  step 150/751  loss 0.5430  acc 0.8901  lr 5.00e-04
+2026-11-10 15:04:45,020 |   epoch 2/15  step 200/751  loss 0.5415  acc 0.8912  lr 5.00e-04
+2026-11-10 15:04:55,254 |   epoch 2/15  step 250/751  loss 0.5449  acc 0.8903  lr 4.99e-04
+2026-11-10 15:05:05,638 |   epoch 2/15  step 300/751  loss 0.5436  acc 0.8911  lr 4.99e-04
+2026-11-10 15:05:16,438 |   epoch 2/15  step 350/751  loss 0.5410  acc 0.8927  lr 4.99e-04
+2026-11-10 15:05:27,215 |   epoch 2/15  step 400/751  loss 0.5373  acc 0.8946  lr 4.98e-04
+2026-11-10 15:05:38,018 |   epoch 2/15  step 450/751  loss 0.5362  acc 0.8946  lr 4.98e-04
+2026-11-10 15:05:48,768 |   epoch 2/15  step 500/751  loss 0.5357  acc 0.8950  lr 4.97e-04
+2026-11-10 15:05:59,865 |   epoch 2/15  step 550/751  loss 0.5335  acc 0.8959  lr 4.97e-04
+2026-11-10 15:06:11,497 |   epoch 2/15  step 600/751  loss 0.5334  acc 0.8968  lr 4.96e-04
+2026-11-10 15:06:23,196 |   epoch 2/15  step 650/751  loss 0.5323  acc 0.8978  lr 4.95e-04
+2026-11-10 15:06:34,422 |   epoch 2/15  step 700/751  loss 0.5317  acc 0.8976  lr 4.95e-04
+2026-11-10 15:06:46,082 |   epoch 2/15  step 750/751  loss 0.5310  acc 0.8984  lr 4.94e-04
+2026-11-10 15:07:02,303 | epoch 2: {"epoch": 2, "train_loss": 0.531, "train_acc": 0.8984, "val_accuracy": 0.9068, "val_macro_f1": 0.8554, "val_fire_recall": 0.9507, "val_false_alarm": 0.097, "minutes": 2.95, "lr": 0.0004937319780454547}
+2026-11-10 15:07:02,337 |   new best (val macro-F1 0.8554) -> E:\dip_fire_smoke\checkpoints\e08_mobilevit_concat\run_20261110_150015\best.pt
+2026-11-10 15:07:03,268 |   epoch 3/15  step 0/751  loss 0.5799  acc 0.9062  lr 4.94e-04
+2026-11-10 15:07:13,380 |   epoch 3/15  step 50/751  loss 0.5314  acc 0.9093  lr 4.93e-04
+2026-11-10 15:07:23,322 |   epoch 3/15  step 100/751  loss 0.5153  acc 0.9115  lr 4.92e-04
+2026-11-10 15:07:33,233 |   epoch 3/15  step 150/751  loss 0.5076  acc 0.9133  lr 4.91e-04
+2026-11-10 15:07:43,116 |   epoch 3/15  step 200/751  loss 0.5110  acc 0.9123  lr 4.90e-04
+2026-11-10 15:07:52,892 |   epoch 3/15  step 250/751  loss 0.5050  acc 0.9137  lr 4.89e-04
+2026-11-10 15:08:02,970 |   epoch 3/15  step 300/751  loss 0.5059  acc 0.9126  lr 4.88e-04
+2026-11-10 15:08:12,858 |   epoch 3/15  step 350/751  loss 0.5081  acc 0.9136  lr 4.87e-04
+2026-11-10 15:08:22,710 |   epoch 3/15  step 400/751  loss 0.5068  acc 0.9134  lr 4.85e-04
+2026-11-10 15:08:32,731 |   epoch 3/15  step 450/751  loss 0.5088  acc 0.9137  lr 4.84e-04
+2026-11-10 15:08:42,654 |   epoch 3/15  step 500/751  loss 0.5088  acc 0.9128  lr 4.83e-04
+2026-11-10 15:08:52,493 |   epoch 3/15  step 550/751  loss 0.5085  acc 0.9135  lr 4.81e-04
+2026-11-10 15:09:02,540 |   epoch 3/15  step 600/751  loss 0.5090  acc 0.9131  lr 4.80e-04
+2026-11-10 15:09:12,358 |   epoch 3/15  step 650/751  loss 0.5090  acc 0.9123  lr 4.78e-04
+2026-11-10 15:09:22,353 |   epoch 3/15  step 700/751  loss 0.5068  acc 0.9134  lr 4.77e-04
+2026-11-10 15:09:32,143 |   epoch 3/15  step 750/751  loss 0.5061  acc 0.9137  lr 4.75e-04
+2026-11-10 15:09:48,372 | epoch 3: {"epoch": 3, "train_loss": 0.5061, "train_acc": 0.9137, "val_accuracy": 0.8972, "val_macro_f1": 0.8568, "val_fire_recall": 0.8926, "val_false_alarm": 0.0552, "minutes": 2.77, "lr": 0.0004752422169756035}
+2026-11-10 15:09:48,404 |   new best (val macro-F1 0.8568) -> E:\dip_fire_smoke\checkpoints\e08_mobilevit_concat\run_20261110_150015\best.pt
+2026-11-10 15:09:49,287 |   epoch 4/15  step 0/751  loss 0.3941  acc 0.9375  lr 4.75e-04
+2026-11-10 15:09:58,889 |   epoch 4/15  step 50/751  loss 0.4737  acc 0.9265  lr 4.74e-04
+2026-11-10 15:10:08,653 |   epoch 4/15  step 100/751  loss 0.4792  acc 0.9248  lr 4.72e-04
+2026-11-10 15:10:18,297 |   epoch 4/15  step 150/751  loss 0.4754  acc 0.9274  lr 4.70e-04
+2026-11-10 15:10:28,116 |   epoch 4/15  step 200/751  loss 0.4763  acc 0.9263  lr 4.68e-04
+2026-11-10 15:10:37,944 |   epoch 4/15  step 250/751  loss 0.4786  acc 0.9255  lr 4.66e-04
+2026-11-10 15:10:47,654 |   epoch 4/15  step 300/751  loss 0.4808  acc 0.9239  lr 4.65e-04
+2026-11-10 15:10:57,823 |   epoch 4/15  step 350/751  loss 0.4845  acc 0.9221  lr 4.63e-04
+2026-11-10 15:11:08,132 |   epoch 4/15  step 400/751  loss 0.4849  acc 0.9219  lr 4.61e-04
+2026-11-10 15:11:18,815 |   epoch 4/15  step 450/751  loss 0.4847  acc 0.9228  lr 4.59e-04
+2026-11-10 15:11:29,078 |   epoch 4/15  step 500/751  loss 0.4850  acc 0.9220  lr 4.57e-04
+2026-11-10 15:11:39,661 |   epoch 4/15  step 550/751  loss 0.4846  acc 0.9221  lr 4.54e-04
+2026-11-10 15:11:49,994 |   epoch 4/15  step 600/751  loss 0.4853  acc 0.9217  lr 4.52e-04
+2026-11-10 15:12:00,703 |   epoch 4/15  step 650/751  loss 0.4843  acc 0.9224  lr 4.50e-04
+2026-11-10 15:12:11,326 |   epoch 4/15  step 700/751  loss 0.4852  acc 0.9225  lr 4.48e-04
+2026-11-10 15:12:21,998 |   epoch 4/15  step 750/751  loss 0.4856  acc 0.9222  lr 4.45e-04
+2026-11-10 15:12:41,348 | epoch 4: {"epoch": 4, "train_loss": 0.4856, "train_acc": 0.9222, "val_accuracy": 0.9087, "val_macro_f1": 0.8661, "val_fire_recall": 0.9255, "val_false_alarm": 0.0552, "minutes": 2.88, "lr": 0.00044545787061700705}
+2026-11-10 15:12:41,373 |   new best (val macro-F1 0.8661) -> E:\dip_fire_smoke\checkpoints\e08_mobilevit_concat\run_20261110_150015\best.pt
+2026-11-10 15:12:42,250 |   epoch 5/15  step 0/751  loss 0.3900  acc 1.0000  lr 4.45e-04
+2026-11-10 15:12:51,769 |   epoch 5/15  step 50/751  loss 0.4791  acc 0.9295  lr 4.43e-04
+2026-11-10 15:13:01,436 |   epoch 5/15  step 100/751  loss 0.4683  acc 0.9350  lr 4.41e-04
+2026-11-10 15:13:10,983 |   epoch 5/15  step 150/751  loss 0.4695  acc 0.9317  lr 4.38e-04
+2026-11-10 15:13:20,763 |   epoch 5/15  step 200/751  loss 0.4717  acc 0.9299  lr 4.36e-04
+2026-11-10 15:13:30,323 |   epoch 5/15  step 250/751  loss 0.4715  acc 0.9305  lr 4.33e-04
+2026-11-10 15:13:40,015 |   epoch 5/15  step 300/751  loss 0.4706  acc 0.9321  lr 4.31e-04
+2026-11-10 15:13:49,742 |   epoch 5/15  step 350/751  loss 0.4710  acc 0.9312  lr 4.28e-04
+2026-11-10 15:13:59,350 |   epoch 5/15  step 400/751  loss 0.4706  acc 0.9313  lr 4.25e-04
+2026-11-10 15:14:09,041 |   epoch 5/15  step 450/751  loss 0.4695  acc 0.9321  lr 4.23e-04
+2026-11-10 15:14:18,656 |   epoch 5/15  step 500/751  loss 0.4702  acc 0.9320  lr 4.20e-04
+2026-11-10 15:14:28,394 |   epoch 5/15  step 550/751  loss 0.4698  acc 0.9315  lr 4.17e-04
+2026-11-10 15:14:38,130 |   epoch 5/15  step 600/751  loss 0.4700  acc 0.9316  lr 4.14e-04
+2026-11-10 15:14:47,849 |   epoch 5/15  step 650/751  loss 0.4712  acc 0.9310  lr 4.12e-04
+2026-11-10 15:14:57,499 |   epoch 5/15  step 700/751  loss 0.4697  acc 0.9315  lr 4.09e-04
+2026-11-10 15:15:07,168 |   epoch 5/15  step 750/751  loss 0.4693  acc 0.9319  lr 4.06e-04
+2026-11-10 15:15:23,439 | epoch 5: {"epoch": 5, "train_loss": 0.4693, "train_acc": 0.9319, "val_accuracy": 0.8808, "val_macro_f1": 0.8294, "val_fire_recall": 0.882, "val_false_alarm": 0.0452, "minutes": 2.7, "lr": 0.00040587245046468323}
+2026-11-10 15:15:24,366 |   epoch 6/15  step 0/751  loss 0.4683  acc 0.9375  lr 4.06e-04
+2026-11-10 15:15:34,111 |   epoch 6/15  step 50/751  loss 0.4362  acc 0.9455  lr 4.03e-04
+2026-11-10 15:15:43,856 |   epoch 6/15  step 100/751  loss 0.4475  acc 0.9421  lr 4.00e-04
+2026-11-10 15:15:53,575 |   epoch 6/15  step 150/751  loss 0.4506  acc 0.9408  lr 3.97e-04
+2026-11-10 15:16:03,481 |   epoch 6/15  step 200/751  loss 0.4549  acc 0.9389  lr 3.94e-04
+2026-11-10 15:16:13,472 |   epoch 6/15  step 250/751  loss 0.4567  acc 0.9374  lr 3.91e-04
+2026-11-10 15:16:23,243 |   epoch 6/15  step 300/751  loss 0.4564  acc 0.9370  lr 3.88e-04
+2026-11-10 15:16:33,120 |   epoch 6/15  step 350/751  loss 0.4568  acc 0.9371  lr 3.85e-04
+2026-11-10 15:16:42,996 |   epoch 6/15  step 400/751  loss 0.4570  acc 0.9368  lr 3.81e-04
+2026-11-10 15:16:52,927 |   epoch 6/15  step 450/751  loss 0.4581  acc 0.9362  lr 3.78e-04
+2026-11-10 15:17:02,569 |   epoch 6/15  step 500/751  loss 0.4560  acc 0.9370  lr 3.75e-04
+2026-11-10 15:17:12,492 |   epoch 6/15  step 550/751  loss 0.4564  acc 0.9371  lr 3.72e-04
+2026-11-10 15:17:22,290 |   epoch 6/15  step 600/751  loss 0.4559  acc 0.9377  lr 3.68e-04
+2026-11-10 15:17:32,201 |   epoch 6/15  step 650/751  loss 0.4564  acc 0.9382  lr 3.65e-04
+2026-11-10 15:17:41,991 |   epoch 6/15  step 700/751  loss 0.4579  acc 0.9376  lr 3.62e-04
+2026-11-10 15:17:51,822 |   epoch 6/15  step 750/751  loss 0.4584  acc 0.9372  lr 3.58e-04
+2026-11-10 15:18:09,678 | epoch 6: {"epoch": 6, "train_loss": 0.4584, "train_acc": 0.9372, "val_accuracy": 0.9245, "val_macro_f1": 0.8882, "val_fire_recall": 0.9496, "val_false_alarm": 0.0452, "minutes": 2.77, "lr": 0.00035847093477938834}
+2026-11-10 15:18:09,719 |   new best (val macro-F1 0.8882) -> E:\dip_fire_smoke\checkpoints\e08_mobilevit_concat\run_20261110_150015\best.pt
+2026-11-10 15:18:10,642 |   epoch 7/15  step 0/751  loss 0.4956  acc 0.9375  lr 3.58e-04
+2026-11-10 15:18:20,111 |   epoch 7/15  step 50/751  loss 0.4653  acc 0.9338  lr 3.55e-04
+2026-11-10 15:18:30,256 |   epoch 7/15  step 100/751  loss 0.4491  acc 0.9403  lr 3.52e-04
+2026-11-10 15:18:39,963 |   epoch 7/15  step 150/751  loss 0.4536  acc 0.9389  lr 3.48e-04
+2026-11-10 15:18:49,592 |   epoch 7/15  step 200/751  loss 0.4498  acc 0.9411  lr 3.45e-04
+2026-11-10 15:18:59,305 |   epoch 7/15  step 250/751  loss 0.4488  acc 0.9417  lr 3.41e-04
+2026-11-10 15:19:09,088 |   epoch 7/15  step 300/751  loss 0.4498  acc 0.9411  lr 3.38e-04
+2026-11-10 15:19:18,700 |   epoch 7/15  step 350/751  loss 0.4474  acc 0.9422  lr 3.34e-04
+2026-11-10 15:19:28,513 |   epoch 7/15  step 400/751  loss 0.4467  acc 0.9420  lr 3.31e-04
+2026-11-10 15:19:38,133 |   epoch 7/15  step 450/751  loss 0.4482  acc 0.9413  lr 3.27e-04
+2026-11-10 15:19:47,975 |   epoch 7/15  step 500/751  loss 0.4475  acc 0.9418  lr 3.24e-04
+2026-11-10 15:19:57,653 |   epoch 7/15  step 550/751  loss 0.4468  acc 0.9414  lr 3.20e-04
+2026-11-10 15:20:07,484 |   epoch 7/15  step 600/751  loss 0.4472  acc 0.9414  lr 3.16e-04
+2026-11-10 15:20:17,126 |   epoch 7/15  step 650/751  loss 0.4463  acc 0.9420  lr 3.13e-04
+2026-11-10 15:20:26,879 |   epoch 7/15  step 700/751  loss 0.4452  acc 0.9422  lr 3.09e-04
+2026-11-10 15:20:36,554 |   epoch 7/15  step 750/751  loss 0.4447  acc 0.9425  lr 3.06e-04
+2026-11-10 15:20:52,795 | epoch 7: {"epoch": 7, "train_loss": 0.4447, "train_acc": 0.9425, "val_accuracy": 0.9267, "val_macro_f1": 0.8965, "val_fire_recall": 0.9384, "val_false_alarm": 0.0502, "minutes": 2.72, "lr": 0.00030563023348907734}
+2026-11-10 15:20:52,835 |   new best (val macro-F1 0.8965) -> E:\dip_fire_smoke\checkpoints\e08_mobilevit_concat\run_20261110_150015\best.pt
+2026-11-10 15:20:53,755 |   epoch 8/15  step 0/751  loss 0.3952  acc 0.9688  lr 3.06e-04
+2026-11-10 15:21:03,442 |   epoch 8/15  step 50/751  loss 0.4148  acc 0.9608  lr 3.02e-04
+2026-11-10 15:21:13,257 |   epoch 8/15  step 100/751  loss 0.4245  acc 0.9551  lr 2.98e-04
+2026-11-10 15:21:22,961 |   epoch 8/15  step 150/751  loss 0.4265  acc 0.9543  lr 2.95e-04
+2026-11-10 15:21:32,914 |   epoch 8/15  step 200/751  loss 0.4281  acc 0.9535  lr 2.91e-04
+2026-11-10 15:21:42,467 |   epoch 8/15  step 250/751  loss 0.4309  acc 0.9524  lr 2.87e-04
+2026-11-10 15:21:52,154 |   epoch 8/15  step 300/751  loss 0.4287  acc 0.9531  lr 2.84e-04
+2026-11-10 15:22:01,711 |   epoch 8/15  step 350/751  loss 0.4314  acc 0.9521  lr 2.80e-04
+2026-11-10 15:22:11,396 |   epoch 8/15  step 400/751  loss 0.4325  acc 0.9517  lr 2.76e-04
+2026-11-10 15:22:21,086 |   epoch 8/15  step 450/751  loss 0.4327  acc 0.9515  lr 2.72e-04
+2026-11-10 15:22:30,852 |   epoch 8/15  step 500/751  loss 0.4332  acc 0.9507  lr 2.69e-04
+2026-11-10 15:22:40,412 |   epoch 8/15  step 550/751  loss 0.4324  acc 0.9508  lr 2.65e-04
+2026-11-10 15:22:50,148 |   epoch 8/15  step 600/751  loss 0.4326  acc 0.9511  lr 2.61e-04
+2026-11-10 15:22:59,749 |   epoch 8/15  step 650/751  loss 0.4326  acc 0.9505  lr 2.57e-04
+2026-11-10 15:23:09,587 |   epoch 8/15  step 700/751  loss 0.4324  acc 0.9504  lr 2.54e-04
+2026-11-10 15:23:19,271 |   epoch 8/15  step 750/751  loss 0.4330  acc 0.9500  lr 2.50e-04
+2026-11-10 15:23:35,500 | epoch 8: {"epoch": 8, "train_loss": 0.433, "train_acc": 0.95, "val_accuracy": 0.9103, "val_macro_f1": 0.8645, "val_fire_recall": 0.9157, "val_false_alarm": 0.0485, "minutes": 2.71, "lr": 0.00024999999999999946}
+2026-11-10 15:23:36,436 |   epoch 9/15  step 0/751  loss 0.4924  acc 0.9062  lr 2.50e-04
+2026-11-10 15:23:45,940 |   epoch 9/15  step 50/751  loss 0.4045  acc 0.9638  lr 2.46e-04
+2026-11-10 15:23:55,486 |   epoch 9/15  step 100/751  loss 0.4087  acc 0.9629  lr 2.42e-04
+2026-11-10 15:24:04,854 |   epoch 9/15  step 150/751  loss 0.4147  acc 0.9607  lr 2.39e-04
+2026-11-10 15:24:14,421 |   epoch 9/15  step 200/751  loss 0.4165  acc 0.9597  lr 2.35e-04
+2026-11-10 15:24:23,872 |   epoch 9/15  step 250/751  loss 0.4181  acc 0.9593  lr 2.31e-04
+2026-11-10 15:24:33,206 |   epoch 9/15  step 300/751  loss 0.4165  acc 0.9595  lr 2.28e-04
+2026-11-10 15:24:42,691 |   epoch 9/15  step 350/751  loss 0.4179  acc 0.9578  lr 2.24e-04
+2026-11-10 15:24:52,218 |   epoch 9/15  step 400/751  loss 0.4189  acc 0.9568  lr 2.20e-04
+2026-11-10 15:25:01,796 |   epoch 9/15  step 450/751  loss 0.4202  acc 0.9562  lr 2.16e-04
+2026-11-10 15:25:11,303 |   epoch 9/15  step 500/751  loss 0.4198  acc 0.9562  lr 2.13e-04
+2026-11-10 15:25:20,929 |   epoch 9/15  step 550/751  loss 0.4204  acc 0.9562  lr 2.09e-04
+2026-11-10 15:25:30,575 |   epoch 9/15  step 600/751  loss 0.4196  acc 0.9566  lr 2.05e-04
+2026-11-10 15:25:40,415 |   epoch 9/15  step 650/751  loss 0.4188  acc 0.9571  lr 2.02e-04
+2026-11-10 15:25:49,974 |   epoch 9/15  step 700/751  loss 0.4189  acc 0.9569  lr 1.98e-04
+2026-11-10 15:25:59,644 |   epoch 9/15  step 750/751  loss 0.4178  acc 0.9574  lr 1.94e-04
+2026-11-10 15:26:17,424 | epoch 9: {"epoch": 9, "train_loss": 0.4178, "train_acc": 0.9574, "val_accuracy": 0.9285, "val_macro_f1": 0.8976, "val_fire_recall": 0.9347, "val_false_alarm": 0.0702, "minutes": 2.7, "lr": 0.000194369766510921}
+2026-11-10 15:26:17,450 |   new best (val macro-F1 0.8976) -> E:\dip_fire_smoke\checkpoints\e08_mobilevit_concat\run_20261110_150015\best.pt
+2026-11-10 15:26:18,341 |   epoch 10/15  step 0/751  loss 0.4016  acc 0.9688  lr 1.94e-04
+2026-11-10 15:26:27,836 |   epoch 10/15  step 50/751  loss 0.4098  acc 0.9608  lr 1.91e-04
+2026-11-10 15:26:37,484 |   epoch 10/15  step 100/751  loss 0.4090  acc 0.9629  lr 1.87e-04
+2026-11-10 15:26:46,942 |   epoch 10/15  step 150/751  loss 0.4078  acc 0.9632  lr 1.83e-04
+2026-11-10 15:26:56,546 |   epoch 10/15  step 200/751  loss 0.4089  acc 0.9625  lr 1.80e-04
+2026-11-10 15:27:06,386 |   epoch 10/15  step 250/751  loss 0.4115  acc 0.9618  lr 1.76e-04
+2026-11-10 15:27:16,164 |   epoch 10/15  step 300/751  loss 0.4107  acc 0.9619  lr 1.73e-04
+2026-11-10 15:27:25,845 |   epoch 10/15  step 350/751  loss 0.4083  acc 0.9622  lr 1.69e-04
+2026-11-10 15:27:35,600 |   epoch 10/15  step 400/751  loss 0.4085  acc 0.9630  lr 1.66e-04
+2026-11-10 15:27:45,441 |   epoch 10/15  step 450/751  loss 0.4089  acc 0.9627  lr 1.62e-04
+2026-11-10 15:27:55,107 |   epoch 10/15  step 500/751  loss 0.4086  acc 0.9630  lr 1.59e-04
+2026-11-10 15:28:05,076 |   epoch 10/15  step 550/751  loss 0.4092  acc 0.9630  lr 1.55e-04
+2026-11-10 15:28:14,772 |   epoch 10/15  step 600/751  loss 0.4086  acc 0.9628  lr 1.52e-04
+2026-11-10 15:28:24,490 |   epoch 10/15  step 650/751  loss 0.4088  acc 0.9624  lr 1.48e-04
+2026-11-10 15:28:34,123 |   epoch 10/15  step 700/751  loss 0.4074  acc 0.9627  lr 1.45e-04
+2026-11-10 15:28:43,626 |   epoch 10/15  step 750/751  loss 0.4077  acc 0.9621  lr 1.42e-04
+2026-11-10 15:29:00,057 | epoch 10: {"epoch": 10, "train_loss": 0.4077, "train_acc": 0.9621, "val_accuracy": 0.9188, "val_macro_f1": 0.8809, "val_fire_recall": 0.9386, "val_false_alarm": 0.0435, "minutes": 2.71, "lr": 0.00014152906522061016}
+2026-11-10 15:29:00,972 |   epoch 11/15  step 0/751  loss 0.4733  acc 0.9688  lr 1.41e-04
+2026-11-10 15:29:10,450 |   epoch 11/15  step 50/751  loss 0.4007  acc 0.9657  lr 1.38e-04
+2026-11-10 15:29:20,185 |   epoch 11/15  step 100/751  loss 0.3954  acc 0.9675  lr 1.35e-04
+2026-11-10 15:29:29,756 |   epoch 11/15  step 150/751  loss 0.3901  acc 0.9700  lr 1.31e-04
+2026-11-10 15:29:39,462 |   epoch 11/15  step 200/751  loss 0.3892  acc 0.9715  lr 1.28e-04
+2026-11-10 15:29:49,067 |   epoch 11/15  step 250/751  loss 0.3901  acc 0.9711  lr 1.25e-04
+2026-11-10 15:29:58,756 |   epoch 11/15  step 300/751  loss 0.3937  acc 0.9691  lr 1.22e-04
+2026-11-10 15:30:08,389 |   epoch 11/15  step 350/751  loss 0.3944  acc 0.9694  lr 1.19e-04
+2026-11-10 15:30:17,949 |   epoch 11/15  step 400/751  loss 0.3939  acc 0.9696  lr 1.15e-04
+2026-11-10 15:30:27,572 |   epoch 11/15  step 450/751  loss 0.3946  acc 0.9694  lr 1.12e-04
+2026-11-10 15:30:37,307 |   epoch 11/15  step 500/751  loss 0.3948  acc 0.9697  lr 1.09e-04
+2026-11-10 15:30:46,799 |   epoch 11/15  step 550/751  loss 0.3946  acc 0.9696  lr 1.06e-04
+2026-11-10 15:30:56,467 |   epoch 11/15  step 600/751  loss 0.3951  acc 0.9692  lr 1.03e-04
+2026-11-10 15:31:06,340 |   epoch 11/15  step 650/751  loss 0.3961  acc 0.9688  lr 1.00e-04
+2026-11-10 15:31:16,213 |   epoch 11/15  step 700/751  loss 0.3955  acc 0.9688  lr 9.71e-05
+2026-11-10 15:31:25,711 |   epoch 11/15  step 750/751  loss 0.3959  acc 0.9685  lr 9.41e-05
+2026-11-10 15:31:41,978 | epoch 11: {"epoch": 11, "train_loss": 0.3959, "train_acc": 0.9685, "val_accuracy": 0.927, "val_macro_f1": 0.8929, "val_fire_recall": 0.938, "val_false_alarm": 0.0418, "minutes": 2.7, "lr": 9.412754953531614e-05}
+2026-11-10 15:31:42,939 |   epoch 12/15  step 0/751  loss 0.3471  acc 1.0000  lr 9.41e-05
+2026-11-10 15:31:52,357 |   epoch 12/15  step 50/751  loss 0.3777  acc 0.9773  lr 9.12e-05
+2026-11-10 15:32:02,027 |   epoch 12/15  step 100/751  loss 0.3861  acc 0.9740  lr 8.83e-05
+2026-11-10 15:32:11,546 |   epoch 12/15  step 150/751  loss 0.3859  acc 0.9731  lr 8.55e-05
+2026-11-10 15:32:21,055 |   epoch 12/15  step 200/751  loss 0.3859  acc 0.9745  lr 8.27e-05
+2026-11-10 15:32:30,537 |   epoch 12/15  step 250/751  loss 0.3853  acc 0.9744  lr 7.99e-05
+2026-11-10 15:32:40,219 |   epoch 12/15  step 300/751  loss 0.3865  acc 0.9741  lr 7.72e-05
+2026-11-10 15:32:49,723 |   epoch 12/15  step 350/751  loss 0.3866  acc 0.9743  lr 7.45e-05
+2026-11-10 15:32:59,376 |   epoch 12/15  step 400/751  loss 0.3861  acc 0.9740  lr 7.19e-05
+2026-11-10 15:33:08,914 |   epoch 12/15  step 450/751  loss 0.3873  acc 0.9735  lr 6.93e-05
+2026-11-10 15:33:18,560 |   epoch 12/15  step 500/751  loss 0.3861  acc 0.9735  lr 6.67e-05
+2026-11-10 15:33:28,200 |   epoch 12/15  step 550/751  loss 0.3867  acc 0.9734  lr 6.42e-05
+2026-11-10 15:33:37,968 |   epoch 12/15  step 600/751  loss 0.3862  acc 0.9732  lr 6.17e-05
+2026-11-10 15:33:47,591 |   epoch 12/15  step 650/751  loss 0.3864  acc 0.9733  lr 5.93e-05
+2026-11-10 15:33:57,220 |   epoch 12/15  step 700/751  loss 0.3865  acc 0.9735  lr 5.69e-05
+2026-11-10 15:34:06,731 |   epoch 12/15  step 750/751  loss 0.3874  acc 0.9729  lr 5.45e-05
+2026-11-10 15:34:23,013 | epoch 12: {"epoch": 12, "train_loss": 0.3874, "train_acc": 0.9729, "val_accuracy": 0.9383, "val_macro_f1": 0.9127, "val_fire_recall": 0.963, "val_false_alarm": 0.0569, "minutes": 2.68, "lr": 5.454212938299229e-05}
+2026-11-10 15:34:23,048 |   new best (val macro-F1 0.9127) -> E:\dip_fire_smoke\checkpoints\e08_mobilevit_concat\run_20261110_150015\best.pt
+2026-11-10 15:34:23,976 |   epoch 13/15  step 0/751  loss 0.4261  acc 0.9688  lr 5.45e-05
+2026-11-10 15:34:33,332 |   epoch 13/15  step 50/751  loss 0.3658  acc 0.9871  lr 5.22e-05
+2026-11-10 15:34:42,982 |   epoch 13/15  step 100/751  loss 0.3812  acc 0.9780  lr 4.99e-05
+2026-11-10 15:34:52,441 |   epoch 13/15  step 150/751  loss 0.3831  acc 0.9772  lr 4.77e-05
+2026-11-10 15:35:01,998 |   epoch 13/15  step 200/751  loss 0.3830  acc 0.9767  lr 4.55e-05
+2026-11-10 15:35:11,651 |   epoch 13/15  step 250/751  loss 0.3832  acc 0.9761  lr 4.34e-05
+2026-11-10 15:35:21,200 |   epoch 13/15  step 300/751  loss 0.3825  acc 0.9763  lr 4.13e-05
+2026-11-10 15:35:30,930 |   epoch 13/15  step 350/751  loss 0.3800  acc 0.9775  lr 3.93e-05
+2026-11-10 15:35:40,554 |   epoch 13/15  step 400/751  loss 0.3807  acc 0.9773  lr 3.73e-05
+2026-11-10 15:35:50,217 |   epoch 13/15  step 450/751  loss 0.3810  acc 0.9773  lr 3.54e-05
+2026-11-10 15:36:00,190 |   epoch 13/15  step 500/751  loss 0.3816  acc 0.9770  lr 3.35e-05
+2026-11-10 15:36:09,930 |   epoch 13/15  step 550/751  loss 0.3806  acc 0.9776  lr 3.16e-05
+2026-11-10 15:36:19,635 |   epoch 13/15  step 600/751  loss 0.3803  acc 0.9780  lr 2.98e-05
+2026-11-10 15:36:29,332 |   epoch 13/15  step 650/751  loss 0.3797  acc 0.9780  lr 2.81e-05
+2026-11-10 15:36:39,010 |   epoch 13/15  step 700/751  loss 0.3793  acc 0.9779  lr 2.64e-05
+2026-11-10 15:36:48,587 |   epoch 13/15  step 750/751  loss 0.3798  acc 0.9779  lr 2.48e-05
+2026-11-10 15:37:04,947 | epoch 13: {"epoch": 13, "train_loss": 0.3798, "train_acc": 0.9779, "val_accuracy": 0.9375, "val_macro_f1": 0.9107, "val_fire_recall": 0.9532, "val_false_alarm": 0.0502, "minutes": 2.7, "lr": 2.4757783024395154e-05}
+2026-11-10 15:37:05,912 |   epoch 14/15  step 0/751  loss 0.3881  acc 0.9688  lr 2.47e-05
+2026-11-10 15:37:15,282 |   epoch 14/15  step 50/751  loss 0.3952  acc 0.9749  lr 2.31e-05
+2026-11-10 15:37:25,055 |   epoch 14/15  step 100/751  loss 0.3830  acc 0.9777  lr 2.16e-05
+2026-11-10 15:37:34,465 |   epoch 14/15  step 150/751  loss 0.3811  acc 0.9781  lr 2.01e-05
+2026-11-10 15:37:44,021 |   epoch 14/15  step 200/751  loss 0.3841  acc 0.9771  lr 1.87e-05
+2026-11-10 15:37:53,579 |   epoch 14/15  step 250/751  loss 0.3819  acc 0.9786  lr 1.73e-05
+2026-11-10 15:38:03,153 |   epoch 14/15  step 300/751  loss 0.3810  acc 0.9790  lr 1.59e-05
+2026-11-10 15:38:12,717 |   epoch 14/15  step 350/751  loss 0.3813  acc 0.9785  lr 1.46e-05
+2026-11-10 15:38:22,296 |   epoch 14/15  step 400/751  loss 0.3805  acc 0.9783  lr 1.34e-05
+2026-11-10 15:38:31,919 |   epoch 14/15  step 450/751  loss 0.3792  acc 0.9789  lr 1.22e-05
+2026-11-10 15:38:41,606 |   epoch 14/15  step 500/751  loss 0.3776  acc 0.9792  lr 1.11e-05
+2026-11-10 15:38:51,269 |   epoch 14/15  step 550/751  loss 0.3764  acc 0.9795  lr 1.00e-05
+2026-11-10 15:39:00,929 |   epoch 14/15  step 600/751  loss 0.3767  acc 0.9797  lr 9.01e-06
+2026-11-10 15:39:10,547 |   epoch 14/15  step 650/751  loss 0.3779  acc 0.9792  lr 8.04e-06
+2026-11-10 15:39:20,354 |   epoch 14/15  step 700/751  loss 0.3774  acc 0.9796  lr 7.13e-06
+2026-11-10 15:39:29,901 |   epoch 14/15  step 750/751  loss 0.3774  acc 0.9794  lr 6.27e-06
+2026-11-10 15:39:46,114 | epoch 14: {"epoch": 14, "train_loss": 0.3774, "train_acc": 0.9794, "val_accuracy": 0.9382, "val_macro_f1": 0.9132, "val_fire_recall": 0.9546, "val_false_alarm": 0.0535, "minutes": 2.68, "lr": 6.26802195454408e-06}
+2026-11-10 15:39:46,146 |   new best (val macro-F1 0.9132) -> E:\dip_fire_smoke\checkpoints\e08_mobilevit_concat\run_20261110_150015\best.pt
+2026-11-10 15:39:47,030 |   epoch 15/15  step 0/751  loss 0.3734  acc 0.9375  lr 6.25e-06
+2026-11-10 15:39:56,554 |   epoch 15/15  step 50/751  loss 0.3841  acc 0.9743  lr 5.45e-06
+2026-11-10 15:40:06,181 |   epoch 15/15  step 100/751  loss 0.3811  acc 0.9765  lr 4.70e-06
+2026-11-10 15:40:15,782 |   epoch 15/15  step 150/751  loss 0.3744  acc 0.9791  lr 4.01e-06
+2026-11-10 15:40:25,165 |   epoch 15/15  step 200/751  loss 0.3769  acc 0.9782  lr 3.37e-06
+2026-11-10 15:40:34,857 |   epoch 15/15  step 250/751  loss 0.3756  acc 0.9778  lr 2.78e-06
+2026-11-10 15:40:44,409 |   epoch 15/15  step 300/751  loss 0.3744  acc 0.9783  lr 2.26e-06
+2026-11-10 15:40:54,120 |   epoch 15/15  step 350/751  loss 0.3757  acc 0.9786  lr 1.78e-06
+2026-11-10 15:41:03,715 |   epoch 15/15  step 400/751  loss 0.3748  acc 0.9793  lr 1.37e-06
+2026-11-10 15:41:13,475 |   epoch 15/15  step 450/751  loss 0.3748  acc 0.9797  lr 1.00e-06
+2026-11-10 15:41:23,026 |   epoch 15/15  step 500/751  loss 0.3735  acc 0.9804  lr 6.97e-07
+2026-11-10 15:41:32,773 |   epoch 15/15  step 550/751  loss 0.3736  acc 0.9805  lr 4.46e-07
+2026-11-10 15:41:42,332 |   epoch 15/15  step 600/751  loss 0.3741  acc 0.9806  lr 2.51e-07
+2026-11-10 15:41:52,015 |   epoch 15/15  step 650/751  loss 0.3737  acc 0.9807  lr 1.12e-07
+2026-11-10 15:42:01,707 |   epoch 15/15  step 700/751  loss 0.3741  acc 0.9806  lr 2.79e-08
+2026-11-10 15:42:11,235 |   epoch 15/15  step 750/751  loss 0.3740  acc 0.9808  lr 0.00e+00
+2026-11-10 15:42:27,656 | epoch 15: {"epoch": 15, "train_loss": 0.374, "train_acc": 0.9808, "val_accuracy": 0.9368, "val_macro_f1": 0.9106, "val_fire_recall": 0.9507, "val_false_alarm": 0.0552, "minutes": 2.69, "lr": 0.0}
+2026-11-10 15:42:29,061 | Evaluating the best epoch (14) on val, test_in, test_ext, test_lookalike
+2026-11-10 15:45:06,889 | Summary:
+             model          split    n  accuracy    accuracy_ci95  macro_f1    macro_f1_ci95  fire_recall  smoke_recall  normal_recall  false_alarm_rate
+D_mobilevit_concat            val 7325    0.9382 [0.9328, 0.9436]    0.9132 [0.9042, 0.9215]       0.9546        0.8944         0.9465            0.0535
+D_mobilevit_concat        test_in 6810    0.9007 [0.8937, 0.9073]    0.8912 [0.8834, 0.8982]       0.9556        0.8067         0.9130            0.0870
+D_mobilevit_concat       test_ext 2931    0.8980 [0.8874, 0.9092]    0.8981 [0.8875, 0.9088]       0.9574        0.8469         0.8928            0.1072
+D_mobilevit_concat test_lookalike  451       NaN              NaN       NaN              NaN          NaN           NaN            NaN            0.0266
+2026-11-10 15:45:07,105 | Look-alike false alarms by type:
+             model   lookalike_type   n  false_alarm_rate  called_fire  called_smoke
+D_mobilevit_concat   cloud_fog_haze  75            0.0000            0             0
+D_mobilevit_concat lamp_streetlight  52            0.0577            2             1
+D_mobilevit_concat  reflection_glow  51            0.0392            1             1
+D_mobilevit_concat   sunset_sunrise  88            0.0227            1             1
+D_mobilevit_concat    vehicle_light 185            0.0270            1             4
+2026-11-10 15:45:07,849 | Done.
