@@ -1,0 +1,18 @@
+{
+  "image": "E:\\my_photos\\c6.jpeg",
+  "label": "smoke",
+  "confidence": 0.942463755607605,
+  "probs": {
+    "fire": 0.018522337079048157,
+    "smoke": 0.942463755607605,
+    "normal": 0.03901385888457298
+  },
+  "sigma": 1.7090123045379304,
+  "points_share": 1.52587890625e-05,
+  "decision": "clean",
+  "filter": "none",
+  "thresholds": {
+    "sigma_thr": 2.56
+  },
+  "model": "CA_mobilevit_adaptive_noiseaug"
+}

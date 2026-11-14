@@ -6,7 +6,6 @@ from pathlib import Path
 
 EXT = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
 
-
 def main() -> None:
     ap = argparse.ArgumentParser(prog="firesmoke")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -26,12 +25,13 @@ def main() -> None:
     for q in paths:
         r = det.predict(q)
         r.save(a.out)
-        print(f"{q.name}: {r.label} {r.confidence * 100:.1f}%  ({r.decision}, {r.filter})")
+        c = r.change
+        print(f"{q.name}: {r.label} {r.confidence * 100:.1f}%  ({r.decision}, {r.filter})  "
+              f"PSNR {c['psnr_db']:.2f} dB  SSIM {c['ssim']:.3f}  changed {c['changed_pct']:.2f}%")
         if a.steps:
             r.explain()
             print()
     print(f"Results saved to {Path(a.out).resolve()}")
-
 
 if __name__ == "__main__":
     main()
