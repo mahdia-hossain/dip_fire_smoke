@@ -1,9 +1,8 @@
-"""DIP steps used at inference: resize, noise check, isolated points, adaptive filtering, CLAHE, colour masks."""
+"""DIP steps used at inference: resize, noise check, adaptive filtering (median + CLAHE), colour masks, input vs output change."""
 import cv2
 import numpy as np
 
 NOISE_MASK = np.array([[1, -2, 1], [-2, 4, -2], [1, -2, 1]], np.float32)
-POINT_MASK = np.array([[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]], np.float32)
 
 def load_rgb(path) -> np.ndarray:
     img = cv2.imdecode(np.fromfile(str(path), dtype=np.uint8), cv2.IMREAD_COLOR)
@@ -20,47 +19,17 @@ def noise_sigma(rgb: np.ndarray) -> float:
     r = np.abs(cv2.filter2D(g, -1, NOISE_MASK, borderType=cv2.BORDER_REFLECT))[1:-1, 1:-1]
     return float(np.sqrt(np.pi / 2) * r.mean() / 6.0)
 
-def point_response(rgb: np.ndarray) -> np.ndarray:
-    g = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY).astype(np.float32)
-    return np.abs(cv2.filter2D(g, -1, POINT_MASK, borderType=cv2.BORDER_REFLECT))
-
 def clahe_l(img: np.ndarray, clip_limit: float = 2.0, tile: int = 8, **_) -> np.ndarray:
     lab = cv2.cvtColor(img, cv2.COLOR_RGB2LAB)
     lab[..., 0] = cv2.createCLAHE(clipLimit=clip_limit, tileGridSize=(tile, tile)).apply(lab[..., 0])
     return cv2.cvtColor(lab, cv2.COLOR_LAB2RGB)
 
-def _minmax(img, k, op):
-    return op(img, np.ones((k, k), np.uint8))
-
-FILTERS = {
-    "average_3": lambda x: cv2.blur(x, (3, 3)), "average_5": lambda x: cv2.blur(x, (5, 5)),
-    "average_7": lambda x: cv2.blur(x, (7, 7)),
-    "weighted_avg_3": lambda x: cv2.filter2D(x, -1, np.array([[1, 2, 1], [2, 4, 2], [1, 2, 1]], np.float32) / 16.0),
-    "gaussian_3": lambda x: cv2.GaussianBlur(x, (3, 3), 0), "gaussian_5": lambda x: cv2.GaussianBlur(x, (5, 5), 0),
-    "gaussian_7": lambda x: cv2.GaussianBlur(x, (7, 7), 0),
-    "median_3": lambda x: cv2.medianBlur(x, 3), "median_5": lambda x: cv2.medianBlur(x, 5),
-    "median_7": lambda x: cv2.medianBlur(x, 7),
-    "min_3": lambda x: _minmax(x, 3, cv2.erode), "max_3": lambda x: _minmax(x, 3, cv2.dilate),
-    "midpoint_3": lambda x: ((_minmax(x, 3, cv2.erode).astype(np.uint16) + _minmax(x, 3, cv2.dilate)) // 2).astype(np.uint8),
-    "bilateral": lambda x: cv2.bilateralFilter(x, 5, 50, 50),
-    "nlmeans": lambda x: cv2.fastNlMeansDenoisingColored(x, None, 10, 10, 7, 21),
-}
-
 def adaptive(p0: np.ndarray, ad: dict, contrast: dict):
     sigma = noise_sigma(p0)
-    points = float((point_response(p0) > 600.0).mean())
     if sigma <= ad["sigma_thr"]:
-        return sigma, points, "clean", "none", p0, p0
-    if "points_thr" in ad and points > ad["points_thr"]:
-        d, f = "salt-and-pepper noise", ad.get("sp_filter", "median_3")
-    elif "heavy_thr" in ad and sigma > ad["heavy_thr"]:
-        d, f = "heavy grain", ad.get("heavy_filter", "gaussian_7")
-    elif "points_thr" in ad:
-        d, f = "light grain", ad.get("light_filter", "bilateral")
-    else:
-        d, f = "noisy", "median_3"
-    p1 = FILTERS[f](p0)
-    return sigma, points, d, f, p1, clahe_l(p1, **contrast)
+        return sigma, "clean", "none", p0, p0
+    p1 = cv2.medianBlur(p0, 3)
+    return sigma, "noisy", "median_3", p1, clahe_l(p1, **contrast)
 
 def _clean_mask(mask: np.ndarray, kernel: int, min_area: int) -> np.ndarray:
     k = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (kernel, kernel))

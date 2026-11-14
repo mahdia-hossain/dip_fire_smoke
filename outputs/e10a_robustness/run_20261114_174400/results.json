@@ -1,0 +1,95 @@
+{
+  "table": [
+    {
+      "model": "CA2_mobilevit_fulladaptive_noiseaug",
+      "condition": "clean",
+      "macro_f1": 0.901,
+      "accuracy": 0.9007,
+      "fire_recall": 0.9574,
+      "smoke_recall": 0.853,
+      "false_alarm_rate": 0.1052
+    },
+    {
+      "model": "CA2_mobilevit_fulladaptive_noiseaug",
+      "condition": "dark",
+      "macro_f1": 0.8772,
+      "accuracy": 0.8758,
+      "fire_recall": 0.8723,
+      "smoke_recall": 0.859,
+      "false_alarm_rate": 0.1042
+    },
+    {
+      "model": "CA2_mobilevit_fulladaptive_noiseaug",
+      "condition": "blur",
+      "macro_f1": 0.8813,
+      "accuracy": 0.8806,
+      "fire_recall": 0.933,
+      "smoke_recall": 0.8429,
+      "false_alarm_rate": 0.1313
+    },
+    {
+      "model": "CA2_mobilevit_fulladaptive_noiseaug",
+      "condition": "jpeg",
+      "macro_f1": 0.8868,
+      "accuracy": 0.8864,
+      "fire_recall": 0.9617,
+      "smoke_recall": 0.8389,
+      "false_alarm_rate": 0.1373
+    },
+    {
+      "model": "CA2_mobilevit_fulladaptive_noiseaug",
+      "condition": "noise5",
+      "macro_f1": 0.8942,
+      "accuracy": 0.8939,
+      "fire_recall": 0.9564,
+      "smoke_recall": 0.857,
+      "false_alarm_rate": 0.1283
+    },
+    {
+      "model": "CA2_mobilevit_fulladaptive_noiseaug",
+      "condition": "noise10",
+      "macro_f1": 0.8843,
+      "accuracy": 0.884,
+      "fire_recall": 0.9479,
+      "smoke_recall": 0.862,
+      "false_alarm_rate": 0.1543
+    },
+    {
+      "model": "CA2_mobilevit_fulladaptive_noiseaug",
+      "condition": "noise15",
+      "macro_f1": 0.8684,
+      "accuracy": 0.868,
+      "fire_recall": 0.9426,
+      "smoke_recall": 0.8459,
+      "false_alarm_rate": 0.1804
+    },
+    {
+      "model": "CA2_mobilevit_fulladaptive_noiseaug",
+      "condition": "noise25",
+      "macro_f1": 0.8365,
+      "accuracy": 0.8356,
+      "fire_recall": 0.9064,
+      "smoke_recall": 0.8006,
+      "false_alarm_rate": 0.1964
+    },
+    {
+      "model": "CA2_mobilevit_fulladaptive_noiseaug",
+      "condition": "saltpepper2",
+      "macro_f1": 0.8611,
+      "accuracy": 0.8618,
+      "fire_recall": 0.9628,
+      "smoke_recall": 0.7664,
+      "false_alarm_rate": 0.1383
+    },
+    {
+      "model": "CA2_mobilevit_fulladaptive_noiseaug",
+      "condition": "saltpepper5",
+      "macro_f1": 0.8187,
+      "accuracy": 0.8219,
+      "fire_recall": 0.9564,
+      "smoke_recall": 0.6425,
+      "false_alarm_rate": 0.1263
+    }
+  ],
+  "records_file": "records.csv"
+}

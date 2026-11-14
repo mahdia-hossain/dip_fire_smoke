@@ -1,0 +1,11 @@
+model,condition,macro_f1,accuracy,fire_recall,smoke_recall,false_alarm_rate
+CA2_mobilevit_fulladaptive_noiseaug,clean,0.901,0.9007,0.9574,0.853,0.1052
+CA2_mobilevit_fulladaptive_noiseaug,dark,0.8772,0.8758,0.8723,0.859,0.1042
+CA2_mobilevit_fulladaptive_noiseaug,blur,0.8813,0.8806,0.933,0.8429,0.1313
+CA2_mobilevit_fulladaptive_noiseaug,jpeg,0.8868,0.8864,0.9617,0.8389,0.1373
+CA2_mobilevit_fulladaptive_noiseaug,noise5,0.8942,0.8939,0.9564,0.857,0.1283
+CA2_mobilevit_fulladaptive_noiseaug,noise10,0.8843,0.884,0.9479,0.862,0.1543
+CA2_mobilevit_fulladaptive_noiseaug,noise15,0.8684,0.868,0.9426,0.8459,0.1804
+CA2_mobilevit_fulladaptive_noiseaug,noise25,0.8365,0.8356,0.9064,0.8006,0.1964
+CA2_mobilevit_fulladaptive_noiseaug,saltpepper2,0.8611,0.8618,0.9628,0.7664,0.1383
+CA2_mobilevit_fulladaptive_noiseaug,saltpepper5,0.8187,0.8219,0.9564,0.6425,0.1263

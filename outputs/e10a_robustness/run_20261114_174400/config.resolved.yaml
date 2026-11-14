@@ -1,0 +1,5 @@
+mode: robust
+models:
+- CA2
+seed: 42
+smoke: false

@@ -25,7 +25,6 @@ class Result:
     confidence: float
     probs: dict
     sigma: float
-    points_share: float
     decision: str
     filter: str
     thresholds: dict
@@ -40,15 +39,13 @@ class Result:
                  "1. The photo is resized to 256 x 256 pixels.",
                  f"2. Noise check: sigma = {self.sigma:.2f} (threshold {t['sigma_thr']}), so the photo is "
                  + ("noisy." if noisy else "clean."),
-                 f"3. Isolated points: {self.points_share * 100:.3f}% of pixels are lonely dots"
-                 + (f" (threshold {t['points_thr'] * 100:.3f}%)." if "points_thr" in t else "."),
-                 f"4. Decision: {self.decision} -> filter: {self.filter}.",
-                 "5. " + ("CLAHE on the brightness channel restores contrast without changing colours." if noisy
+                 f"3. Decision: {self.decision} -> filter: {self.filter}.",
+                 "4. " + ("CLAHE on the brightness channel restores contrast without changing colours." if noisy
                           else "Clean photos are passed on unchanged, so no detail is lost."),
-                 f"6. Input vs output: PSNR {self.change['psnr_db']:.2f} dB, SSIM {self.change['ssim']:.3f}, "
+                 f"5. Input vs output: PSNR {self.change['psnr_db']:.2f} dB, SSIM {self.change['ssim']:.3f}, "
                  f"mean change {self.change['mean_abs_diff']:.2f} grey levels, {self.change['changed_pct']:.2f}% of pixels changed"
                  + (" (identical: nothing was changed)." if not noisy else "."),
-                 "7. MobileViT-XS scores: " + ", ".join(f"{k} {v * 100:.1f}%" for k, v in self.probs.items()) + ".",
+                 "6. MobileViT-XS scores: " + ", ".join(f"{k} {v * 100:.1f}%" for k, v in self.probs.items()) + ".",
                  "(The red/blue highlight comes from DIP colour masks and is approximate.)"]
         text = "\n".join(lines)
         if show:
@@ -67,7 +64,7 @@ class Result:
 
     def compare_figure(self):
         import matplotlib.pyplot as plt
-        before, after, diff = self.steps[0][1], self.steps[4][1], self.steps[5][1]
+        before, after, diff = self.steps[0][1], self.steps[3][1], self.steps[4][1]
         c = self.change
         fig, axes = plt.subplots(1, 3, figsize=(9, 3.4))
         for ax, im, title in zip(axes, (before, after, diff),
@@ -127,23 +124,21 @@ class FireSmokeDetector:
     def predict(self, source) -> Result:
         rgb = dip.load_rgb(source) if not isinstance(source, np.ndarray) else source
         p0 = dip.resize(rgb, self.pre["size"])
-        sigma, points, decision, filt, p1, p2 = dip.adaptive(p0, self.pre["adaptive"], self.pre["contrast"])
+        sigma, decision, filt, p1, p2 = dip.adaptive(p0, self.pre["adaptive"], self.pre["contrast"])
         x = (torch.from_numpy(np.ascontiguousarray(p2)).permute(2, 0, 1).float() / 255.0 - self.mean) / self.std
         prob = torch.softmax(self.net(x[None].to(self.device)).float(), 1)[0].cpu().numpy()
         label = self.classes[int(prob.argmax())]
         fire, smoke = dip.colour_masks(clahe_ready(p0, self.pre), self.seg)
         hl = dip.overlay(p2, fire if label == "fire" else 0 * fire, smoke if label == "smoke" else 0 * smoke)
-        resp = dip.point_response(p0)
         chg = dip.change(p0, p2)
         steps = [("1. Resized 256x256", p0),
                  (f"2. Noise sigma = {sigma:.2f}", cv2.cvtColor(p0, cv2.COLOR_RGB2GRAY)),
-                 (f"3. Isolated points {points * 100:.3f}%", np.clip(resp / 4, 0, 255).astype(np.uint8)),
-                 (f"4. {decision}: {filt}", p1),
-                 ("5. After CLAHE" if decision != "clean" else "5. No change (clean)", p2),
-                 (f"6. Difference x4  SSIM {chg['ssim']:.3f}", dip.diff_map(p0, p2)),
-                 (f"7. {label.upper()} {prob.max() * 100:.0f}%", hl)]
+                 (f"3. {decision}: {filt}", p1),
+                 ("4. After CLAHE" if decision != "clean" else "4. No change (clean)", p2),
+                 (f"5. Difference x4  SSIM {chg['ssim']:.3f}", dip.diff_map(p0, p2)),
+                 (f"6. {label.upper()} {prob.max() * 100:.0f}%", hl)]
         return Result(str(source) if not isinstance(source, np.ndarray) else "array", label, float(prob.max()),
-                      dict(zip(self.classes, map(float, prob))), sigma, points, decision, filt,
+                      dict(zip(self.classes, map(float, prob))), sigma, decision, filt,
                       self.pre["adaptive"], self.meta["model_name"], steps, chg)
 
 def clahe_ready(p0: np.ndarray, pre: dict) -> np.ndarray:

@@ -1,0 +1,2 @@
+model,dark,blur,jpeg,noise5,noise10,noise15,noise25,saltpepper2,saltpepper5
+CA2_mobilevit_fulladaptive_noiseaug,-0.0238,-0.0197,-0.0142,-0.0068,-0.0167,-0.0326,-0.0645,-0.0399,-0.0823

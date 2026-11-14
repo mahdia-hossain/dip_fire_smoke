@@ -1,0 +1,16 @@
+2026-11-14 17:44:03,271 | CA2_mobilevit_fulladaptive_noiseaug: run run_20261111_213222
+2026-11-14 17:44:47,068 |   clean  macro-F1 0.9010  fire recall 0.9574
+2026-11-14 17:45:22,228 |   dark   macro-F1 0.8772  fire recall 0.8723
+2026-11-14 17:45:55,072 |   blur   macro-F1 0.8813  fire recall 0.9330
+2026-11-14 17:46:28,838 |   jpeg   macro-F1 0.8868  fire recall 0.9617
+2026-11-14 17:47:14,535 |   noise5 macro-F1 0.8942  fire recall 0.9564
+2026-11-14 17:48:00,799 |   noise10 macro-F1 0.8843  fire recall 0.9479
+2026-11-14 17:48:46,975 |   noise15 macro-F1 0.8684  fire recall 0.9426
+2026-11-14 17:49:33,136 |   noise25 macro-F1 0.8365  fire recall 0.9064
+2026-11-14 17:50:08,388 |   saltpepper2 macro-F1 0.8611  fire recall 0.9628
+2026-11-14 17:50:43,786 |   saltpepper5 macro-F1 0.8187  fire recall 0.9564
+2026-11-14 17:50:44,671 | Macro-F1 on DeepQuestAI by condition:
+condition                            clean    dark    blur    jpeg  noise5  noise10  noise15  noise25  saltpepper2  saltpepper5
+model                                                                                                                          
+CA2_mobilevit_fulladaptive_noiseaug  0.901  0.8772  0.8813  0.8868  0.8942   0.8843   0.8684   0.8365       0.8611       0.8187
+2026-11-14 17:50:45,155 | Done.
