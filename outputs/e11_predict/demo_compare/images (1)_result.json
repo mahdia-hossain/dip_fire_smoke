@@ -1,0 +1,24 @@
+{
+  "image": "E:\\my_photos\\images (1).jpeg",
+  "label": "fire",
+  "confidence": 0.8413822650909424,
+  "probs": {
+    "fire": 0.8413822650909424,
+    "smoke": 0.06934911012649536,
+    "normal": 0.08926860243082047
+  },
+  "sigma": 2.509791513027078,
+  "points_share": 0.00042724609375,
+  "decision": "clean",
+  "filter": "none",
+  "thresholds": {
+    "sigma_thr": 2.56
+  },
+  "model": "CA_mobilevit_adaptive_noiseaug",
+  "change": {
+    "psnr_db": 100.0,
+    "ssim": 1.0,
+    "mean_abs_diff": 0.0,
+    "changed_pct": 0.0
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "image": "E:\\my_photos\\c5.jpeg",
+  "label": "smoke",
+  "confidence": 0.9135543704032898,
+  "probs": {
+    "fire": 0.03705684468150139,
+    "smoke": 0.9135543704032898,
+    "normal": 0.0493888258934021
+  },
+  "sigma": 1.5301727979429887,
+  "points_share": 0.0,
+  "decision": "clean",
+  "filter": "none",
+  "thresholds": {
+    "sigma_thr": 2.56
+  },
+  "model": "CA_mobilevit_adaptive_noiseaug",
+  "change": {
+    "psnr_db": 100.0,
+    "ssim": 1.0,
+    "mean_abs_diff": 0.0,
+    "changed_pct": 0.0
+  }
+}

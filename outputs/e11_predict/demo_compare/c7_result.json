@@ -1,0 +1,24 @@
+{
+  "image": "E:\\my_photos\\c7.jpeg",
+  "label": "normal",
+  "confidence": 0.9653752446174622,
+  "probs": {
+    "fire": 0.015066212974488735,
+    "smoke": 0.019558489322662354,
+    "normal": 0.9653752446174622
+  },
+  "sigma": 8.415351218065757,
+  "points_share": 0.0001373291015625,
+  "decision": "noisy",
+  "filter": "median_3",
+  "thresholds": {
+    "sigma_thr": 2.56
+  },
+  "model": "CA_mobilevit_adaptive_noiseaug",
+  "change": {
+    "psnr_db": 19.41,
+    "ssim": 0.7481,
+    "mean_abs_diff": 20.86,
+    "changed_pct": 64.46
+  }
+}
